@@ -1,0 +1,64 @@
+NAME
+    DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
+
+VERSION
+    version 0.092970
+
+SYNOPSIS
+     package MyApp::Schema::Result::Foo_Bar;
+    our $VERSION = '0.092970';
+
+     __PACKAGE__->load_components(qw{Helper::JoinTable Core});
+
+     __PACKAGE__->join_table({
+        left_class   => 'Foo',
+        left_method  => 'foo',
+        right_class  => 'Bar',
+        right_method => 'bar',
+     });
+
+     # define parent class
+     package ParentSchema::Result::Bar;
+    our $VERSION = '0.092970';
+
+     use strict;
+     use warnings;
+
+     use parent 'DBIx::Class';
+
+     __PACKAGE__->load_components('Core');
+
+     __PACKAGE__->table('Bar');
+
+     __PACKAGE__->add_columns(qw/ id foo_id /);
+
+     __PACKAGE__->set_primary_key('id');
+
+     __PACKAGE__->belongs_to( foo => 'ParentSchema::Result::Foo', 'foo_id' );
+
+     # define subclass
+     package MySchema::Result::Bar;
+    our $VERSION = '0.092970';
+
+     use strict;
+     use warnings;
+
+     use parent 'ParentSchema::Result::Bar';
+
+     __PACKAGE__->load_components(qw{Helper::SubClass Core});
+
+     __PACKAGE__->subclass;
+
+SEE ALSO
+    DBIx::Class::Helper::JoinTable, DBIx::Class::Helper::SubClass,
+    DBIx::Class::Helpers::Util
+
+AUTHOR
+      Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

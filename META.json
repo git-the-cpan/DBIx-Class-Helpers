@@ -1,0 +1,23 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/frioux/DBIx-Class-Helpers"
+   },
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "generated_by" : "Dist::Zilla version 1.092680",
+   "version" : "0.092970",
+   "name" : "DBIx-Class-Helpers",
+   "author" : [
+      "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
+   ],
+   "license" : "perl",
+   "requires" : {
+      "Test::More" : "0",
+      "Test::Exception" : "0",
+      "Sub::Exporter" : "0",
+      "DBIx::Class" : "0"
+   },
+   "abstract" : "Simplify the common case stuff for DBIx::Class."
+}
