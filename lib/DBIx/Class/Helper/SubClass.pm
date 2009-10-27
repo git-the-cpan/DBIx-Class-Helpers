@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::SubClass;
-our $VERSION = '0.092970';
+our $VERSION = '0.093000';
 
 
 
@@ -8,7 +8,7 @@ use warnings;
 
 # ABSTRACT: Convenient subclassing with DBIx::Class
 
-use DBIx::Class::Helpers::Util 'get_namespace_parts';
+use DBIx::Class::Helpers::Util qw{get_namespace_parts assert_similar_namespaces};
 
 sub subclass {
    my $self = shift;
@@ -24,8 +24,8 @@ sub generate_relationships {
       my $rel_info = $self->relationship_info($rel);
       my $class = $rel_info->{class};
 
+      assert_similar_namespaces($self, $class);
       my (undef, $result) = get_namespace_parts($class);
-
 
       $self->add_relationship(
          $rel,
@@ -54,7 +54,7 @@ DBIx::Class::Helper::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 0.092970
+version 0.093000
 
 =pod 
 
@@ -62,7 +62,7 @@ version 0.092970
 
  # define parent class
  package ParentSchema::Result::Bar;
-our $VERSION = '0.092970';
+our $VERSION = '0.093000';
 
  use strict;
  use warnings;
@@ -81,7 +81,7 @@ our $VERSION = '0.092970';
 
  # define subclass
  package MySchema::Result::Bar;
-our $VERSION = '0.092970';
+our $VERSION = '0.093000';
 
  use strict;
  use warnings;

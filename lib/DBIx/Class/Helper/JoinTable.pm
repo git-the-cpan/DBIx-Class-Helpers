@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::JoinTable;
-our $VERSION = '0.092970';
+our $VERSION = '0.093000';
 
 
 
@@ -107,14 +107,14 @@ DBIx::Class::Helper::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 0.092970
+version 0.093000
 
 =pod 
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::Result::Foo_Bar;
-our $VERSION = '0.092970';
+our $VERSION = '0.093000';
 
  __PACKAGE__->load_components(qw{Helper::JoinTable Core});
 
@@ -149,6 +149,7 @@ our $VERSION = '0.092970';
 =head1 METHODS
 
 All the methods take a configuration hashref that looks like the following:
+
  {
     left_class   => 'Foo',
     left_method  => 'foo',   # see L</NOTE>

@@ -1,5 +1,10 @@
 Revision history for DBIx-Class-Helpers
 
+0.093000 Sat Oct 26 19:40:00 CDT 2009
+       - Add parent as a dependency
+       - Super basic POD cleanup
+       - Tighter Restrictions on the namespaces of parent classes
+
 0.092970 Sat Oct 24 02:41:00 CDT 2009
        - Initial Release
 
