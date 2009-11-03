@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::SubClass;
-our $VERSION = '0.093000';
+our $VERSION = '0.093070';
 
 
 
@@ -45,7 +45,6 @@ sub set_table {
 
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -54,15 +53,15 @@ DBIx::Class::Helper::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 0.093000
-
-=pod 
+version 0.093070
 
 =head1 SYNOPSIS
 
  # define parent class
  package ParentSchema::Result::Bar;
-our $VERSION = '0.093000';
+our $VERSION = '0.093070';
+
+
 
  use strict;
  use warnings;
@@ -81,7 +80,9 @@ our $VERSION = '0.093000';
 
  # define subclass
  package MySchema::Result::Bar;
-our $VERSION = '0.093000';
+our $VERSION = '0.093070';
+
+
 
  use strict;
  use warnings;
@@ -127,6 +128,5 @@ This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 

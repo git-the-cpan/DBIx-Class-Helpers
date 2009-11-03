@@ -2,21 +2,27 @@
    "resources" : {
       "repository" : "http://github.com/frioux/DBIx-Class-Helpers"
    },
+   "generated_by" : "Dist::Zilla version 1.093010",
    "meta-spec" : {
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "generated_by" : "Dist::Zilla version 1.092930",
-   "version" : "0.093000",
+   "version" : "0.093070",
    "name" : "DBIx-Class-Helpers",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
    "license" : "perl",
-   "requires" : {
-      "Test::More" : "0",
+   "build_requires" : {
+      "Test::More" : "0.88",
       "parent" : "0",
       "Test::Exception" : "0",
+      "SQL::Translator" : "0.11002",
+      "DBD::SQLite" : "0",
+      "Test::Deep" : "0"
+   },
+   "requires" : {
+      "Lingua::EN::Inflect" : "0",
       "Sub::Exporter" : "0",
       "DBIx::Class" : "0"
    },

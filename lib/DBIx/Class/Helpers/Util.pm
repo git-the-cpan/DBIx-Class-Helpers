@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers::Util;
-our $VERSION = '0.093000';
+our $VERSION = '0.093070';
 
 
 
@@ -51,7 +51,6 @@ sub assert_similar_namespaces {
 
 
 
-
 =pod
 
 =head1 NAME
@@ -60,9 +59,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 0.093000
-
-=pod 
+version 0.093070
 
 =head1 SYNOPSIS
 
@@ -123,8 +120,7 @@ This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 
 
 __END__

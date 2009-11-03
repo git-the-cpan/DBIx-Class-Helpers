@@ -9,16 +9,32 @@ WriteMakefile(
   NAME      => 'DBIx::Class::Helpers',
   AUTHOR    => "Arthur\ Axel\ \"fREW\"\ Schmidt\ \<frioux\+cpan\@gmail\.com\>",
   ABSTRACT  => "Simplify\ the\ common\ case\ stuff\ for\ DBIx\:\:Class\.",
-  VERSION   => '0.093000',
+  VERSION   => '0.093070',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {
-    "Test::More" => '0',
+  (eval { ExtUtils::MakeMaker->VERSION(6.55_01) } ? () : (
+    "Test::More" => '0.88',
     "parent" => '0',
     "Test::Exception" => '0',
+    "SQL::Translator" => '0.11002',
+    "DBD::SQLite" => '0',
+    "Test::Deep" => '0',
+  )),
+    "Lingua::EN::Inflect" => '0',
     "Sub::Exporter" => '0',
     "DBIx::Class" => '0',
   },
+(eval { ExtUtils::MakeMaker->VERSION(6.55_01) } ? (
+  BUILD_REQUIRES    => {
+    "Test::More" => '0.88',
+    "parent" => '0',
+    "Test::Exception" => '0',
+    "SQL::Translator" => '0.11002',
+    "DBD::SQLite" => '0',
+    "Test::Deep" => '0',
+  },
+) : ()),
   test => {TESTS => 't/*.t'}
 );
 
