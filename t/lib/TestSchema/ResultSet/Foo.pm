@@ -1,5 +1,5 @@
 package TestSchema::ResultSet::Foo;
-our $VERSION = '0.093070';
+our $VERSION = '0.093071';
 
 
 use strict;

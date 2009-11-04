@@ -1,5 +1,5 @@
-package DBIx::Class::Helper::VirtaulView;
-our $VERSION = '0.093070';
+package DBIx::Class::Helper::VirtualView;
+our $VERSION = '0.093071';
 
 
 
@@ -25,17 +25,17 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::VirtaulView - Clean up your SQL namespace
+DBIx::Class::Helper::VirtualView - Clean up your SQL namespace
 
 =head1 VERSION
 
-version 0.093070
+version 0.093071
 
 =head1 SYNOPSIS
 
  # note that this is normally a component for a ResultSet
  package MySchema::ResultSet::Bar;
-our $VERSION = '0.093070';
+our $VERSION = '0.093071';
 
 
 
