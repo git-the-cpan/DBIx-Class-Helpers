@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::JoinTable;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 
@@ -28,7 +28,8 @@ BEGIN {
 }
 
 sub _pluralize {
-   my ($self, $original) = @_;
+   my $self = shift;
+   my $original = shift or return;
    return join q{_}, split /\s+/,
       Lingua::EN::Inflect::PL(join q{ }, split /_/, $original);
 }
@@ -151,12 +152,12 @@ DBIx::Class::Helper::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 0.093071
+version 0.093140
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::Result::Foo_Bar;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 

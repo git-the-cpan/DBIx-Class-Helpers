@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 use strict;
@@ -19,12 +19,12 @@ DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 =head1 VERSION
 
-version 0.093071
+version 0.093140
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::Result::Foo_Bar;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 
@@ -39,7 +39,7 @@ our $VERSION = '0.093071';
 
  # define parent class
  package ParentSchema::Result::Bar;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 
@@ -60,7 +60,7 @@ our $VERSION = '0.093071';
 
  # define subclass
  package MySchema::Result::Bar;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 

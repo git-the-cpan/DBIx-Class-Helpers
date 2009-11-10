@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::VirtualView;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 
@@ -29,13 +29,13 @@ DBIx::Class::Helper::VirtualView - Clean up your SQL namespace
 
 =head1 VERSION
 
-version 0.093071
+version 0.093140
 
 =head1 SYNOPSIS
 
  # note that this is normally a component for a ResultSet
  package MySchema::ResultSet::Bar;
-our $VERSION = '0.093071';
+our $VERSION = '0.093140';
 
 
 
