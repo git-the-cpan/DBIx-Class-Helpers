@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::VirtualView;
-our $VERSION = '0.093140';
+our $VERSION = '0.093270';
 
 
 
@@ -13,7 +13,11 @@ sub as_virtual_view {
 
    return $self->result_source->resultset->search( undef, {
       alias => 'me',
-      from => [{ me => $self->as_query }]
+      from => [{
+            me => $self->as_query,
+            -alias         => 'me',
+            -source_handle => $self->result_source->handle,
+         }]
    });
 }
 
@@ -29,15 +33,12 @@ DBIx::Class::Helper::VirtualView - Clean up your SQL namespace
 
 =head1 VERSION
 
-version 0.093140
+version 0.093270
 
 =head1 SYNOPSIS
 
  # note that this is normally a component for a ResultSet
  package MySchema::ResultSet::Bar;
-our $VERSION = '0.093140';
-
-
 
  use strict;
  use warnings;
@@ -89,6 +90,11 @@ in the following manner:
  use DBIx::Class:Helper::VirtualView;
 
  my $new_rs = DBIx::Class::Helper::VirtualView::as_virtual_view($rs);
+
+=head1 THANKS
+
+Thanks to ijw from #dbix-class for the idea for this helper (originally called
+seal), most of the code, and most of the documentation.
 
 =head1 AUTHOR
 

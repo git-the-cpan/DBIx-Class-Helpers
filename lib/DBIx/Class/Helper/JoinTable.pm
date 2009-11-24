@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::JoinTable;
-our $VERSION = '0.093140';
+our $VERSION = '0.093270';
 
 
 
@@ -152,14 +152,11 @@ DBIx::Class::Helper::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 0.093140
+version 0.093270
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::Result::Foo_Bar;
-our $VERSION = '0.093140';
-
-
 
  __PACKAGE__->load_components(qw{Helper::JoinTable Core});
 

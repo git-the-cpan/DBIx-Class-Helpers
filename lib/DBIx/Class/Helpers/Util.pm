@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers::Util;
-our $VERSION = '0.093140';
+our $VERSION = '0.093270';
 
 
 
@@ -59,7 +59,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 0.093140
+version 0.093270
 
 =head1 SYNOPSIS
 

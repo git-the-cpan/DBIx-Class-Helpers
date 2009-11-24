@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::SubClass;
-our $VERSION = '0.093140';
+our $VERSION = '0.093270';
 
 
 
@@ -53,15 +53,12 @@ DBIx::Class::Helper::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 0.093140
+version 0.093270
 
 =head1 SYNOPSIS
 
  # define parent class
  package ParentSchema::Result::Bar;
-our $VERSION = '0.093140';
-
-
 
  use strict;
  use warnings;
@@ -80,9 +77,6 @@ our $VERSION = '0.093140';
 
  # define subclass
  package MySchema::Result::Bar;
-our $VERSION = '0.093140';
-
-
 
  use strict;
  use warnings;

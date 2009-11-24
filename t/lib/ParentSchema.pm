@@ -1,5 +1,5 @@
 package ParentSchema;
-our $VERSION = '0.093140';
+our $VERSION = '0.093270';
 
 
 use parent 'DBIx::Class::Schema';

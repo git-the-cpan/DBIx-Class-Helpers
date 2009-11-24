@@ -6,6 +6,7 @@ Makefile.PL
 README
 dist.ini
 lib/DBIx/Class/Helper/JoinTable.pm
+lib/DBIx/Class/Helper/Random.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -14,6 +15,7 @@ t/01-subclass.t
 t/02-jointable.t
 t/03-utilities.t
 t/04-virtual_view.t
+t/05-random.t
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
