@@ -1,7 +1,5 @@
 package ParentSchema;
-our $VERSION = '0.093270';
-
-
+our $VERSION = '1.093500';
 use parent 'DBIx::Class::Schema';
 
 __PACKAGE__->load_namespaces();

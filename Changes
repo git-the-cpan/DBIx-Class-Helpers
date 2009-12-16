@@ -1,5 +1,10 @@
 Revision history for DBIx-Class-Helpers
 
+1.093500  2009-12-16 16:12:00 CST6CDT
+       - Add IgnoreWantarray helper
+       - Pull column def information from foreign tables
+         for JoinTable helper, see pod in helper for details
+
 0.093270 Mon Nov 23 10:45 2009
        - Add Random helper
        - Clean up as_virtual_view with recommendation from ijw and ribasushi

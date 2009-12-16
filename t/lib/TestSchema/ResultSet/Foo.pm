@@ -1,11 +1,9 @@
 package TestSchema::ResultSet::Foo;
-our $VERSION = '0.093270';
-
-
+our $VERSION = '1.093500';
 use strict;
 use warnings;
 
-use parent 'DBIx::Class::ResultSet';
+use parent 'TestSchema::ResultSet';
 
 __PACKAGE__->load_components(qw{ Helper::Random Helper::VirtualView });
 

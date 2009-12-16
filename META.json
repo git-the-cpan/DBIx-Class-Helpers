@@ -2,12 +2,12 @@
    "resources" : {
       "repository" : "http://github.com/frioux/DBIx-Class-Helpers"
    },
-   "generated_by" : "Dist::Zilla version 1.093280",
+   "generated_by" : "Dist::Zilla version 1.093400",
    "meta-spec" : {
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.093270",
+   "version" : "1.093500",
    "name" : "DBIx-Class-Helpers",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"

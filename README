@@ -2,7 +2,7 @@ NAME
     DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 VERSION
-    version 0.093270
+    version 1.093500
 
 SYNOPSIS
      package MyApp::Schema::Result::Foo_Bar;
