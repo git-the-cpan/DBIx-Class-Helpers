@@ -1,5 +1,8 @@
 Revision history for DBIx-Class-Helpers
 
+1.093501  2009-12-16 16:32:55 CST6CDT
+       - Fix deps list
+
 1.093500  2009-12-16 16:12:00 CST6CDT
        - Add IgnoreWantarray helper
        - Pull column def information from foreign tables

@@ -2,13 +2,6 @@
 abstract: 'Simplify the common case stuff for DBIx::Class.'
 author:
   - "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
-build_requires:
-  DBD::SQLite: 0
-  SQL::Translator: 0.11002
-  Test::Deep: 0
-  Test::Exception: 0
-  Test::More: 0.88
-  parent: 0
 generated_by: 'Dist::Zilla version 1.093400'
 license: perl
 meta-spec:
@@ -16,9 +9,15 @@ meta-spec:
   version: 1.4
 name: DBIx-Class-Helpers
 requires:
+  DBD::SQLite: 0
   DBIx::Class: 0.08100
   Lingua::EN::Inflect: 0
+  SQL::Translator: 0.11002
   Sub::Exporter: 0
+  Test::Deep: 0
+  Test::Exception: 0
+  Test::More: 0.88
+  parent: 0
 resources:
   repository: http://github.com/frioux/DBIx-Class-Helpers
-version: 1.093500
+version: 1.093501
