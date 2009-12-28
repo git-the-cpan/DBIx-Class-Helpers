@@ -1,5 +1,5 @@
 package ParentSchema::Result::Bar;
-our $VERSION = '1.093501';
+our $VERSION = '2.00000_1';
 use parent 'DBIx::Class';
 use strict;
 use warnings;
@@ -17,5 +17,6 @@ __PACKAGE__->add_columns(id => {
 __PACKAGE__->set_primary_key('id');
 
 __PACKAGE__->belongs_to( foo => 'ParentSchema::Result::Foo', 'foo_id' );
+__PACKAGE__->has_many(  foos => 'ParentSchema::Result::Foo', 'bar_id' );
 
 1;

@@ -1,10 +1,10 @@
 package TestSchema::Result::Gnarly_Station;
-our $VERSION = '1.093501';
+our $VERSION = '2.00000_1';
 use parent 'DBIx::Class';
 use strict;
 use warnings;
 
-__PACKAGE__->load_components(qw{Helper::JoinTable Core});
+__PACKAGE__->load_components(qw{Helper::Row::JoinTable Core});
 
 my $config = {
    left_class          => 'Gnarly',

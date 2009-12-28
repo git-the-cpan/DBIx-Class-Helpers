@@ -2,7 +2,7 @@ NAME
     DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 VERSION
-    version 1.093501
+    version 2.00000_1
 
 SYNOPSIS
      package MyApp::Schema::Result::Foo_Bar;
@@ -47,8 +47,8 @@ SYNOPSIS
      __PACKAGE__->subclass;
 
 SEE ALSO
-    DBIx::Class::Helper::JoinTable, DBIx::Class::Helper::SubClass,
-    DBIx::Class::Helpers::Util
+    DBIx::Class::Helper::Row::JoinTable,
+    DBIx::Class::Helper::ResultSet::SubClass, DBIx::Class::Helpers::Util
 
 AUTHOR
       Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>

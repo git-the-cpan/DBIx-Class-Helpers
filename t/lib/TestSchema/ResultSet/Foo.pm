@@ -1,10 +1,10 @@
 package TestSchema::ResultSet::Foo;
-our $VERSION = '1.093501';
+our $VERSION = '2.00000_1';
 use strict;
 use warnings;
 
 use parent 'TestSchema::ResultSet';
 
-__PACKAGE__->load_components(qw{ Helper::Random Helper::VirtualView });
+__PACKAGE__->load_components(qw{ Helper::ResultSet::Union Helper::ResultSet::Random Helper::ResultSet::VirtualView });
 
 1;

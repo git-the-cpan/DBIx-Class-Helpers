@@ -2,13 +2,20 @@ Changes
 LICENSE
 MANIFEST
 META.json
-META.yml
 Makefile.PL
 README
+dbfile
 dist.ini
 lib/DBIx/Class/Helper/IgnoreWantarray.pm
 lib/DBIx/Class/Helper/JoinTable.pm
 lib/DBIx/Class/Helper/Random.pm
+lib/DBIx/Class/Helper/ResultSet.pm
+lib/DBIx/Class/Helper/ResultSet/IgnoreWantarray.pm
+lib/DBIx/Class/Helper/ResultSet/Random.pm
+lib/DBIx/Class/Helper/ResultSet/Union.pm
+lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
+lib/DBIx/Class/Helper/Row/JoinTable.pm
+lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -19,6 +26,7 @@ t/03-utilities.t
 t/04-virtual_view.t
 t/05-random.t
 t/06-ignore-wantarray.t
+t/07-union.t
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
@@ -31,5 +39,6 @@ t/lib/TestSchema/Result/Gnarly_Station.pm
 t/lib/TestSchema/Result/Station.pm
 t/lib/TestSchema/ResultSet.pm
 t/lib/TestSchema/ResultSet/Foo.pm
+t/lib/ddl.sql
 t/release-pod-coverage.t
 t/release-pod-syntax.t

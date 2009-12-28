@@ -11,11 +11,10 @@ WriteMakefile(
   NAME      => 'DBIx::Class::Helpers',
   AUTHOR    => "Arthur\ Axel\ \"fREW\"\ Schmidt\ \<frioux\+cpan\@gmail\.com\>",
   ABSTRACT  => "Simplify\ the\ common\ case\ stuff\ for\ DBIx\:\:Class\.",
-  VERSION   => '1.093501',
+  VERSION   => '2.00000_1',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {
-    "SQL::Translator" => '0.11002',
     "Test::Exception" => '0',
     "parent" => '0',
     "DBD::SQLite" => '0',
