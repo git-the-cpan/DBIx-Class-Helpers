@@ -1,5 +1,5 @@
 package TestSchema::Result::Foo_Bar;
-our $VERSION = '2.00000_1';
+our $VERSION = '2.00000_2';
 use parent 'DBIx::Class';
 use strict;
 use warnings;
@@ -8,7 +8,6 @@ use warnings;
 
  __PACKAGE__->join_table({
     left_class   => 'Foo',
-    left_method  => 'foo',
     right_class  => 'Bar',
     right_method => 'bar',
  });

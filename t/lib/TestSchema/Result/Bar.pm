@@ -1,5 +1,5 @@
 package TestSchema::Result::Bar;
-our $VERSION = '2.00000_1';
+our $VERSION = '2.00000_2';
 
 use strict;
 use warnings;

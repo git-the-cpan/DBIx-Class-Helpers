@@ -1,5 +1,11 @@
 Revision history for DBIx-Class-Helpers
 
+2.00000_2 2009-12-29 18:45:15 CST6CDT
+       - note added to SubClass disambiguating it from
+         DBIx::Class::DynamicSubclass (thanks jnap)
+       - random_order_by is now private (_random_order_by)
+       - Depend on String::CamelCase now that it's fixed
+
 2.00000_1 2009-12-28 11:40:43 CST6CDT
        - No longer depend on SQLT
        - Switch to more user friendly versioning

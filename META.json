@@ -7,7 +7,7 @@
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
    "generated_by" : "Dist::Zilla version 1.093400",
-   "version" : "2.00000_1",
+   "version" : "2.00000_2",
    "name" : "DBIx-Class-Helpers",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
@@ -16,6 +16,7 @@
    "requires" : {
       "Test::Exception" : "0",
       "parent" : "0",
+      "String::CamelCase" : "0",
       "DBD::SQLite" : "0",
       "Sub::Exporter" : "0",
       "Test::More" : "0.88",

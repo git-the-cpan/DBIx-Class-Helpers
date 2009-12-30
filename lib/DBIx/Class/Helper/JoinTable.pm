@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::JoinTable;
-our $VERSION = '2.00000_1';
+our $VERSION = '2.00000_2';
 
 use parent 'DBIx::Class::Helper::Row::JoinTable';
 
@@ -17,7 +17,7 @@ DBIx::Class::Helper::JoinTable - (DEPRECATED) Easily set up join tables with DBI
 
 =head1 VERSION
 
-version 2.00000_1
+version 2.00000_2
 
 =head1 DESCRIPTION
 
