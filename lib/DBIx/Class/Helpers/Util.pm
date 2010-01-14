@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers::Util;
-our $VERSION = '2.00000';
+our $VERSION = '2.00100';
 
 use strict;
 use warnings;
@@ -57,7 +57,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.00000
+version 2.00100
 
 =head1 SYNOPSIS
 
@@ -113,7 +113,7 @@ load_namespaces or both are not.  See L</SYNOPSIS> for example.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

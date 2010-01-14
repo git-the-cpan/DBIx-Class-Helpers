@@ -1,12 +1,12 @@
 package TestSchema::Result::Foo;
-our $VERSION = '2.00000';
+our $VERSION = '2.00100';
 
 use strict;
 use warnings;
 
 use parent 'ParentSchema::Result::Foo';
 
-__PACKAGE__->load_components(qw{Helper::Row::SubClass Core});
+__PACKAGE__->load_components(qw{Helper::Row::NumifyGet Helper::Row::SubClass Core});
 
 __PACKAGE__->subclass;
 

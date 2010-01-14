@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Wed Dec 30 13:02:25 2009
+-- Created on Wed Jan 13 23:37:36 2010
 -- 
 
 
@@ -59,7 +59,7 @@ CREATE INDEX Foo_idx_bar_id ON Foo (bar_id);
 DROP TABLE Foo_Bar;
 
 CREATE TABLE Foo_Bar (
-  foo_id integer NOT NULL,
+  foo_id  NOT NULL,
   bar_id integer(12) NOT NULL,
   PRIMARY KEY (foo_id, bar_id)
 );

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-our $VERSION = '2.00000';
+our $VERSION = '2.00100';
 
 use strict;
 use warnings;
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issu
 
 =head1 VERSION
 
-version 2.00000
+version 2.00100
 
 =head1 SYNOPSIS
 
@@ -61,7 +61,7 @@ Override of the default search method to force it to return a ResultSet.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

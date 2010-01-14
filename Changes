@@ -1,5 +1,12 @@
 Revision history for DBIx-Class-Helpers
 
+2.00100   2010-01-13 23:37:34 CST6CDT
+       - fix 'me' in RS::Union
+       - change order in RS::Union so Unioning RS is first instead of last
+       - add Row::NumifyGet
+       - add docs to RS::Union to clarify some of the awesomeness that can be had
+       - fixed union because it didn't actually work before (!!!)
+
 2.00000   2009-12-30 13:02:23 CST6CDT
        - No new changes since dev release
 

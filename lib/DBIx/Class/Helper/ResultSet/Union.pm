@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Union;
-our $VERSION = '2.00000';
+our $VERSION = '2.00100';
 
 use strict;
 use warnings;
@@ -23,7 +23,7 @@ sub union {
 
    $other = [$other] if ref $other ne 'ARRAY';
 
-   push @{$other}, $self;
+   unshift @{$other}, $self;
 
    my @sql;
    my @params;
@@ -49,13 +49,19 @@ sub union {
 
    my $query = q<(> . join(' UNION ', @sql). q<)>;
 
-   return $self->result_source->resultset->search(undef, {
+   my $attrs = $self->_resolved_attrs;
+   my $new_rs = $self->result_source->resultset->search(undef, {
       from => [{
-         me             => \[ $query, @params ],
-         -alias         => $self->current_source_alias,
-         -source_handle => $self->result_source->handle,
-      }]
+         $self->current_source_alias => \[ $query, @params ],
+         -alias                      => $self->current_source_alias,
+         -source_handle              => $self->result_source->handle,
+      }],
+      columns => $attrs->{as},
    });
+
+   $new_rs->result_class($self->result_class);
+
+   return $new_rs;
 }
 
 1;
@@ -70,7 +76,7 @@ DBIx::Class::Helper::ResultSet::Union - Do unions with DBIx::Class
 
 =head1 VERSION
 
-version 2.00000
+version 2.00100
 
 =head1 SYNOPSIS
 
@@ -94,14 +100,51 @@ This component allows you to create unions with your ResultSets.  See
 L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to your
 entire schema.
 
+Component throws exceptions if ResultSets have different ResultClasses or
+different "Columns Specs."
+
+The basic idea here is that in SQL if you union two queries they must be
+selecting the same columns names, so that the results will all match.  The
+deal with the ResultClasses is that DBIC needs to inflate the results the same
+for the entire ResultSet, so if one were to try to union in a table with the
+same column name but different classes DBIC wouldn't be doing what you would
+expect.
+
+A nice way to use this is with L<DBIx::Class::ResultClass::HashRefInflator>.
+
+So you might have something like the following sketch autocompletion code:
+
+ my $rs1 = $schema->resultset('Album')->search({
+    name => { -like => "$input%" }
+ }, {
+   columns => [qw{id name}],
+   '+select' => [\'"album" AS tablename']
+ });
+
+ my $rs2 = $schema->resultset('Artist')->search({
+    name => { -like => "$input%" }
+ }, {
+   columns => [qw{id name}],
+   '+select' => [\'"artist" AS tablename']
+ });
+
+ my $rs3 = $schema->resultset('Song')->search({
+    name => { -like => "$input%" }
+ }, {
+   columns => [qw{id name}],
+   '+select' => [\'"song" AS tablename']
+ });
+
+ $_->result_class('DBIx::Class::ResultClass::HashRefInflator')
+   for ($rs1, $rs2, $rs3);
+
+ my $data = [$rs1->union([$rs2, $rs3])->all];
+
 =head1 METHODS
 
 =head2 union
 
 Takes a single ResultSet or an ArrayRef of ResultSets as the parameter.
-
-Component throws exceptions if ResultSets have different ResultClasses or
-different "Columns Specs."
 
 =head1 AUTHOR
 
@@ -109,7 +152,7 @@ different "Columns Specs."
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

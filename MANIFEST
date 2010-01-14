@@ -15,6 +15,7 @@ lib/DBIx/Class/Helper/ResultSet/Random.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm
+lib/DBIx/Class/Helper/Row/NumifyGet.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
@@ -27,6 +28,7 @@ t/04-virtual_view.t
 t/05-random.t
 t/06-ignore-wantarray.t
 t/07-union.t
+t/08-getnum.t
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
