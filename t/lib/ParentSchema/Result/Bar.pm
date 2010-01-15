@@ -1,5 +1,5 @@
 package ParentSchema::Result::Bar;
-our $VERSION = '2.00100';
+our $VERSION = '2.00101';
 use parent 'DBIx::Class';
 use strict;
 use warnings;

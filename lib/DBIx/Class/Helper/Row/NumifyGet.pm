@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::NumifyGet;
-our $VERSION = '2.00100';
+our $VERSION = '2.00101';
 
 use strict;
 use warnings;
@@ -11,7 +11,8 @@ sub get_column {
 
    my $value = $self->next::method($col);
 
-   $value += 0 if $self->result_source->column_info($col)->{is_numeric};
+   $value += 0 if $self->result_source->column_info($col)->{is_numeric}
+                  and defined($value); # for nullable and autoinc fields
 
    return $value;
 }
@@ -23,7 +24,8 @@ sub get_columns {
 
    for (keys %columns) {
       $columns{$_} += 0
-         if $self->result_source->column_info($_)->{is_numeric};
+         if $self->result_source->column_info($_)->{is_numeric}
+            and defined($columns{$_}); # for nullable and autoinc fields
    }
 
    return %columns;
@@ -41,7 +43,7 @@ DBIx::Class::Helper::Row::NumifyGet - Force numeric "context" on numeric columns
 
 =head1 VERSION
 
-version 2.00100
+version 2.00101
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::SubClass;
-our $VERSION = '2.00100';
+our $VERSION = '2.00101';
 
 use parent 'DBIx::Class::Helper::Row::SubClass';
 
@@ -17,7 +17,7 @@ DBIx::Class::Helper::SubClass - (DEPRECATED) Convenient subclassing with DBIx::C
 
 =head1 VERSION
 
-version 2.00100
+version 2.00101
 
 =head1 DESCRIPTION
 

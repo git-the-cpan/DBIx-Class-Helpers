@@ -29,6 +29,7 @@ t/05-random.t
 t/06-ignore-wantarray.t
 t/07-union.t
 t/08-getnum.t
+t/dbfile
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm

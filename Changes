@@ -1,5 +1,10 @@
 Revision history for DBIx-Class-Helpers
 
+2.00101   2010-01-15 02:14:55 CST6CDT
+       - fix bug in Random where if a user calls random and schema isn't
+         connected yet we get false storage type (thanks jnap)
+       - fix NumifyGet for nullable and autoinc columns
+
 2.00100   2010-01-13 23:37:34 CST6CDT
        - fix 'me' in RS::Union
        - change order in RS::Union so Unioning RS is first instead of last
