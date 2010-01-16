@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SubClass;
-our $VERSION = '2.00101';
+our $VERSION = '2.00102';
 
 use strict;
 use warnings;
@@ -51,7 +51,7 @@ DBIx::Class::Helper::Row::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 2.00101
+version 2.00102
 
 =head1 SYNOPSIS
 

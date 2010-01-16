@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-our $VERSION = '2.00101';
+our $VERSION = '2.00102';
 
 use strict;
 use warnings;
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issu
 
 =head1 VERSION
 
-version 2.00101
+version 2.00102
 
 =head1 SYNOPSIS
 

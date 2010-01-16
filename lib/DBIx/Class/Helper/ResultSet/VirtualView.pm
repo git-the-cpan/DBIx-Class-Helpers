@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-our $VERSION = '2.00101';
+our $VERSION = '2.00102';
 
 use strict;
 use warnings;
@@ -31,7 +31,7 @@ DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace
 
 =head1 VERSION
 
-version 2.00101
+version 2.00102
 
 =head1 SYNOPSIS
 

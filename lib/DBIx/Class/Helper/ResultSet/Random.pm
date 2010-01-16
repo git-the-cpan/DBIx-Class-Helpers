@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Random;
-our $VERSION = '2.00101';
+our $VERSION = '2.00102';
 
 use strict;
 use warnings;
@@ -20,7 +20,7 @@ my %rand_order_by = (
 
 sub _rand_order_by {
    my $self = shift;
-   $self->result_source->storage->ensure_connected;
+   $self->result_source->storage->_determine_driver;
    return $rand_order_by{ref $self->result_source->storage} || 'RAND()';
 }
 
@@ -51,7 +51,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.00101
+version 2.00102
 
 =head1 SYNOPSIS
 
