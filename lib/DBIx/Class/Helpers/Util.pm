@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers::Util;
-our $VERSION = '2.00102';
+our $VERSION = '2.00200';
 
 use strict;
 use warnings;
@@ -18,7 +18,7 @@ use Sub::Exporter -setup => {
 sub get_namespace_parts {
    my $package = shift;
 
-   if ($package =~ m/([\w:]+)::(\w+)/) {
+   if ($package =~ m/(^[\w:]+::Result)::([\w:]+)$/) {
       return ($1, $2);
    } else {
       die "$package doesn't look like".'$namespace::$resultclass';
@@ -57,7 +57,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.00102
+version 2.00200
 
 =head1 SYNOPSIS
 

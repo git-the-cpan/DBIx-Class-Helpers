@@ -1,5 +1,5 @@
 package TestSchema::ResultSet;
-our $VERSION = '2.00102';
+our $VERSION = '2.00200';
 
 use strict;
 use warnings;

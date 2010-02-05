@@ -1,5 +1,5 @@
 package ParentSchema::Result::Foo;
-our $VERSION = '2.00102';
+our $VERSION = '2.00200';
 use parent 'DBIx::Class';
 use strict;
 use warnings;
@@ -12,7 +12,9 @@ __PACKAGE__->add_columns(
    id => {
       is_numeric => 1,
    },
-   'bar_id'
+   bar_id => {
+      data_type => 'integer'
+   },
 );
 
 __PACKAGE__->set_primary_key('id');

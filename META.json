@@ -2,12 +2,12 @@
    "resources" : {
       "repository" : "http://github.com/frioux/DBIx-Class-Helpers"
    },
+   "generated_by" : "Dist::Zilla version 1.100160",
    "meta-spec" : {
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "generated_by" : "Dist::Zilla version 1.093400",
-   "version" : "2.00102",
+   "version" : "2.00200",
    "name" : "DBIx-Class-Helpers",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
@@ -18,11 +18,12 @@
       "parent" : "0",
       "String::CamelCase" : "0",
       "DBD::SQLite" : "0",
+      "ExtUtils::MakeMaker" : "6.11",
       "Sub::Exporter" : "0",
       "Test::More" : "0.88",
       "Lingua::EN::Inflect" : "0",
-      "Test::Deep" : "0",
-      "DBIx::Class" : "0.08100"
+      "DBIx::Class" : "0.08117",
+      "Test::Deep" : "0"
    },
    "abstract" : "Simplify the common case stuff for DBIx::Class."
 }

@@ -1,5 +1,12 @@
 Revision history for DBIx-Class-Helpers
 
+2.00200   2010-02-05 14:15:06 CST6CDT
+       - Allow multiple levels for result in namespace for get_namespace_parts
+         (aka, Foo::Schema::Result::Baz::Biff) (for melo)
+       - Add Helper::Row::ToJSON
+       - Autopopulate is_numeric correcly with NumifyGet
+       - Fix mssql Random to use RAND() (pldoh, #RT53885)
+
 2.00102   2010-01-15 21:50:20 CST6CDT
        - Better performance for some cases in NumifyGet
        - _determine_driver is better than _ensure_connected ( Random )

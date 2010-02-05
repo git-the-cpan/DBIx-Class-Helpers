@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Random;
-our $VERSION = '2.00102';
+our $VERSION = '2.00200';
 
 use parent 'DBIx::Class::Helper::ResultSet::Random';
 
@@ -17,7 +17,7 @@ DBIx::Class::Helper::Random - (DEPRECATED) Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.00102
+version 2.00200
 
 =head1 DESCRIPTION
 

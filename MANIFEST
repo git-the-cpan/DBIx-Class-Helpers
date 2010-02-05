@@ -4,6 +4,7 @@ MANIFEST
 META.json
 Makefile.PL
 README
+contributing
 dbfile
 dist.ini
 lib/DBIx/Class/Helper/IgnoreWantarray.pm
@@ -17,6 +18,7 @@ lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm
 lib/DBIx/Class/Helper/Row/NumifyGet.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
+lib/DBIx/Class/Helper/Row/ToJSON.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -29,7 +31,7 @@ t/05-random.t
 t/06-ignore-wantarray.t
 t/07-union.t
 t/08-getnum.t
-t/dbfile
+t/09-to_json.t
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm

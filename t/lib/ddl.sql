@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Fri Jan 15 21:50:22 2010
+-- Created on Fri Feb  5 13:34:18 2010
 -- 
 
 
@@ -14,6 +14,8 @@ DROP TABLE Gnarly;
 CREATE TABLE Gnarly (
   id  NOT NULL,
   name  NOT NULL,
+  literature text,
+  your_mom blob,
   PRIMARY KEY (id)
 );
 
@@ -47,7 +49,7 @@ DROP TABLE Foo;
 
 CREATE TABLE Foo (
   id  NOT NULL,
-  bar_id  NOT NULL,
+  bar_id integer NOT NULL,
   PRIMARY KEY (id)
 );
 
