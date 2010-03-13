@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::ToJSON;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -66,13 +66,15 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::Result::KittenRobot;
 
- __PACKAGE__->load_components(qw{Helper::Row::ToJSON Core});
+ use base 'DBIx::Class::Core';
+
+ __PACKAGE__->load_components(qw{Helper::Row::ToJSON});
 
  __PACKAGE__->table('KittenRobot');
  __PACKAGE__->add_columns(
@@ -114,7 +116,7 @@ This helper adds a JSON method like the following:
 
  $self->_is_column_serializable('kitten')
 
-returns true if a column should be serializabel or not.  Currently this marks
+returns true if a column should be serializable or not.  Currently this marks
 everything as serializable unless C<is_serializable> is set to false, or
 C<data_type> is a C<blob>, C<text>, or C<ntext> columns.  If you wanted to only
 have explicit serialization you might override this method to look like this:

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Union;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -51,6 +51,7 @@ sub union {
 
    my $attrs = $self->_resolved_attrs;
    my $new_rs = $self->result_source->resultset->search(undef, {
+      alias => $self->current_source_alias,
       from => [{
          $self->current_source_alias => \[ $query, @params ],
          -alias                      => $self->current_source_alias,
@@ -76,7 +77,7 @@ DBIx::Class::Helper::ResultSet::Union - Do unions with DBIx::Class
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 

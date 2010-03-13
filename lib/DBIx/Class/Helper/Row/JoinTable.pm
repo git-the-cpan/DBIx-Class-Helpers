@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::JoinTable;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -122,13 +122,13 @@ sub _add_join_column {
       map {
          my $info = $class->column_info($_);
          my $result = {};
-	 my $defined = undef;
-	 for (@datas) {
-	    if (defined $info->{$_}) {
-	       $defined = 1;
-	       $result->{$_} = $info->{$_};
-	    }
-	 }
+         my $defined = undef;
+         for (@datas) {
+            if (defined $info->{$_}) {
+               $defined = 1;
+               $result->{$_} = $info->{$_};
+            }
+         }
          $result = $default unless $defined;
          $result;
       } $class->primary_columns
@@ -147,7 +147,6 @@ sub _add_join_column {
          );
       }
    }
-
 }
 
 sub add_join_columns {
@@ -181,13 +180,13 @@ DBIx::Class::Helper::Row::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::Result::Foo_Bar;
 
- __PACKAGE__->load_components(qw{Helper::JoinTable Core});
+ __PACKAGE__->load_components(qw{Helper::Row::JoinTable Core});
 
  __PACKAGE__->join_table({
     left_class   => 'Foo',

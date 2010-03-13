@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -22,13 +22,13 @@ DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issu
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::ResultSet::Foo;
 
- __PACKAGE__->load_components(qw{Helper::IgnoreWantarray});
+ __PACKAGE__->load_components(qw{Helper::ResultSet::IgnoreWantarray});
 
  ...
 

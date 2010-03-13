@@ -1,5 +1,5 @@
 package TestSchema::Result::Foo_Bar;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 use parent 'DBIx::Class';
 use strict;
 use warnings;

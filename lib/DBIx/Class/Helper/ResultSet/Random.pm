@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Random;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -51,7 +51,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 
@@ -63,7 +63,7 @@ version 2.00200
 
  use parent 'DBIx::Class::ResultSet';
 
- __PACKAGE__->load_components('Helper::Random');
+ __PACKAGE__->load_components('Helper::ResultSet::Random');
 
  # in code using resultset:
  my $random_row  = $schema->resultset('Bar')->rand->single;

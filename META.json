@@ -2,29 +2,32 @@
    "resources" : {
       "repository" : "http://github.com/frioux/DBIx-Class-Helpers"
    },
-   "generated_by" : "Dist::Zilla version 1.100160",
    "meta-spec" : {
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "2.00200",
+   "generated_by" : "Dist::Zilla version 1.100660",
+   "version" : "2.002001",
    "name" : "DBIx-Class-Helpers",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
    "license" : "perl",
+   "build_requires" : {},
    "requires" : {
-      "Test::Exception" : "0",
-      "parent" : "0",
       "String::CamelCase" : "0",
+      "parent" : "0",
+      "Test::Exception" : "0",
       "DBD::SQLite" : "0",
-      "ExtUtils::MakeMaker" : "6.11",
       "Sub::Exporter" : "0",
       "Test::More" : "0.88",
       "Lingua::EN::Inflect" : "0",
-      "DBIx::Class" : "0.08117",
-      "Test::Deep" : "0"
+      "Test::Deep" : "0",
+      "DBIx::Class" : "0.08118"
    },
-   "abstract" : "Simplify the common case stuff for DBIx::Class."
+   "abstract" : "Simplify the common case stuff for DBIx::Class.",
+   "configure_requires" : {
+      "ExtUtils::MakeMaker" : "6.11"
+   }
 }
 

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SubClass;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -51,7 +51,7 @@ DBIx::Class::Helper::Row::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 
@@ -81,7 +81,7 @@ version 2.00200
 
  use parent 'ParentSchema::Result::Bar';
 
- __PACKAGE__->load_components(qw{Helper::SubClass Core});
+ __PACKAGE__->load_components(qw{Helper::Row::SubClass Core});
 
  __PACKAGE__->subclass;
 

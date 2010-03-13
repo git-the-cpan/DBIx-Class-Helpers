@@ -1,7 +1,10 @@
 package DBIx::Class::Helper::IgnoreWantarray;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use parent 'DBIx::Class::Helper::ResultSet::IgnoreWantarray';
+use Carp::Clan;
+carp 'This module is deprecated!  Pleause use the namespaced version instead!' if $VERSION >= 3;
+croak 'This module is deprecated!  Pleause use the namespaced version instead!' if $VERSION >= 4;
 
 # ABSTRACT: (DEPRECATED) Get rid of search context issues
 
@@ -17,7 +20,7 @@ DBIx::Class::Helper::IgnoreWantarray - (DEPRECATED) Get rid of search context is
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 DESCRIPTION
 

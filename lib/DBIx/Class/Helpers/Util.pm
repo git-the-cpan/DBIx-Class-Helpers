@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers::Util;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
@@ -21,7 +21,7 @@ sub get_namespace_parts {
    if ($package =~ m/(^[\w:]+::Result)::([\w:]+)$/) {
       return ($1, $2);
    } else {
-      die "$package doesn't look like".'$namespace::$resultclass';
+      die "$package doesn't look like ".'$namespace::Result::$resultclass';
    }
 }
 
@@ -57,7 +57,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 

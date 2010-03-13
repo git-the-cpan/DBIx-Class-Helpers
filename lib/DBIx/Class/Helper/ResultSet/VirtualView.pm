@@ -1,23 +1,20 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use strict;
 use warnings;
 
-# ABSTRACT: Clean up your SQL namespace
+# ABSTRACT: Clean up your SQL namespace (DEPRECATED)
 
 sub as_virtual_view {
    my $self = shift;
 
-   return $self->result_source->resultset->search( undef, {
-      alias => 'me',
-      from => [{
-            me => $self->as_query,
-            -alias         => $self->current_source_alias,
-            -source_handle => $self->result_source->handle,
-         }]
-   });
+   return $self->as_subselect_rs;
 }
+
+use Carp::Clan;
+carp 'This module is deprecated!  Pleause use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 3;
+croak 'This module is deprecated!  Pleause use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 4;
 
 1;
 
@@ -27,11 +24,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace
+DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRECATED)
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 SYNOPSIS
 
@@ -43,7 +40,7 @@ version 2.00200
 
  use parent 'DBIx::Class::ResultSet';
 
- __PACKAGE__->load_components('Helper::VirtualView');
+ __PACKAGE__->load_components('Helper::ResultSet::VirtualView');
 
  # and then in code that uses the ResultSet Join with relation x
  my $rs = $schema->resultset('Bar')->search({'x.name' => 'abc'},{ join => 'x' });
@@ -71,6 +68,13 @@ version 2.00200
 This component is will allow you to clean up your SQL namespace.  See
 L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to your
 entire schema.
+
+=head1 DEPRECATED
+
+This component has been suplanted by
+L<DBIx::Class::ResultSet::as_subselect_rs>.  In the next major version
+(3) we will begin issuing a warning on it's use.  In the major version after
+that (4) we will remove it entirely.
 
 =head1 METHODS
 

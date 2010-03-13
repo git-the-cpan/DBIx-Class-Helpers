@@ -1,7 +1,10 @@
 package DBIx::Class::Helper::Random;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use parent 'DBIx::Class::Helper::ResultSet::Random';
+use Carp::Clan;
+carp 'This module is deprecated!  Pleause use the namespaced version instead!' if $VERSION >= 3;
+croak 'This module is deprecated!  Pleause use the namespaced version instead!' if $VERSION >= 4;
 
 # ABSTRACT: (DEPRECATED) Get random rows from a ResultSet
 
@@ -17,7 +20,7 @@ DBIx::Class::Helper::Random - (DEPRECATED) Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 DESCRIPTION
 

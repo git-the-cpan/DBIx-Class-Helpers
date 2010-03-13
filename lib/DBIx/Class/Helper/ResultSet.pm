@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet;
-our $VERSION = '2.00200';
+our $VERSION = '2.002001';
 
 use parent qw{
    DBIx::Class::Helper::ResultSet::IgnoreWantarray
@@ -8,7 +8,7 @@ use parent qw{
    DBIx::Class::Helper::ResultSet::VirtualView
 };
 
-# ABSTRACT: All the He
+# ABSTRACT: All the ResultSet Helpers in one place
 
 1;
 
@@ -18,11 +18,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet - All the He
+DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
 
 =head1 VERSION
 
-version 2.00200
+version 2.002001
 
 =head1 DESCRIPTION
 
