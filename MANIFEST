@@ -12,6 +12,7 @@ lib/DBIx/Class/Helper/IgnoreWantarray.pm
 lib/DBIx/Class/Helper/JoinTable.pm
 lib/DBIx/Class/Helper/Random.pm
 lib/DBIx/Class/Helper/ResultSet.pm
+lib/DBIx/Class/Helper/ResultSet/.VirtualView.pm.swp
 lib/DBIx/Class/Helper/ResultSet/IgnoreWantarray.pm
 lib/DBIx/Class/Helper/ResultSet/Random.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm

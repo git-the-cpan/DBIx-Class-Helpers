@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Random;
-our $VERSION = '2.002001';
+our $VERSION = '2.002002';
 
 use strict;
 use warnings;
@@ -14,7 +14,7 @@ my %rand_order_by = (
    'DBIx::Class::Storage::DBI::mysql'                      => 'RAND()',
    'DBIx::Class::Storage::DBI::ODBC::Microsoft_SQL_Server' => 'RAND()',
    'DBIx::Class::Storage::DBI::MSSQL'                      => 'RAND()',
-   'DBIx::Class::Storage::DBI::Pg'                         => 'RAND()',
+   'DBIx::Class::Storage::DBI::Pg'                         => 'RANDOM()',
    'DBIx::Class::Storage::DBI::Oracle'                     => 'dbms_random.value',
 );
 
@@ -51,7 +51,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.002001
+version 2.002002
 
 =head1 SYNOPSIS
 

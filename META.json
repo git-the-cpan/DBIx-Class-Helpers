@@ -6,8 +6,8 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "generated_by" : "Dist::Zilla version 1.100660",
-   "version" : "2.002001",
+   "generated_by" : "Dist::Zilla version 1.100711",
+   "version" : "2.002002",
    "name" : "DBIx-Class-Helpers",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
