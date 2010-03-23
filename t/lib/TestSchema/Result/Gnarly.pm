@@ -1,5 +1,5 @@
 package TestSchema::Result::Gnarly;
-our $VERSION = '2.003000';
+our $VERSION = '2.003001';
 use parent 'DBIx::Class';
 use strict;
 use warnings;

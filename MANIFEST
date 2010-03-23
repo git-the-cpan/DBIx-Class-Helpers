@@ -33,6 +33,7 @@ t/06-ignore-wantarray.t
 t/07-set_operations.t
 t/08-getnum.t
 t/09-to_json.t
+t/lib/.TestSchema.pm.swp
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
