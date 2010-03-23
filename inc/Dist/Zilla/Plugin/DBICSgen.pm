@@ -1,5 +1,5 @@
 package inc::Dist::Zilla::Plugin::DBICSgen;
-our $VERSION = '2.002002';
+our $VERSION = '2.003000';
 
 use strict;
 use warnings;

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet;
-our $VERSION = '2.002002';
+our $VERSION = '2.003000';
 
 use parent qw{
    DBIx::Class::Helper::ResultSet::IgnoreWantarray
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
 
 =head1 VERSION
 
-version 2.002002
+version 2.003000
 
 =head1 DESCRIPTION
 

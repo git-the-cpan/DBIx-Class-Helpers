@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-our $VERSION = '2.002002';
+our $VERSION = '2.003000';
 
 use strict;
 use warnings;
@@ -13,8 +13,8 @@ sub as_virtual_view {
 }
 
 use Carp::Clan;
-carp 'This module is deprecated!  Pleause use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 3;
-croak 'This module is deprecated!  Pleause use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 4;
+carp 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 3;
+croak 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 4;
 
 1;
 
@@ -28,7 +28,7 @@ DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRE
 
 =head1 VERSION
 
-version 2.002002
+version 2.003000
 
 =head1 SYNOPSIS
 

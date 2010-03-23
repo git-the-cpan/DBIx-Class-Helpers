@@ -1,5 +1,10 @@
 Revision history for DBIx-Class-Helpers
 
+2.003000  2010-03-22 21:27:14 CST6CDT
+       - Fix tests to correctly generate test database
+       - Stop bundling sqlite database with distribution!
+       - Change DBICH::Union into DBICH::SetOperations (nothingmuch)
+
 2.002002  2010-03-14 20:18:59 CST6CDT
        - DBIx::Class::Helper::ResultSet::Random declared RAND() as the
          random function for PostgreSQL when Pg uses RANDOM(). This
