@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Union;
-our $VERSION = '2.003001';
+our $VERSION = '2.003002';
 
 use parent 'DBIx::Class::Helper::ResultSet::SetOperations';
 
@@ -21,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Union - (DEPRECATED) Get rid of search context i
 
 =head1 VERSION
 
-version 2.003001
+version 2.003002
 
 =head1 DESCRIPTION
 
