@@ -1,10 +1,22 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Wed Mar 24 23:49:07 2010
+-- Created on Thu Jul 29 21:07:03 2010
 -- 
 
-
 BEGIN TRANSACTION;
+
+--
+-- Table: Bloaty
+--
+DROP TABLE Bloaty;
+
+CREATE TABLE Bloaty (
+  id  NOT NULL,
+  name  NOT NULL,
+  literature text,
+  your_mom blob,
+  PRIMARY KEY (id)
+);
 
 --
 -- Table: Gnarly

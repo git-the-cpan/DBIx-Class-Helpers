@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::Row::JoinTable;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helper::Row::JoinTable::VERSION = '2.004000';
+}
 
 use strict;
 use warnings;
@@ -9,6 +11,17 @@ use warnings;
 use DBIx::Class::Helpers::Util 'get_namespace_parts';
 use Lingua::EN::Inflect ();
 use String::CamelCase ();
+use DBIx::Class::Candy::Exports;
+
+export_methods [qw(
+   join_table
+   generate_primary_key
+   generate_has_manys
+   generate_many_to_manys
+   generate_relationships
+   set_table
+   add_join_columns
+)];
 
 sub _pluralize {
    my $self = shift;
@@ -180,7 +193,7 @@ DBIx::Class::Helper::Row::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -215,6 +228,19 @@ version 2.003002
 
  __PACKAGE__->belongs_to( foo => 'MyApp::Schema::Result::Foo' 'foo_id');
  __PACKAGE__->belongs_to( bar => 'MyApp::Schema::Result::Bar' 'bar_id');
+
+or with L<DBIx::Class::Candy>:
+
+ package MyApp::Schema::Result::Foo_Bar;
+
+ use DBIx::Class::Candy -components => ['Helper::Row::JoinTable'];
+
+ join_table {
+    left_class   => 'Foo',
+    left_method  => 'foo',
+    right_class  => 'Bar',
+    right_method => 'bar',
+ };
 
 =head1 METHODS
 
@@ -273,6 +299,28 @@ C<"${namespace}::Schema::Result::$left_class"> respectively.
 
 This method sets the table to "${left_class}_${right_class}".
 
+=head1 CANDY EXPORTS
+
+If used in conjunction with L<DBIx::Class::Candy> this component will export:
+
+=over
+
+=item join_table
+
+=item generate_primary_key
+
+=item generate_has_manys
+
+=item generate_many_to_manys
+
+=item generate_relationships
+
+=item set_table
+
+=item add_join_columns
+
+=back
+
 =head2 NOTE
 
 This module uses L<String::CamelCase> to default the method names and uses
@@ -293,7 +341,7 @@ C<is_numeric>, and C<extra> from the foreign tables.
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

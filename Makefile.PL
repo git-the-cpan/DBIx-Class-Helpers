@@ -4,41 +4,55 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.11;
+use ExtUtils::MakeMaker 6.31;
 
 
 
 my %WriteMakefileArgs = (
-                       'test' => {
-                                   'TESTS' => 't/*.t'
-                                 },
-                       'NAME' => 'DBIx::Class::Helpers',
-                       'DISTNAME' => 'DBIx-Class-Helpers',
-                       'CONFIGURE_REQUIRES' => {
-                                                 'ExtUtils::MakeMaker' => '6.11'
-                                               },
-                       'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>',
-                       'BUILD_REQUIRES' => {},
-                       'ABSTRACT' => 'Simplify the common case stuff for DBIx::Class.',
-                       'EXE_FILES' => [],
-                       'VERSION' => '2.003002',
-                       'PREREQ_PM' => {
-                                        'String::CamelCase' => '0',
-                                        'parent' => '0',
-                                        'Test::Exception' => '0',
-                                        'DBD::SQLite' => '0',
-                                        'Sub::Exporter' => '0',
-                                        'Test::More' => '0.88',
-                                        'Lingua::EN::Inflect' => '0',
-                                        'Test::Deep' => '0',
-                                        'DBIx::Class' => '0.08118'
-                                      },
-                       'LICENSE' => 'perl'
-                     );
+  'ABSTRACT' => 'Simplify the common case stuff for DBIx::Class.',
+  'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>',
+  'BUILD_REQUIRES' => {},
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
+  },
+  'DISTNAME' => 'DBIx-Class-Helpers',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'DBIx::Class::Helpers',
+  'PREREQ_PM' => {
+    'DBD::SQLite' => '0',
+    'DBIx::Class' => '0.08118',
+    'DBIx::Class::Candy' => '0.001003',
+    'Lingua::EN::Inflect' => '0',
+    'String::CamelCase' => '0',
+    'Sub::Exporter' => '0',
+    'Test::Deep' => '0',
+    'Test::Exception' => '0',
+    'Test::More' => '0.88',
+    'parent' => '0'
+  },
+  'VERSION' => '2.004000',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
+);
 
 
-delete $WriteMakefileArgs{LICENSE}
-  unless eval { ExtUtils::MakeMaker->VERSION(6.31) };
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
 
 WriteMakefile(%WriteMakefileArgs);
 

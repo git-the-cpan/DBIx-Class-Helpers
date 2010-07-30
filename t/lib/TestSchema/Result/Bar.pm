@@ -1,13 +1,22 @@
 package TestSchema::Result::Bar;
-our $VERSION = '2.003002';
 
-use strict;
-use warnings;
+use DBIx::Class::Candy
+   -base => 'ParentSchema::Result::Bar',
+   -components => [qw(
+      Helper::Row::ToJSON
+      Helper::Row::SubClass
+      Helper::Row::OnColumnChange
+    )];
 
-use parent 'ParentSchema::Result::Bar';
+our @events;
 
-__PACKAGE__->load_components(qw{Helper::Row::ToJSON Helper::Row::SubClass Core});
+subclass;
 
-__PACKAGE__->subclass;
+before_column_change(foo_id => {
+   method => 'before_foo_id',
+});
+
+
+sub before_foo_id { push @events, [before_foo_id => $_[1], $_[2]] }
 
 1;

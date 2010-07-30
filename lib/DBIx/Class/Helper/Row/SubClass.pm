@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::Row::SubClass;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helper::Row::SubClass::VERSION = '2.004000';
+}
 
 use strict;
 use warnings;
@@ -7,6 +9,9 @@ use warnings;
 # ABSTRACT: Convenient subclassing with DBIx::Class
 
 use DBIx::Class::Helpers::Util qw{get_namespace_parts assert_similar_namespaces};
+use DBIx::Class::Candy::Exports;
+
+export_methods [qw(subclass generate_relationships set_table)];
 
 sub subclass {
    my $self = shift;
@@ -51,7 +56,7 @@ DBIx::Class::Helper::Row::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -85,6 +90,17 @@ version 2.003002
 
  __PACKAGE__->subclass;
 
+or with L<DBIx::Class::Candy>:
+
+ # define subclass
+ package MySchema::Result::Bar;
+
+ use DBIx::Class::Candy
+    -base => 'ParentSchema::Result::Bar',
+    -components => ['Helper::Row::SubClass'];
+
+ subclass;
+
 =head1 DESCRIPTION
 
 This component is to allow simple subclassing of L<DBIx::Class> Result classes.
@@ -109,6 +125,22 @@ will automatically get the relationship to C<MyApp::Schema::Result::Bar>.
 This is a super basic method that just sets the current classes' table to the
 parent classes' table.
 
+=head1 CANDY EXPORTS
+
+If used in conjunction with L<DBIx::Class::Candy> this component will export:
+
+=over
+
+=item join_table
+
+=item subclass
+
+=item generate_relationships
+
+=item set_table
+
+=back
+
 =head1 NOTE
 
 This Component is mostly aimed at those who want to subclass parts of a schema,
@@ -120,7 +152,7 @@ component is merely for reusing an existing schema.
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

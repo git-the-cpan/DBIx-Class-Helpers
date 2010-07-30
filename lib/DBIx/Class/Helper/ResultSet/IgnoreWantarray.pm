@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.004000';
+}
 
 use strict;
 use warnings;
@@ -22,7 +24,7 @@ DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issu
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -57,7 +59,7 @@ Override of the default search method to force it to return a ResultSet.
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

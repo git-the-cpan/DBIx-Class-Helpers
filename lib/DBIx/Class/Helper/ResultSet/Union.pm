@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::ResultSet::Union;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helper::ResultSet::Union::VERSION = '2.004000';
+}
 
 use parent 'DBIx::Class::Helper::ResultSet::SetOperations';
 
@@ -21,7 +23,7 @@ DBIx::Class::Helper::ResultSet::Union - (DEPRECATED) Get rid of search context i
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 DESCRIPTION
 
@@ -32,7 +34,7 @@ that (4) we will remove it entirely.
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

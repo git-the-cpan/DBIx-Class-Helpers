@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::ResultSet::SetOperations;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.004000';
+}
 
 use strict;
 use warnings;
@@ -104,7 +106,7 @@ DBIx::Class::Helper::ResultSet::SetOperations - Do set operations with DBIx::Cla
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -189,7 +191,7 @@ On Oracle C<except> will issue a C<MINUS> operation.
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

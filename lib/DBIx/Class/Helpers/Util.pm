@@ -1,5 +1,7 @@
 package DBIx::Class::Helpers::Util;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helpers::Util::VERSION = '2.004000';
+}
 
 use strict;
 use warnings;
@@ -57,7 +59,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -109,7 +111,7 @@ load_namespaces or both are not.  See L</SYNOPSIS> for example.
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

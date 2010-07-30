@@ -1,33 +1,45 @@
 {
-   "resources" : {
-      "repository" : "http://github.com/frioux/DBIx-Class-Helpers"
-   },
-   "meta-spec" : {
-      "version" : 1.4,
-      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
-   },
-   "generated_by" : "Dist::Zilla version 1.100711",
-   "version" : "2.003002",
-   "name" : "DBIx-Class-Helpers",
+   "abstract" : "Simplify the common case stuff for DBIx::Class.",
    "author" : [
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
-   "license" : "perl",
-   "build_requires" : {},
-   "requires" : {
-      "String::CamelCase" : "0",
-      "parent" : "0",
-      "Test::Exception" : "0",
-      "DBD::SQLite" : "0",
-      "Sub::Exporter" : "0",
-      "Test::More" : "0.88",
-      "Lingua::EN::Inflect" : "0",
-      "Test::Deep" : "0",
-      "DBIx::Class" : "0.08118"
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.101900, CPAN::Meta::Converter version 2.101670",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
    },
-   "abstract" : "Simplify the common case stuff for DBIx::Class.",
-   "configure_requires" : {
-      "ExtUtils::MakeMaker" : "6.11"
-   }
+   "name" : "DBIx-Class-Helpers",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "DBD::SQLite" : 0,
+            "DBIx::Class" : "0.08118",
+            "DBIx::Class::Candy" : "0.001003",
+            "Lingua::EN::Inflect" : 0,
+            "String::CamelCase" : 0,
+            "Sub::Exporter" : 0,
+            "Test::Deep" : 0,
+            "Test::Exception" : 0,
+            "Test::More" : "0.88",
+            "parent" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "url" : "http://github.com/frioux/DBIx-Class-Helpers"
+      }
+   },
+   "version" : "2.004000"
 }
 

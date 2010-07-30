@@ -1,5 +1,7 @@
 package DBIx::Class::Helpers;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helpers::VERSION = '2.004000';
+}
 use strict;
 use warnings;
 
@@ -17,7 +19,7 @@ DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -68,7 +70,7 @@ L<DBIx::Class::Helper::Row::JoinTable>, L<DBIx::Class::Helper::ResultSet::SubCla
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

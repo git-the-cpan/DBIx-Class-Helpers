@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::Row::ToJSON;
-our $VERSION = '2.003002';
+BEGIN {
+  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.004000';
+}
 
 use strict;
 use warnings;
@@ -66,7 +68,7 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
 =head1 VERSION
 
-version 2.003002
+version 2.004000
 
 =head1 SYNOPSIS
 
@@ -153,7 +155,7 @@ to the returned hashref:
 
 =head1 AUTHOR
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

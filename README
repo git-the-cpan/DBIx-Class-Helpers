@@ -2,7 +2,7 @@ NAME
     DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 VERSION
-    version 2.003002
+    version 2.004000
 
 SYNOPSIS
      package MyApp::Schema::Result::Foo_Bar;
@@ -51,7 +51,7 @@ SEE ALSO
     DBIx::Class::Helper::ResultSet::SubClass, DBIx::Class::Helpers::Util
 
 AUTHOR
-      Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+    Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
