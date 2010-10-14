@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::NumifyGet;
 BEGIN {
-  $DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.004000';
+  $DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.005000';
 }
 
 use strict;
@@ -45,7 +45,7 @@ DBIx::Class::Helper::Row::NumifyGet - Force numeric "context" on numeric columns
 
 =head1 VERSION
 
-version 2.004000
+version 2.005000
 
 =head1 SYNOPSIS
 

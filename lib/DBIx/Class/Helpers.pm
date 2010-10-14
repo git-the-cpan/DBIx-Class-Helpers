@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers;
 BEGIN {
-  $DBIx::Class::Helpers::VERSION = '2.004000';
+  $DBIx::Class::Helpers::VERSION = '2.005000';
 }
 use strict;
 use warnings;
@@ -19,7 +19,7 @@ DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 =head1 VERSION
 
-version 2.004000
+version 2.005000
 
 =head1 SYNOPSIS
 

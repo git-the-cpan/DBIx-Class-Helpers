@@ -1,12 +1,10 @@
 package DBIx::Class::Helper::ResultSet::Random;
 BEGIN {
-  $DBIx::Class::Helper::ResultSet::Random::VERSION = '2.004000';
+  $DBIx::Class::Helper::ResultSet::Random::VERSION = '2.005000';
 }
 
 use strict;
 use warnings;
-
-use parent 'DBIx::Class::Helper::ResultSet::Union';
 
 # ABSTRACT: Get random rows from a ResultSet
 
@@ -14,8 +12,8 @@ use parent 'DBIx::Class::Helper::ResultSet::Union';
 my %rand_order_by = (
    'DBIx::Class::Storage::DBI::SQLite'                     => 'RANDOM()',
    'DBIx::Class::Storage::DBI::mysql'                      => 'RAND()',
-   'DBIx::Class::Storage::DBI::ODBC::Microsoft_SQL_Server' => 'RAND()',
-   'DBIx::Class::Storage::DBI::MSSQL'                      => 'RAND()',
+   'DBIx::Class::Storage::DBI::ODBC::Microsoft_SQL_Server' => 'NEWID()',
+   'DBIx::Class::Storage::DBI::MSSQL'                      => 'NEWID()',
    'DBIx::Class::Storage::DBI::Pg'                         => 'RANDOM()',
    'DBIx::Class::Storage::DBI::Oracle'                     => 'dbms_random.value',
 );
@@ -53,7 +51,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.004000
+version 2.005000
 
 =head1 SYNOPSIS
 

@@ -14,6 +14,7 @@ lib/DBIx/Class/Helper/Random.pm
 lib/DBIx/Class/Helper/ResultSet.pm
 lib/DBIx/Class/Helper/ResultSet/AutoRemoveColumns.pm
 lib/DBIx/Class/Helper/ResultSet/IgnoreWantarray.pm
+lib/DBIx/Class/Helper/ResultSet/Me.pm
 lib/DBIx/Class/Helper/ResultSet/Random.pm
 lib/DBIx/Class/Helper/ResultSet/RemoveColumns.pm
 lib/DBIx/Class/Helper/ResultSet/SetOperations.pm

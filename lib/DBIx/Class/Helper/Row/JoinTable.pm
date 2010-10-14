@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::JoinTable;
 BEGIN {
-  $DBIx::Class::Helper::Row::JoinTable::VERSION = '2.004000';
+  $DBIx::Class::Helper::Row::JoinTable::VERSION = '2.005000';
 }
 
 use strict;
@@ -193,7 +193,7 @@ DBIx::Class::Helper::Row::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 2.004000
+version 2.005000
 
 =head1 SYNOPSIS
 
