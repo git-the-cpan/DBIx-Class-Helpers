@@ -17,6 +17,7 @@ lib/DBIx/Class/Helper/ResultSet/IgnoreWantarray.pm
 lib/DBIx/Class/Helper/ResultSet/Me.pm
 lib/DBIx/Class/Helper/ResultSet/Random.pm
 lib/DBIx/Class/Helper/ResultSet/RemoveColumns.pm
+lib/DBIx/Class/Helper/ResultSet/ResultClassDWIM.pm
 lib/DBIx/Class/Helper/ResultSet/SetOperations.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
@@ -26,6 +27,7 @@ lib/DBIx/Class/Helper/Row/OnColumnChange.pm
 lib/DBIx/Class/Helper/Row/StorageValues.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/Row/ToJSON.pm
+lib/DBIx/Class/Helper/Schema/GenerateSource.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -41,6 +43,9 @@ t/09-to_json.t
 t/10-remove-columns.t
 t/11-storage-values.t
 t/12-on-col-change.t
+t/13-generate-source.t
+t/14-result-class-dwim.t
+t/lib/Lolbot.pm
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm

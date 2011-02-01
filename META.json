@@ -4,7 +4,7 @@
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.102400",
    "license" : [
       "perl_5"
    ],
@@ -22,7 +22,7 @@
       "runtime" : {
          "requires" : {
             "DBD::SQLite" : 0,
-            "DBIx::Class" : "0.08118",
+            "DBIx::Class" : "0.08127",
             "DBIx::Class::Candy" : "0.001003",
             "Lingua::EN::Inflect" : 0,
             "String::CamelCase" : 0,
@@ -37,9 +37,11 @@
    "release_status" : "stable",
    "resources" : {
       "repository" : {
-         "url" : "http://github.com/frioux/DBIx-Class-Helpers"
+         "type" : "git",
+         "url" : "git://github.com/frioux/DBIx-Class-Helpers.git",
+         "web" : "http://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.005000"
+   "version" : "2.006000"
 }
 

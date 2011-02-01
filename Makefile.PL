@@ -21,7 +21,7 @@ my %WriteMakefileArgs = (
   'NAME' => 'DBIx::Class::Helpers',
   'PREREQ_PM' => {
     'DBD::SQLite' => '0',
-    'DBIx::Class' => '0.08118',
+    'DBIx::Class' => '0.08127',
     'DBIx::Class::Candy' => '0.001003',
     'Lingua::EN::Inflect' => '0',
     'String::CamelCase' => '0',
@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     'Test::More' => '0.88',
     'parent' => '0'
   },
-  'VERSION' => '2.005000',
+  'VERSION' => '2.006000',
   'test' => {
     'TESTS' => 't/*.t'
   }
