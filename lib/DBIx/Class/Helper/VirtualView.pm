@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::VirtualView;
 BEGIN {
-  $DBIx::Class::Helper::VirtualView::VERSION = '2.006000';
+  $DBIx::Class::Helper::VirtualView::VERSION = '2.007000';
 }
 
 use parent 'DBIx::Class::Helper::ResultSet::VirtualView';
@@ -22,7 +22,7 @@ DBIx::Class::Helper::VirtualView - (DEPRECATED) Clean up your SQL namespace
 
 =head1 VERSION
 
-version 2.006000
+version 2.007000
 
 =head1 DESCRIPTION
 

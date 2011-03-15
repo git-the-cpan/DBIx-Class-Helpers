@@ -24,6 +24,7 @@ lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm
 lib/DBIx/Class/Helper/Row/NumifyGet.pm
 lib/DBIx/Class/Helper/Row/OnColumnChange.pm
+lib/DBIx/Class/Helper/Row/RelationshipDWIM.pm
 lib/DBIx/Class/Helper/Row/StorageValues.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/Row/ToJSON.pm
@@ -45,8 +46,10 @@ t/11-storage-values.t
 t/12-on-col-change.t
 t/13-generate-source.t
 t/14-result-class-dwim.t
+t/16-relationship-dwim.t
 t/lib/Lolbot.pm
 t/lib/ParentSchema.pm
+t/lib/ParentSchema/Result.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
 t/lib/TestSchema.pm
