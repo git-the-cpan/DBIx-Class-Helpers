@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Mon Mar 14 21:43:24 2011
+-- Created on Wed Aug 17 22:34:58 2011
 -- 
 
 BEGIN TRANSACTION;
@@ -49,7 +49,8 @@ DROP TABLE Bar;
 
 CREATE TABLE Bar (
   id INTEGER PRIMARY KEY NOT NULL,
-  foo_id  NOT NULL
+  foo_id  NOT NULL,
+  FOREIGN KEY(foo_id) REFERENCES Foo(id)
 );
 
 CREATE INDEX Bar_idx_foo_id ON Bar (foo_id);
@@ -62,7 +63,8 @@ DROP TABLE Foo;
 CREATE TABLE Foo (
   id  NOT NULL,
   bar_id integer NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  FOREIGN KEY(bar_id) REFERENCES Bar(id)
 );
 
 CREATE INDEX Foo_idx_bar_id ON Foo (bar_id);
@@ -75,7 +77,9 @@ DROP TABLE Foo_Bar;
 CREATE TABLE Foo_Bar (
   foo_id  NOT NULL,
   bar_id integer(12) NOT NULL,
-  PRIMARY KEY (foo_id, bar_id)
+  PRIMARY KEY (foo_id, bar_id),
+  FOREIGN KEY(bar_id) REFERENCES Bar(id),
+  FOREIGN KEY(foo_id) REFERENCES Foo(id)
 );
 
 CREATE INDEX Foo_Bar_idx_bar_id ON Foo_Bar (bar_id);
@@ -90,7 +94,9 @@ DROP TABLE Gnarly_Station;
 CREATE TABLE Gnarly_Station (
   gnarly_id integer NOT NULL,
   station_id integer NOT NULL,
-  PRIMARY KEY (gnarly_id, station_id)
+  PRIMARY KEY (gnarly_id, station_id),
+  FOREIGN KEY(gnarly_id) REFERENCES Gnarly(id),
+  FOREIGN KEY(station_id) REFERENCES Station(id)
 );
 
 CREATE INDEX Gnarly_Station_idx_gnarly_id ON Gnarly_Station (gnarly_id);

@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Random;
-BEGIN {
-  $DBIx::Class::Helper::ResultSet::Random::VERSION = '2.007000';
+{
+  $DBIx::Class::Helper::ResultSet::Random::VERSION = '2.007001';
 }
 
 use strict;
@@ -51,7 +51,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.007000
+version 2.007001
 
 =head1 SYNOPSIS
 

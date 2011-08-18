@@ -4,7 +4,7 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -13,13 +13,14 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>',
   'BUILD_REQUIRES' => {},
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'DBIx-Class-Helpers',
   'EXE_FILES' => [],
   'LICENSE' => 'perl',
   'NAME' => 'DBIx::Class::Helpers',
   'PREREQ_PM' => {
+    'Carp::Clan' => '6.04',
     'DBD::SQLite' => '0',
     'DBIx::Class' => '0.08127',
     'DBIx::Class::Candy' => '0.001003',
@@ -31,7 +32,7 @@ my %WriteMakefileArgs = (
     'Test::More' => '0.88',
     'parent' => '0'
   },
-  'VERSION' => '2.007000',
+  'VERSION' => '2.007001',
   'test' => {
     'TESTS' => 't/*.t'
   }
