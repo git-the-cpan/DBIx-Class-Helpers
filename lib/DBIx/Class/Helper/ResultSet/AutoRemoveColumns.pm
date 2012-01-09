@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::AutoRemoveColumns;
 {
-  $DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.007001';
+  $DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.007002';
 }
 
 # ABSTRACT: Automatically remove columns from a ResultSet
@@ -65,11 +65,11 @@ DBIx::Class::Helper::ResultSet::AutoRemoveColumns - Automatically remove columns
 
 =head1 VERSION
 
-version 2.007001
+version 2.007002
 
 =head1 SYNOPSIS
 
- package MySchema::ResultSet::Bar;
+ package MySchema::Result::Bar;
 
  use strict;
  use warnings;
@@ -143,7 +143,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

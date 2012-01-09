@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers::Util;
 {
-  $DBIx::Class::Helpers::Util::VERSION = '2.007001';
+  $DBIx::Class::Helpers::Util::VERSION = '2.007002';
 }
 
 use strict;
@@ -29,7 +29,7 @@ sub get_namespace_parts {
 
 sub is_load_namespaces {
    my $namespace = shift;
-   $namespace =~ /^[\w:]+::Result::[\w]+$/;
+   $namespace =~ /^[\w:]+::Result::[\w:]+$/;
 }
 
 sub is_not_load_namespaces {
@@ -59,7 +59,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.007001
+version 2.007002
 
 =head1 SYNOPSIS
 
@@ -115,7 +115,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

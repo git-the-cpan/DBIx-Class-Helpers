@@ -9,32 +9,32 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Simplify the common case stuff for DBIx::Class.',
-  'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "ABSTRACT" => "Simplify the common case stuff for DBIx::Class.",
+  "AUTHOR" => "Arthur Axel \"fREW\" Schmidt <frioux+cpan\@gmail.com>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'DBIx-Class-Helpers',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'DBIx::Class::Helpers',
-  'PREREQ_PM' => {
-    'Carp::Clan' => '6.04',
-    'DBD::SQLite' => '0',
-    'DBIx::Class' => '0.08127',
-    'DBIx::Class::Candy' => '0.001003',
-    'Lingua::EN::Inflect' => '0',
-    'String::CamelCase' => '0',
-    'Sub::Exporter' => '0',
-    'Test::Deep' => '0',
-    'Test::Exception' => '0',
-    'Test::More' => '0.88',
-    'parent' => '0'
+  "DISTNAME" => "DBIx-Class-Helpers",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "DBIx::Class::Helpers",
+  "PREREQ_PM" => {
+    "Carp::Clan" => "6.04",
+    "DBD::SQLite" => 0,
+    "DBIx::Class" => "0.08127",
+    "DBIx::Class::Candy" => "0.001003",
+    "Lingua::EN::Inflect" => 0,
+    "String::CamelCase" => 0,
+    "Sub::Exporter" => 0,
+    "Test::Deep" => 0,
+    "Test::Exception" => 0,
+    "Test::More" => "0.88",
+    "parent" => 0
   },
-  'VERSION' => '2.007001',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "2.007002",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
