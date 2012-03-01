@@ -1,10 +1,12 @@
 package DBIx::Class::Helper::Row::NumifyGet;
 {
-  $DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.007002';
+  $DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.007003';
 }
 
 use strict;
 use warnings;
+
+use Try::Tiny;
 
 # ABSTRACT: Force numeric "context" on numeric columns
 
@@ -14,7 +16,7 @@ sub get_column {
    my $value = $self->next::method($col);
 
    $value += 0 if defined($value) and # for nullable and autoinc fields
-                  $self->_is_column_numeric($col);
+                  try { $self->_is_column_numeric($col) };
 
    return $value;
 }
@@ -27,7 +29,7 @@ sub get_columns {
    for (keys %columns) {
       $columns{$_} += 0
          if defined($columns{$_}) and # for nullable and autoinc fields
-            $self->_is_column_numeric($_);
+            try { $self->_is_column_numeric($_) };
    }
 
    return %columns;
@@ -45,7 +47,7 @@ DBIx::Class::Helper::Row::NumifyGet - Force numeric "context" on numeric columns
 
 =head1 VERSION
 
-version 2.007002
+version 2.007003
 
 =head1 SYNOPSIS
 

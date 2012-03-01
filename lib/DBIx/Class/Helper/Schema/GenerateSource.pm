@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Schema::GenerateSource;
 {
-  $DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.007002';
+  $DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.007003';
 }
 
 # ABSTRACT: Generate sources directly from your Schema
@@ -42,7 +42,7 @@ DBIx::Class::Helper::Schema::GenerateSource - Generate sources directly from you
 
 =head1 VERSION
 
-version 2.007002
+version 2.007003
 
 =head1 SYNOPSIS
 

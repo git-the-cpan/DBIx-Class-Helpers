@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::SetOperations;
 {
-  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.007002';
+  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.007003';
 }
 
 use strict;
@@ -106,7 +106,7 @@ DBIx::Class::Helper::ResultSet::SetOperations - Do set operations with DBIx::Cla
 
 =head1 VERSION
 
-version 2.007002
+version 2.007003
 
 =head1 SYNOPSIS
 

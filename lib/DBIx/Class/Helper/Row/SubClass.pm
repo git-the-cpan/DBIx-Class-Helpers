@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::SubClass;
 {
-  $DBIx::Class::Helper::Row::SubClass::VERSION = '2.007002';
+  $DBIx::Class::Helper::Row::SubClass::VERSION = '2.007003';
 }
 
 use strict;
@@ -56,7 +56,7 @@ DBIx::Class::Helper::Row::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 2.007002
+version 2.007003
 
 =head1 SYNOPSIS
 
