@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::RemoveColumns;
 {
-  $DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.007003';
+  $DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.007004';
 }
 
 # ABSTRACT: Remove columns from a ResultSet
@@ -32,7 +32,7 @@ DBIx::Class::Helper::ResultSet::RemoveColumns - Remove columns from a ResultSet
 
 =head1 VERSION
 
-version 2.007003
+version 2.007004
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::ToJSON;
 {
-  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.007003';
+  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.007004';
 }
 
 use strict;
@@ -68,7 +68,7 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
 =head1 VERSION
 
-version 2.007003
+version 2.007004
 
 =head1 SYNOPSIS
 

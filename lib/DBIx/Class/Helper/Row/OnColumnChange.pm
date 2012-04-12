@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
 {
-  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.007003';
+  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.007004';
 }
 
 use strict;
@@ -60,9 +60,9 @@ sub after_column_change {
 }
 
 sub update {
-   my $self = shift;
+   my ($self, $args) = @_;
 
-   my %dirty = ( $self->get_dirty_columns, %{$_[0]||{}} );
+   my %dirty = ( $self->get_dirty_columns, %{$args||{}} );
 
    my @all_before = @{$self->_before_change || []};
    my @all_around = @{$self->_around_change || []};
@@ -75,7 +75,7 @@ sub update {
 
    my $inner = $self->next::can;
 
-   my $final = sub { $self->$inner };
+   my $final = sub { $self->$inner($args) };
 
    for ( reverse @around ) {
       my $fn = $_->{method};
@@ -125,7 +125,7 @@ DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column
 
 =head1 VERSION
 
-version 2.007003
+version 2.007004
 
 =head1 SYNOPSIS
 
