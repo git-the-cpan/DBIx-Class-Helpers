@@ -13,6 +13,7 @@ lib/DBIx/Class/Helper/JoinTable.pm
 lib/DBIx/Class/Helper/Random.pm
 lib/DBIx/Class/Helper/ResultSet.pm
 lib/DBIx/Class/Helper/ResultSet/AutoRemoveColumns.pm
+lib/DBIx/Class/Helper/ResultSet/CorrelateRelationship.pm
 lib/DBIx/Class/Helper/ResultSet/IgnoreWantarray.pm
 lib/DBIx/Class/Helper/ResultSet/Me.pm
 lib/DBIx/Class/Helper/ResultSet/Random.pm
@@ -33,6 +34,7 @@ lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
 lib/DBIx/Class/Helpers/Util.pm
+t/correlate-relationship.t
 t/generate-source.t
 t/getnum.t
 t/ignore-wantarray.t
@@ -53,6 +55,7 @@ t/lib/TestSchema/Result/Station.pm
 t/lib/TestSchema/ResultSet.pm
 t/lib/TestSchema/ResultSet/Bloaty.pm
 t/lib/TestSchema/ResultSet/Foo.pm
+t/lib/TestSchema/ResultSet/Gnarly.pm
 t/lib/ddl.sql
 t/on-col-change.t
 t/random.t
