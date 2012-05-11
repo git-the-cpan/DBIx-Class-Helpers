@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::SearchOr;
 {
-  $DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.009000';
+  $DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.009001';
 }
 
 # ABSTRACT: Combine ResultSet searches with OR's
@@ -38,7 +38,7 @@ DBIx::Class::Helper::ResultSet::SearchOr - Combine ResultSet searches with OR's
 
 =head1 VERSION
 
-version 2.009000
+version 2.009001
 
 =head1 SYNOPSIS
 
@@ -69,7 +69,7 @@ version 2.009000
 
    my $me = $self->current_source_alias;
 
-   $self->search_or([$self->failed, $self->not_passed]);
+   $self->search_or([$self->failed, $self->untested]);
  }
 
  1;

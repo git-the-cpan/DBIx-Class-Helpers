@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet;
 {
-  $DBIx::Class::Helper::ResultSet::VERSION = '2.009000';
+  $DBIx::Class::Helper::ResultSet::VERSION = '2.009001';
 }
 
 use parent qw{
@@ -24,7 +24,7 @@ DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
 
 =head1 VERSION
 
-version 2.009000
+version 2.009001
 
 =head1 DESCRIPTION
 
