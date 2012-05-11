@@ -19,6 +19,7 @@ lib/DBIx/Class/Helper/ResultSet/Me.pm
 lib/DBIx/Class/Helper/ResultSet/Random.pm
 lib/DBIx/Class/Helper/ResultSet/RemoveColumns.pm
 lib/DBIx/Class/Helper/ResultSet/ResultClassDWIM.pm
+lib/DBIx/Class/Helper/ResultSet/SearchOr.pm
 lib/DBIx/Class/Helper/ResultSet/SetOperations.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
@@ -63,6 +64,7 @@ t/relationship-dwim.t
 t/release-pod-syntax.t
 t/remove-columns.t
 t/result-class-dwim.t
+t/search-or.t
 t/set_operations.t
 t/storage-values.t
 t/subclass.t

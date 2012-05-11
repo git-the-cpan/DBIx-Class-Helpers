@@ -25,14 +25,16 @@ my %WriteMakefileArgs = (
     "DBIx::Class" => "0.08127",
     "DBIx::Class::Candy" => "0.001003",
     "Lingua::EN::Inflect" => 0,
+    "List::Util" => 0,
     "String::CamelCase" => 0,
     "Sub::Exporter" => 0,
     "Test::Deep" => 0,
     "Test::Exception" => 0,
     "Test::More" => "0.88",
+    "namespace::clean" => "0.23",
     "parent" => 0
   },
-  "VERSION" => "2.008000",
+  "VERSION" => "2.009000",
   "test" => {
     "TESTS" => "t/*.t"
   }

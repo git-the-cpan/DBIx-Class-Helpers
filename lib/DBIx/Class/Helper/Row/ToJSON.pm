@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::ToJSON;
 {
-  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.008000';
+  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.009000';
 }
 
 use strict;
@@ -68,7 +68,7 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
 =head1 VERSION
 
-version 2.008000
+version 2.009000
 
 =head1 SYNOPSIS
 
@@ -107,7 +107,7 @@ This helper adds a JSON method like the following:
        id       => $self->id,
        kitten   => $self->kitten,
        # robot  => $self->robot,    # <-- doesn't serialize text columns
-       your_mom => $self->your_mom, # <-- normally wouldn't but explicitely
+       your_mom => $self->your_mom, # <-- normally wouldn't but explicitly
                                     #     asked for in the column spec above
     }
  }
