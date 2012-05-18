@@ -31,6 +31,7 @@ lib/DBIx/Class/Helper/Row/StorageValues.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/Row/ToJSON.pm
 lib/DBIx/Class/Helper/Schema/GenerateSource.pm
+lib/DBIx/Class/Helper/Schema/LintContents.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -58,6 +59,7 @@ t/lib/TestSchema/ResultSet/Bloaty.pm
 t/lib/TestSchema/ResultSet/Foo.pm
 t/lib/TestSchema/ResultSet/Gnarly.pm
 t/lib/ddl.sql
+t/lint-contents.t
 t/on-col-change.t
 t/random.t
 t/relationship-dwim.t
