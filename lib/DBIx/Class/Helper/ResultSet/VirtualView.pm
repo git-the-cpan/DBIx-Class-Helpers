@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
 {
-  $DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.010000';
+  $DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.010001';
 }
 
 use strict;
@@ -30,7 +30,7 @@ DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRE
 
 =head1 VERSION
 
-version 2.010000
+version 2.010001
 
 =head1 SYNOPSIS
 
