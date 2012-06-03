@@ -4,7 +4,7 @@
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300016, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300017, CPAN::Meta::Converter version 2.120630",
    "license" : [
       "perl_5"
    ],
@@ -45,6 +45,6 @@
          "web" : "http://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.010001"
+   "version" : "2.011000"
 }
 

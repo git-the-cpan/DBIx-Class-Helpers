@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Schema::LintContents;
 {
-  $DBIx::Class::Helper::Schema::LintContents::VERSION = '2.010001';
+  $DBIx::Class::Helper::Schema::LintContents::VERSION = '2.011000';
 }
 
 use strict;
@@ -118,7 +118,7 @@ DBIx::Class::Helper::Schema::LintContents - Check the data in your database matc
 
 =head1 VERSION
 
-version 2.010001
+version 2.011000
 
 =head1 SYNOPSIS
 
