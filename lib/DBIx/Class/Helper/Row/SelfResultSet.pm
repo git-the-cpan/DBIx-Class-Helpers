@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
 {
-  $DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.013000';
+  $DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.013001';
 }
 
 use strict;
@@ -29,7 +29,7 @@ DBIx::Class::Helper::Row::SelfResultSet - Easily use ResultSet methods for the c
 
 =head1 VERSION
 
-version 2.013000
+version 2.013001
 
 =head1 SYNOPSIS
 
