@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::SetOperations;
 {
-  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.013001';
+  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.013002';
 }
 
 use strict;
@@ -106,7 +106,7 @@ DBIx::Class::Helper::ResultSet::SetOperations - Do set operations with DBIx::Cla
 
 =head1 VERSION
 
-version 2.013001
+version 2.013002
 
 =head1 SYNOPSIS
 
@@ -147,22 +147,25 @@ You might have something like the following sketch autocompletion code:
  my $rs1 = $schema->resultset('Album')->search({
     name => { -like => "$input%" }
  }, {
-   columns => [qw{id name}],
-   '+select' => [\'"album" AS tablename']
+   columns => [qw( id name ), {
+      tablename => \['?', [{} => 'album']],
+   }],
  });
 
  my $rs2 = $schema->resultset('Artist')->search({
     name => { -like => "$input%" }
  }, {
-   columns => [qw{id name}],
-   '+select' => [\'"artist" AS tablename']
+   columns => [qw( id name ), {
+      tablename => \['?', [{} => 'artist']],
+   }],
  });
 
  my $rs3 = $schema->resultset('Song')->search({
     name => { -like => "$input%" }
  }, {
-   columns => [qw{id name}],
-   '+select' => [\'"song" AS tablename']
+   columns => [qw( id name ), {
+      tablename => \['?', [{} => 'song']],
+   }],
  });
 
  $_->result_class('DBIx::Class::ResultClass::HashRefInflator')

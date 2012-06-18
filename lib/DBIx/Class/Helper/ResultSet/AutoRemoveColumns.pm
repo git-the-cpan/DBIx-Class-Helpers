@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::AutoRemoveColumns;
 {
-  $DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.013001';
+  $DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.013002';
 }
 
 # ABSTRACT: Automatically remove columns from a ResultSet
@@ -65,7 +65,7 @@ DBIx::Class::Helper::ResultSet::AutoRemoveColumns - Automatically remove columns
 
 =head1 VERSION
 
-version 2.013001
+version 2.013002
 
 =head1 SYNOPSIS
 
@@ -112,7 +112,9 @@ version 2.013001
 This component automatically removes "heavy-weight" columns.  To be specific,
 columns of type C<text>, C<ntext>, C<blob>, C<clob>, or C<bytea>.  You may
 use the C<remove_column> key in the column info to specify directly whether or
-not to remove the column automatically.
+not to remove the column automatically. See
+L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to your
+entire schema.
 
 =head1 METHODS
 
@@ -120,7 +122,7 @@ not to remove the column automatically.
 
  $self->_should_column_fetch('kitten')
 
-returns true if a colum should be fetched or not.  This fetches a column if it
+returns true if a column should be fetched or not.  This fetches a column if it
 is not of type C<text>, C<ntext>, C<blob>, C<clob>, or C<bytea> or the
 C<remove_column> is set to true.  If you only wanted to explicitly state which
 columns to remove you might override this method like this:

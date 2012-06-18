@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::SearchOr;
 {
-  $DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.013001';
+  $DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.013002';
 }
 
 # ABSTRACT: Combine ResultSet searches with OR's
@@ -38,7 +38,7 @@ DBIx::Class::Helper::ResultSet::SearchOr - Combine ResultSet searches with OR's
 
 =head1 VERSION
 
-version 2.013001
+version 2.013002
 
 =head1 SYNOPSIS
 
@@ -102,6 +102,9 @@ With a union, you'd have to implement it like this:
 
 The union will work, but it will generate more complex SQL that may have lower
 performance on your database.
+
+See L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to
+your entire schema.
 
 =head1 METHODS
 

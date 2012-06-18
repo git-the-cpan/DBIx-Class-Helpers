@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::CorrelateRelationship;
 {
-  $DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.013001';
+  $DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.013002';
 }
 
 use strict;
@@ -39,7 +39,7 @@ DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your Re
 
 =head1 VERSION
 
-version 2.013001
+version 2.013002
 
 =head1 SYNOPSIS
 
@@ -120,6 +120,9 @@ And then elsewhere, like in a controller:
    ->all;
 
 This assumes that the Book resultset has C<good> and C<bad> methods.
+
+See L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to
+your entire schema.
 
 =head1 METHODS
 
