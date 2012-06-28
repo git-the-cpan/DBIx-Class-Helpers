@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::StorageValues;
 {
-  $DBIx::Class::Helper::Row::StorageValues::VERSION = '2.013002';
+  $DBIx::Class::Helper::Row::StorageValues::VERSION = '2.013003';
 }
 
 use strict;
@@ -79,7 +79,7 @@ DBIx::Class::Helper::Row::StorageValues - Keep track of stored vs in-memory row 
 
 =head1 VERSION
 
-version 2.013002
+version 2.013003
 
 =head1 SYNOPSIS
 
