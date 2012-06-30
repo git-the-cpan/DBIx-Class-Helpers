@@ -28,6 +28,7 @@ lib/DBIx/Class/Helper/Row/JoinTable.pm
 lib/DBIx/Class/Helper/Row/NumifyGet.pm
 lib/DBIx/Class/Helper/Row/OnColumnChange.pm
 lib/DBIx/Class/Helper/Row/ProxyResultSetMethod.pm
+lib/DBIx/Class/Helper/Row/ProxyResultSetUpdate.pm
 lib/DBIx/Class/Helper/Row/RelationshipDWIM.pm
 lib/DBIx/Class/Helper/Row/SelfResultSet.pm
 lib/DBIx/Class/Helper/Row/StorageValues.pm
@@ -70,6 +71,7 @@ t/row/jointable.t
 t/row/numifyget.t
 t/row/on-column-change.t
 t/row/proxy-resultset-method.t
+t/row/proxy-resultset-update.t
 t/row/relationship-dwim.t
 t/row/self-resultset.t
 t/row/storage-values.t

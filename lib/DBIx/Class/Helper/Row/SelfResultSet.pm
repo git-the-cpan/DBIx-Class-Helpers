@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
 {
-  $DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.013003';
+  $DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.014000';
 }
 
 use strict;
@@ -12,8 +12,11 @@ sub self_rs {
    my ($self) = @_;
 
    my $src = $self->result_source;
-   return $src->resultset->search({
-      map { $_ => $self->get_column($_) } $src->primary_columns
+   my $rs = $src->resultset;
+   my $me = $rs->current_source_alias;
+   return $rs->search({
+          # perl, sometimes I hate your guts
+      map +( "$me.$_" => $self->get_column($_) ), $src->primary_columns
    })
 }
 
@@ -29,7 +32,7 @@ DBIx::Class::Helper::Row::SelfResultSet - Easily use ResultSet methods for the c
 
 =head1 VERSION
 
-version 2.013003
+version 2.014000
 
 =head1 SYNOPSIS
 
