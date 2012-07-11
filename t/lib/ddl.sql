@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Tue Jul  3 08:34:23 2012
+-- Created on Tue Jul 10 21:41:18 2012
 -- 
 
 BEGIN TRANSACTION;
@@ -8,8 +8,6 @@ BEGIN TRANSACTION;
 --
 -- Table: Bloaty
 --
-DROP TABLE Bloaty;
-
 CREATE TABLE Bloaty (
   id  NOT NULL,
   name  NOT NULL,
@@ -21,8 +19,6 @@ CREATE TABLE Bloaty (
 --
 -- Table: Gnarly
 --
-DROP TABLE Gnarly;
-
 CREATE TABLE Gnarly (
   id  NOT NULL,
   name  NOT NULL,
@@ -34,8 +30,6 @@ CREATE TABLE Gnarly (
 --
 -- Table: Station
 --
-DROP TABLE Station;
-
 CREATE TABLE Station (
   id  NOT NULL,
   name  NOT NULL,
@@ -45,8 +39,6 @@ CREATE TABLE Station (
 --
 -- Table: Bar
 --
-DROP TABLE Bar;
-
 CREATE TABLE Bar (
   id INTEGER PRIMARY KEY NOT NULL,
   foo_id  NOT NULL,
@@ -58,8 +50,6 @@ CREATE INDEX Bar_idx_foo_id ON Bar (foo_id);
 --
 -- Table: Foo
 --
-DROP TABLE Foo;
-
 CREATE TABLE Foo (
   id  NOT NULL,
   bar_id integer NOT NULL,
@@ -72,8 +62,6 @@ CREATE INDEX Foo_idx_bar_id ON Foo (bar_id);
 --
 -- Table: Foo_Bar
 --
-DROP TABLE Foo_Bar;
-
 CREATE TABLE Foo_Bar (
   foo_id  NOT NULL,
   bar_id integer(12) NOT NULL,
@@ -89,8 +77,6 @@ CREATE INDEX Foo_Bar_idx_foo_id ON Foo_Bar (foo_id);
 --
 -- Table: Gnarly_Station
 --
-DROP TABLE Gnarly_Station;
-
 CREATE TABLE Gnarly_Station (
   gnarly_id integer NOT NULL,
   station_id integer NOT NULL,
