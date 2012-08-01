@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers::Util;
 {
-  $DBIx::Class::Helpers::Util::VERSION = '2.014003';
+  $DBIx::Class::Helpers::Util::VERSION = '2.015000';
 }
 
 use strict;
@@ -8,11 +8,11 @@ use warnings;
 
 # ABSTRACT: Helper utilities for DBIx::Class components
 
-use Sub::Exporter -setup => {
+use Sub::Exporter::Progressive -setup => {
     exports => [
       qw(
          get_namespace_parts is_load_namespaces is_not_load_namespaces
-         assert_similar_namespaces
+         assert_similar_namespaces order_by_visitor
       ),
     ],
   };
@@ -47,6 +47,55 @@ sub assert_similar_namespaces {
              is_not_load_namespaces($ns1) and is_not_load_namespaces($ns2);
 }
 
+sub _order_by_visitor_HASHREF {
+   my ($hash, $callback) = @_;
+
+   my %ret;
+   # there should only be one k/v pair, but DBIC checks for that and I'm not
+   # going to reimplement said check here.
+   for my $k (keys %$hash) {
+      my $v = $hash->{$k};
+
+      if (my $v_ref = ref $v) {
+         if ($v_ref eq 'ARRAY' ) {
+            $ret{$k} = [ map $callback->($_), @$v ]
+         } else {
+            die 'this should never happen'
+         }
+      } else {
+         $ret{$k} = ($callback->($v));
+      }
+   }
+
+   \%ret
+}
+
+sub order_by_visitor {
+   my ($order, $callback) = @_;
+
+   if (my $top_ref = ref $order) {
+      if ($top_ref eq 'HASH') {
+         return _order_by_visitor_HASHREF($order, $callback)
+      } elsif ($top_ref eq 'ARRAY') {
+         return [
+            map {
+               if (my $ref = ref $_) {
+                  if ($ref eq 'HASH') {
+                     _order_by_visitor_HASHREF($_, $callback)
+                  } else {
+                     die 'this should never happen'
+                  }
+               } else {
+                  $callback->($_)
+               }
+            } @$order
+         ];
+      }
+   } else {
+      return $callback->($order)
+   }
+}
+
 1;
 
 
@@ -59,9 +108,11 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.014003
+version 2.015000
 
 =head1 SYNOPSIS
+
+ use DBIx::Class::Helpers::Util ':all';
 
  my ($namespace, $class) = get_namespace_parts('MyApp:Schema::Person');
  is $namespace, 'MyApp::Schema';
@@ -83,12 +134,30 @@ version 2.014003
    print 'both projects are structured similarly';
  }
 
+ # in a resultset
+
+ sub search {
+    my ($self, $search, $attrs) = @_;
+
+    $attrs->{order_by} = order_by_visitor($attrs->{order_by}, sub {
+       my $field = shift;
+
+       return 'foo_bar' if $field eq 'foo.bar';
+       return $field;
+    }) if $attrs && $attrs->{order_by};
+ }
+
 =head1 DESCRIPTION
 
 A collection of various helper utilities for L<DBIx::Class> stuff.  Probably
 only useful for components.
 
-=head1 METHODS
+=head1 EXPORTS
+
+=head2 order_by_visitor
+
+This function allows you to easily transform C<order_by> clauses. See
+L</SYNOPSIS> for example.
 
 =head2 get_namespace_parts
 

@@ -28,10 +28,10 @@
             "Lingua::EN::Inflect" : "0",
             "List::Util" : "0",
             "String::CamelCase" : "0",
-            "Sub::Exporter" : "0",
+            "Sub::Exporter::Progressive" : "0",
             "Test::Deep" : "0",
             "Test::Exception" : "0",
-            "Test::More" : "0.88",
+            "Test::More" : "0.94",
             "namespace::clean" : "0.23",
             "parent" : "0"
          }
@@ -45,6 +45,6 @@
          "web" : "http://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.014003"
+   "version" : "2.015000"
 }
 
