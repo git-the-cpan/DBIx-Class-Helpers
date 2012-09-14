@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
 {
-  $DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.015000';
+  $DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.015001';
 }
 
 # ABSTRACT: result_class => '::HRI' == WIN
@@ -26,8 +26,8 @@ sub result_class {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -36,7 +36,7 @@ DBIx::Class::Helper::ResultSet::ResultClassDWIM - result_class => '::HRI' == WIN
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -79,4 +79,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

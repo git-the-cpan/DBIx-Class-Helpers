@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
 {
-  $DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.015000';
+  $DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.015001';
 }
 
 use strict;
@@ -20,8 +20,8 @@ croak 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subsele
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -30,7 +30,7 @@ DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRE
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -114,4 +114,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

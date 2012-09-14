@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::NoColumns;
 {
-  $DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.015000';
+  $DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.015001';
 }
 
 # ABSTRACT: Look ma, no columns!
@@ -12,8 +12,8 @@ sub no_columns { $_[0]->search(undef, { columns => [] }) }
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::NoColumns - Look ma, no columns!
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -69,4 +69,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

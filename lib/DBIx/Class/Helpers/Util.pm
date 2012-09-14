@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers::Util;
 {
-  $DBIx::Class::Helpers::Util::VERSION = '2.015000';
+  $DBIx::Class::Helpers::Util::VERSION = '2.015001';
 }
 
 use strict;
@@ -98,7 +98,7 @@ sub order_by_visitor {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -108,7 +108,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -190,7 +190,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

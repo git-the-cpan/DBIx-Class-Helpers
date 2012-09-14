@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::ToJSON;
 {
-  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.015000';
+  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.015001';
 }
 
 use strict;
@@ -58,8 +58,8 @@ sub TO_JSON {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -68,7 +68,7 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -165,4 +165,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

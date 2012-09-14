@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Me;
 {
-  $DBIx::Class::Helper::ResultSet::Me::VERSION = '2.015000';
+  $DBIx::Class::Helper::ResultSet::Me::VERSION = '2.015001';
 }
 
 use strict;
@@ -12,8 +12,8 @@ sub me { shift->current_source_alias . q(.) }
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::Me - Define predefined searches a more nicely
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -75,4 +75,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

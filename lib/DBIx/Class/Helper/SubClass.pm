@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::SubClass;
 {
-  $DBIx::Class::Helper::SubClass::VERSION = '2.015000';
+  $DBIx::Class::Helper::SubClass::VERSION = '2.015001';
 }
 
 use parent 'DBIx::Class::Helper::Row::SubClass';
@@ -12,8 +12,8 @@ croak 'This module is deprecated!  Please use the namespaced version instead!' i
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -22,7 +22,7 @@ DBIx::Class::Helper::SubClass - (DEPRECATED) Convenient subclassing with DBIx::C
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 DESCRIPTION
 
@@ -43,4 +43,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

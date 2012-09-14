@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers;
 {
-  $DBIx::Class::Helpers::VERSION = '2.015000';
+  $DBIx::Class::Helpers::VERSION = '2.015001';
 }
 use strict;
 use warnings;
@@ -9,7 +9,7 @@ use warnings;
 
 1; # this class isn't meant to be used
 
-
+__END__
 
 =pod
 
@@ -19,7 +19,7 @@ DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -80,7 +80,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

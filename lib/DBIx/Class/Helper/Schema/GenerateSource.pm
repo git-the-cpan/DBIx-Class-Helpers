@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Schema::GenerateSource;
 {
-  $DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.015000';
+  $DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.015001';
 }
 
 # ABSTRACT: Generate sources directly from your Schema
@@ -32,8 +32,8 @@ sub generate_source {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -42,7 +42,7 @@ DBIx::Class::Helper::Schema::GenerateSource - Generate sources directly from you
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -95,4 +95,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

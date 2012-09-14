@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
 {
-  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.015000';
+  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.015001';
 }
 
 use strict;
@@ -116,8 +116,8 @@ sub update {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -126,7 +126,7 @@ DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -311,4 +311,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

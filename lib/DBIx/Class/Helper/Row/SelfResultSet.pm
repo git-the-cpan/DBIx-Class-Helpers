@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
 {
-  $DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.015000';
+  $DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.015001';
 }
 
 use strict;
@@ -22,8 +22,8 @@ sub self_rs {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -32,7 +32,7 @@ DBIx::Class::Helper::Row::SelfResultSet - Easily use ResultSet methods for the c
 
 =head1 VERSION
 
-version 2.015000
+version 2.015001
 
 =head1 SYNOPSIS
 
@@ -71,4 +71,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
