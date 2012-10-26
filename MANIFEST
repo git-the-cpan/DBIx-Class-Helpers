@@ -22,6 +22,14 @@ lib/DBIx/Class/Helper/ResultSet/RemoveColumns.pm
 lib/DBIx/Class/Helper/ResultSet/ResultClassDWIM.pm
 lib/DBIx/Class/Helper/ResultSet/SearchOr.pm
 lib/DBIx/Class/Helper/ResultSet/SetOperations.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/AddColumns.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Columns.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Distinct.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/GroupBy.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/HRI.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/OrderBy.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Rows.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm
@@ -59,6 +67,7 @@ t/lib/TestSchema/ResultSet/Foo.pm
 t/lib/TestSchema/ResultSet/Gnarly.pm
 t/lib/ddl.sql
 t/release-pod-syntax.t
+t/resultset/attribute-accessors.t
 t/resultset/correlate-relationship.t
 t/resultset/ignore-wantarray.t
 t/resultset/no-columns.t
