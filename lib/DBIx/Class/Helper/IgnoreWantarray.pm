@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::IgnoreWantarray;
 {
-  $DBIx::Class::Helper::IgnoreWantarray::VERSION = '2.016000';
+  $DBIx::Class::Helper::IgnoreWantarray::VERSION = '2.016001';
 }
 
 use parent 'DBIx::Class::Helper::ResultSet::IgnoreWantarray';
@@ -22,7 +22,7 @@ DBIx::Class::Helper::IgnoreWantarray - (DEPRECATED) Get rid of search context is
 
 =head1 VERSION
 
-version 2.016000
+version 2.016001
 
 =head1 DESCRIPTION
 

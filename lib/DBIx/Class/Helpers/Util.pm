@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers::Util;
 {
-  $DBIx::Class::Helpers::Util::VERSION = '2.016000';
+  $DBIx::Class::Helpers::Util::VERSION = '2.016001';
 }
 
 use strict;
@@ -108,7 +108,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.016000
+version 2.016001
 
 =head1 SYNOPSIS
 

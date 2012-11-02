@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
 {
-  $DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.016000';
+  $DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.016001';
 }
 
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
@@ -34,13 +34,13 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.016000
+version 2.016001
 
 =head1 SYNOPSIS
 
  package MyApp::Schema::ResultSet::Foo;
 
- __PACKAGE__->load_components(qw{Helper::ResultSet::AttributeAccessors});
+ __PACKAGE__->load_components(qw{Helper::ResultSet::Shortcut});
 
  ...
 

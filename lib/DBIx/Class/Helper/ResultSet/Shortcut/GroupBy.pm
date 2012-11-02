@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::GroupBy;
 {
-  $DBIx::Class::Helper::ResultSet::Shortcut::GroupBy::VERSION = '2.016000';
+  $DBIx::Class::Helper::ResultSet::Shortcut::GroupBy::VERSION = '2.016001';
 }
 
 use strict;
@@ -20,7 +20,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::GroupBy
 
 =head1 VERSION
 
-version 2.016000
+version 2.016001
 
 =head1 AUTHOR
 

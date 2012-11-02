@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
 {
-  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.016000';
+  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.016001';
 }
 
 use strict;
@@ -19,6 +19,9 @@ __PACKAGE__->mk_group_accessors(inherited => $_)
    for qw(_before_change _around_change _after_change);
 
 sub before_column_change {
+   die 'Invalid number of arguments. One $column => $args pair at a time.'
+      unless  @_ == 3;
+
    my $self = shift;
 
    my $column   = shift;
@@ -33,6 +36,9 @@ sub before_column_change {
 }
 
 sub around_column_change {
+   die 'Invalid number of arguments. One $column => $args pair at a time.'
+      unless  @_ == 3;
+
    my $self = shift;
 
    my $column   = shift;
@@ -47,6 +53,9 @@ sub around_column_change {
 }
 
 sub after_column_change {
+   die 'Invalid number of arguments. One $column => $args pair at a time.'
+      unless  @_ == 3;
+
    my $self = shift;
 
    my $column   = shift;
@@ -63,7 +72,10 @@ sub after_column_change {
 sub update {
    my ($self, $args) = @_;
 
-   my %dirty = ( $self->get_dirty_columns, %{$args||{}} );
+   $self->set_inflated_columns($args) if $args;
+
+   my %dirty = $self->get_dirty_columns
+     or return $self;
 
    my @all_before = @{$self->_before_change || []};
    my @all_around = @{$self->_around_change || []};
@@ -126,7 +138,7 @@ DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column
 
 =head1 VERSION
 
-version 2.016000
+version 2.016001
 
 =head1 SYNOPSIS
 

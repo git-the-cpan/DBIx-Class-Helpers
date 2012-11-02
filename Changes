@@ -1,5 +1,12 @@
 Revision history for DBIx-Class-Helpers
 
+2.016001  2012-11-02 17:52:43 CST6CDT
+       - fix OnColumnChange to work with relationship based updates
+         so $artist->update({ cd => $cd_obj }) now correctly triggers
+         a change.  Thanks David Schmidt for the test
+       - validate number of arguments to _change_column (David Schmidt)
+       - fix name of Helper::ResultSet::Shortcut in SYNOPSIS
+
 2.016000  2012-10-25 21:35:05 CST6CDT
        - Add Helper::ResultSet::Shortcut (Wes Malone)
 
