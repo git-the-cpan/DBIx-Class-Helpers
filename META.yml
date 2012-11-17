@@ -1,0 +1,31 @@
+---
+abstract: 'Simplify the common case stuff for DBIx::Class.'
+author:
+  - "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: DBIx-Class-Helpers
+requires:
+  Carp::Clan: 6.04
+  DBD::SQLite: 0
+  DBIx::Class: 0.08127
+  DBIx::Class::Candy: 0.001003
+  Lingua::EN::Inflect: 0
+  List::Util: 0
+  String::CamelCase: 0
+  Sub::Exporter::Progressive: 0.001006
+  Test::Deep: 0
+  Test::Exception: 0
+  Test::More: 0.94
+  namespace::clean: 0.23
+  parent: 0
+resources:
+  repository: git://github.com/frioux/DBIx-Class-Helpers.git
+version: 2.016002

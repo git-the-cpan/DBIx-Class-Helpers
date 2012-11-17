@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::HRI;
 {
-  $DBIx::Class::Helper::ResultSet::Shortcut::HRI::VERSION = '2.016001';
+  $DBIx::Class::Helper::ResultSet::Shortcut::HRI::VERSION = '2.016002';
 }
 
 use strict;
@@ -23,7 +23,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::HRI
 
 =head1 VERSION
 
-version 2.016001
+version 2.016002
 
 =head1 AUTHOR
 

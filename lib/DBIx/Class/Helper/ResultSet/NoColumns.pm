@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::NoColumns;
 {
-  $DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.016001';
+  $DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.016002';
 }
 
 # ABSTRACT: Look ma, no columns!
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::NoColumns - Look ma, no columns!
 
 =head1 VERSION
 
-version 2.016001
+version 2.016002
 
 =head1 SYNOPSIS
 
