@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::CorrelateRelationship;
 {
-  $DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.016002';
+  $DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.016003';
 }
 
 use strict;
@@ -37,7 +37,7 @@ DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your Re
 
 =head1 VERSION
 
-version 2.016002
+version 2.016003
 
 =head1 SYNOPSIS
 

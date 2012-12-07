@@ -66,6 +66,7 @@ t/lib/TestSchema/ResultSet.pm
 t/lib/TestSchema/ResultSet/Bloaty.pm
 t/lib/TestSchema/ResultSet/Foo.pm
 t/lib/TestSchema/ResultSet/Gnarly.pm
+t/lib/TestSchema/ResultSet/Station.pm
 t/lib/ddl.sql
 t/release-pod-syntax.t
 t/resultset/attribute-accessors.t
