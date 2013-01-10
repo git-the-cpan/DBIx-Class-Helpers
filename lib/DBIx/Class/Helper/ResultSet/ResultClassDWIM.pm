@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
 {
-  $DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.016003';
+  $DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.016004';
 }
 
 # ABSTRACT: result_class => '::HRI' == WIN
@@ -36,7 +36,7 @@ DBIx::Class::Helper::ResultSet::ResultClassDWIM - result_class => '::HRI' == WIN
 
 =head1 VERSION
 
-version 2.016003
+version 2.016004
 
 =head1 SYNOPSIS
 
@@ -73,7 +73,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

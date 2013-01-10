@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::ToJSON;
 {
-  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.016003';
+  $DBIx::Class::Helper::Row::ToJSON::VERSION = '2.016004';
 }
 
 use strict;
@@ -68,7 +68,7 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
 =head1 VERSION
 
-version 2.016003
+version 2.016004
 
 =head1 SYNOPSIS
 
@@ -159,7 +159,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
