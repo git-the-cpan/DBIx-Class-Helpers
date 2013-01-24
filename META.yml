@@ -28,4 +28,4 @@ requires:
   parent: 0
 resources:
   repository: git://github.com/frioux/DBIx-Class-Helpers.git
-version: 2.016004
+version: 2.016005

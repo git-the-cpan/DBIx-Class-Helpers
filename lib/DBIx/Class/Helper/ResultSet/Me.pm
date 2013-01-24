@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Me;
 {
-  $DBIx::Class::Helper::ResultSet::Me::VERSION = '2.016004';
+  $DBIx::Class::Helper::ResultSet::Me::VERSION = '2.016005';
 }
 
 use strict;
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::Me - Define predefined searches a more nicely
 
 =head1 VERSION
 
-version 2.016004
+version 2.016005
 
 =head1 SYNOPSIS
 

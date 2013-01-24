@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
 {
-  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.016004';
+  $DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.016005';
 }
 
 use strict;
@@ -138,7 +138,7 @@ DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column
 
 =head1 VERSION
 
-version 2.016004
+version 2.016005
 
 =head1 SYNOPSIS
 

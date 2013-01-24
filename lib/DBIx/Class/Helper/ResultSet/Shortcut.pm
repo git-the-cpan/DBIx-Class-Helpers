@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
 {
-  $DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.016004';
+  $DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.016005';
 }
 
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
@@ -34,7 +34,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.016004
+version 2.016005
 
 =head1 SYNOPSIS
 

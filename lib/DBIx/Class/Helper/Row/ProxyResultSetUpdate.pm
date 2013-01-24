@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::ProxyResultSetUpdate;
 {
-  $DBIx::Class::Helper::Row::ProxyResultSetUpdate::VERSION = '2.016004';
+  $DBIx::Class::Helper::Row::ProxyResultSetUpdate::VERSION = '2.016005';
 }
 
 use base 'DBIx::Class::Helper::Row::SelfResultSet';
@@ -40,7 +40,7 @@ DBIx::Class::Helper::Row::ProxyResultSetUpdate
 
 =head1 VERSION
 
-version 2.016004
+version 2.016005
 
 =head1 SYNOPSIS
 
