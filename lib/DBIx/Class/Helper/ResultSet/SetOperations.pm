@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::SetOperations;
 {
-  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.016005';
+  $DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.016006';
 }
 
 use strict;
@@ -71,12 +71,11 @@ sub _set_operation {
       $self->throw_exception('ResultSets do not all have the same selected columns!')
          unless $self->_compare_arrays($as, $attrs->{as});
 
-      my ($sql, $bind) = $self->result_source->storage->_select_args_to_query(
-         $attrs->{from}, $attrs->{select}, $attrs->{where}, $attrs
-      );
+      my ($sql, @bind) = @{${$_->as_query}};
+      $sql =~ s/^\s*\((.*)\)\s*$/$1/;
 
       push @sql, $sql;
-      push @params, @{$bind};
+      push @params, @bind;
    }
 
    my $query = q<(> . join(" $operation ", @sql). q<)>;
@@ -106,7 +105,7 @@ DBIx::Class::Helper::ResultSet::SetOperations - Do set operations with DBIx::Cla
 
 =head1 VERSION
 
-version 2.016005
+version 2.016006
 
 =head1 SYNOPSIS
 

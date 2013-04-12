@@ -6,7 +6,6 @@ META.yml
 Makefile.PL
 README
 contributing
-dbfile
 dist.ini
 inc/Dist/Zilla/Plugin/DBICSgen.pm
 lib/DBIx/Class/Helper/IgnoreWantarray.pm
