@@ -44,6 +44,7 @@ lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/Row/ToJSON.pm
 lib/DBIx/Class/Helper/Schema/GenerateSource.pm
 lib/DBIx/Class/Helper/Schema/LintContents.pm
+lib/DBIx/Class/Helper/Schema/QuoteNames.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm

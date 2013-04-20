@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
 {
-  $DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.016006';
+  $DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.017000';
 }
 
 use strict;
@@ -49,7 +49,7 @@ DBIx::Class::Helper::Row::ProxyResultSetMethod - Efficiently reuse ResultSet met
 
 =head1 VERSION
 
-version 2.016006
+version 2.017000
 
 =head1 SYNOPSIS
 

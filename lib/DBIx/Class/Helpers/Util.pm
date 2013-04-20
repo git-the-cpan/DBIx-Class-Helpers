@@ -1,6 +1,6 @@
 package DBIx::Class::Helpers::Util;
 {
-  $DBIx::Class::Helpers::Util::VERSION = '2.016006';
+  $DBIx::Class::Helpers::Util::VERSION = '2.017000';
 }
 
 use strict;
@@ -13,6 +13,7 @@ use Sub::Exporter::Progressive -setup => {
       qw(
          get_namespace_parts is_load_namespaces is_not_load_namespaces
          assert_similar_namespaces order_by_visitor
+         normalize_connect_info
       ),
     ],
   };
@@ -96,6 +97,51 @@ sub order_by_visitor {
    }
 }
 
+sub normalize_connect_info {
+   my %all;
+
+   if (!ref $_[0]) {
+      %all = (
+         dsn => $_[0],
+         ( exists $_[1] ?
+            (user => $_[1],
+
+            exists $_[2] ?
+             (  password => $_[2],
+
+               ( exists $_[3] && ref $_[3] ?
+                  %{$_[3]}
+               : ()
+               ),
+
+               ( exists $_[4] && ref $_[4] ?
+                  %{$_[4]}
+               : ()
+               ),
+
+            )
+            : ()
+
+            )
+
+         : ()
+         ),
+      )
+   } elsif (ref $_[0] eq 'CODE') {
+      %all = (
+         dbh_maker => $_[0],
+         ( exists $_[1] && ref $_[1] ?
+            %{$_[1]}
+         : ()
+         ),
+      )
+   } else {
+      %all = %{$_[0]}
+   }
+
+   return \%all;
+}
+
 1;
 
 __END__
@@ -108,7 +154,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.016006
+version 2.017000
 
 =head1 SYNOPSIS
 
@@ -145,6 +191,19 @@ version 2.016006
        return 'foo_bar' if $field eq 'foo.bar';
        return $field;
     }) if $attrs && $attrs->{order_by};
+
+    $self->next::method($search, $attrs);
+ }
+
+ # in schema
+
+ sub connection {
+    my $self = shift;
+
+    my $args = normalize_connect_info(@_);
+    $args->{quote_names} = 1;
+
+    $self->next::method($args)
  }
 
 =head1 DESCRIPTION
@@ -177,6 +236,12 @@ load_namespaces.  See L</SYNOPSIS> for example.
 
 Dies if both packages are structured in the same way.  The same means both are
 load_namespaces or both are not.  See L</SYNOPSIS> for example.
+
+=head2 normalize_connect_info
+
+Takes L<all of the various and interesting
+forms|DBIx::Class::Storage::DBI/connect_info> that can be passed to connect and
+normalizes them into the final and simplest form, a single hashref.
 
 =head1 AUTHOR
 
