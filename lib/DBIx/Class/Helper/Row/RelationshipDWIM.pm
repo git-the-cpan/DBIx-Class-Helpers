@@ -1,12 +1,11 @@
 package DBIx::Class::Helper::Row::RelationshipDWIM;
-{
-  $DBIx::Class::Helper::Row::RelationshipDWIM::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
 
 # ABSTRACT: Type less for your relationships!
+
+our $VERSION = '2.018000'; # VERSION
 
 sub default_result_namespace {
    die 'you forgot to set your default_result_namespace'
@@ -56,7 +55,7 @@ DBIx::Class::Helper::Row::RelationshipDWIM - Type less for your relationships!
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 

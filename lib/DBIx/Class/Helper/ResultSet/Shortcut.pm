@@ -1,23 +1,25 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-{
-  $DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.017000';
-}
 
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;
 use warnings;
 
+our $VERSION = '2.018000'; # VERSION
+
 use base 'Class::C3::Componentised';
 
 __PACKAGE__->load_components(qw(
    HRI
-   OrderBy
+   OrderByMagic
    GroupBy
    Distinct
    Rows
+   HasRows
+   Limit
    Columns
    AddColumns
+   Prefetch
 ));
 
 sub component_base_class { 'DBIx::Class::Helper::ResultSet::Shortcut' }
@@ -34,7 +36,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 
@@ -91,6 +93,17 @@ entire schema.
  # equivalent to...
  $foo_rs->search(undef, { order_by => { -desc => 'col1' } });
 
+You can also specify the order as a "magic string", e.g.:
+
+ $foo_rs->order_by('!col1')       # ->order_by({ -desc => 'col1' })
+ $foo_rs->order_by('col1,col2')   # ->order_by([qw(col1 col2)])
+ $foo_rs->order_by('col1,!col2')  # ->order_by([{ -asc => 'col1' }, { -desc => 'col2' }])
+ $foo_rs->order_by(qw(col1 col2)) # ->order_by([qw(col1 col2)])
+
+Can mix it all up as well:
+
+ $foo_rs->order_by(qw(col1 col2 col3), 'col4,!col5')
+
 =head2 hri
 
  $foo_rs->hri;
@@ -107,6 +120,20 @@ entire schema.
  # equivalent to...
  $foo_rs->search(undef, { rows => 10 })
 
+=head2 limit
+
+This is an alias for C<rows>.
+
+  $foo_rs->limit(10);
+
+  # equivalent to...
+  $foo_rs->rows(10);
+
+=head2 has_rows
+
+A lighter way to check the resultset contains any data rather than
+calling C<< $rs->count >>.
+
 =head2 columns
 
  $foo_rs->columns([qw/ some column names /]);
@@ -120,6 +147,13 @@ entire schema.
 
  # equivalent to...
  $foo_rs->search(undef, { '+columns' => [qw/ some column names /] });
+
+=head2 prefetch
+
+ $foo_rs->prefetch('bar');
+
+ # equivalent to...
+ $foo_rs->search(undef, { prefetch => 'bar' });
 
 =head1 SEE ALSO
 
@@ -135,11 +169,24 @@ components are:
 
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>
 
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic>
+
+(adds the "magic string" functionality to
+C<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>))
+
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::GroupBy>
 
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::Distinct>
 
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Limit>
+
+(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::HasRows>
+
+(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
 
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::Columns>
 

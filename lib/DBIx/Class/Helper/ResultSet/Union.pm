@@ -1,9 +1,8 @@
 package DBIx::Class::Helper::ResultSet::Union;
-{
-  $DBIx::Class::Helper::ResultSet::Union::VERSION = '2.017000';
-}
 
 use parent 'DBIx::Class::Helper::ResultSet::SetOperations';
+
+our $VERSION = '2.018000'; # VERSION
 
 use Carp::Clan;
 carp 'This module is deprecated!  Please use the namespaced version instead!' if $VERSION >= 3;
@@ -23,7 +22,7 @@ DBIx::Class::Helper::ResultSet::Union - (DEPRECATED) Get rid of search context i
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 DESCRIPTION
 

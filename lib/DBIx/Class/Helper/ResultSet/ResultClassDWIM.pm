@@ -1,9 +1,8 @@
 package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
-{
-  $DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.017000';
-}
 
 # ABSTRACT: result_class => '::HRI' == WIN
+
+our $VERSION = '2.018000'; # VERSION
 
 use strict;
 use warnings;
@@ -36,7 +35,7 @@ DBIx::Class::Helper::ResultSet::ResultClassDWIM - result_class => '::HRI' == WIN
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 

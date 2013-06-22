@@ -1,10 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Distinct;
-{
-  $DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
+
+our $VERSION = '2.018000'; # VERSION
 
 sub distinct { $_[0]->search(undef, { distinct => defined $_[1] ? $_[1] : 1 }) }
 
@@ -20,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Distinct
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 AUTHOR
 

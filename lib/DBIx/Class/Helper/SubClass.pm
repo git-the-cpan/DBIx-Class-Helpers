@@ -1,9 +1,9 @@
 package DBIx::Class::Helper::SubClass;
-{
-  $DBIx::Class::Helper::SubClass::VERSION = '2.017000';
-}
 
 use parent 'DBIx::Class::Helper::Row::SubClass';
+
+our $VERSION = '2.018000'; # VERSION
+
 use Carp::Clan;
 carp 'This module is deprecated!  Please use the namespaced version instead!' if $VERSION >= 3;
 croak 'This module is deprecated!  Please use the namespaced version instead!' if $VERSION >= 4;
@@ -22,7 +22,7 @@ DBIx::Class::Helper::SubClass - (DEPRECATED) Convenient subclassing with DBIx::C
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 DESCRIPTION
 

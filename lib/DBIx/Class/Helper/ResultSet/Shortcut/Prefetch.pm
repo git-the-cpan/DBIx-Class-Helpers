@@ -1,11 +1,9 @@
-package DBIx::Class::Helper::ResultSet::Shortcut::Columns;
+package DBIx::Class::Helper::ResultSet::Shortcut::Prefetch;
 
 use strict;
 use warnings;
 
-our $VERSION = '2.018000'; # VERSION
-
-sub columns { shift->search(undef, { columns => shift }) }
+sub prefetch { return shift->search(undef, { prefetch => shift }) }
 
 1;
 
@@ -15,7 +13,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::Shortcut::Columns
+DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
 
 =head1 VERSION
 

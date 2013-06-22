@@ -1,12 +1,11 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
-{
-  $DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
 
-# ABSTRACT: Efficiently reuse ResultSet methods from results
+# ABSTRACT: Efficiently reuse ResultSet methods from results with fallback
+
+our $VERSION = '2.018000'; # VERSION
 
 use base 'DBIx::Class::Helper::Row::SelfResultSet';
 use Sub::Name ();
@@ -45,11 +44,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Row::ProxyResultSetMethod - Efficiently reuse ResultSet methods from results
+DBIx::Class::Helper::Row::ProxyResultSetMethod - Efficiently reuse ResultSet methods from results with fallback
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 
@@ -117,6 +116,13 @@ C<$name> and C<$resultset_method> will default to C<"with_$name">.  C<$slot>
 is the column that the data being retrieved is stored as in the ResultSet
 method being proxied to.  C<$resultset_method> is (duh) the ResultSet method
 being proxied to.
+
+If you did not call the C<with_*> method on your ResultSet, and call the
+proxy method, it will transparently B<fallback> and do the call and fetch
+the needed data. E.g.:
+
+ my $foo = $schema->resultset('Foo')->first; ## did not call with_friend_count
+ print $foo->friend_count; ## will produce desired result magically
 
 =head1 CANDY EXPORTS
 

@@ -1,9 +1,8 @@
 package DBIx::Class::Helper::ResultSet::RemoveColumns;
-{
-  $DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.017000';
-}
 
 # ABSTRACT: Remove columns from a ResultSet
+
+our $VERSION = '2.018000'; # VERSION
 
 sub _resolved_attrs {
    my $self = $_[0];
@@ -32,7 +31,7 @@ DBIx::Class::Helper::ResultSet::RemoveColumns - Remove columns from a ResultSet
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 

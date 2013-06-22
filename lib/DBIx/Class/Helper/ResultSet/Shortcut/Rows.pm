@@ -1,10 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Rows;
-{
-  $DBIx::Class::Helper::ResultSet::Shortcut::Rows::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
+
+our $VERSION = '2.018000'; # VERSION
 
 sub rows { shift->search(undef, { rows => shift }) }
 
@@ -20,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Rows
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 AUTHOR
 

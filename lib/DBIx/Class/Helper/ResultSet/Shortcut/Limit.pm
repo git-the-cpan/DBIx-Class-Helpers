@@ -1,11 +1,13 @@
-package DBIx::Class::Helper::ResultSet::Shortcut::Columns;
+package DBIx::Class::Helper::ResultSet::Shortcut::Limit;
 
 use strict;
 use warnings;
 
+use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
+
 our $VERSION = '2.018000'; # VERSION
 
-sub columns { shift->search(undef, { columns => shift }) }
+sub limit { return shift->rows(@_) }
 
 1;
 
@@ -15,7 +17,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::Shortcut::Columns
+DBIx::Class::Helper::ResultSet::Shortcut::Limit
 
 =head1 VERSION
 

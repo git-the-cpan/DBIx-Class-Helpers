@@ -1,10 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::AddColumns;
-{
-  $DBIx::Class::Helper::ResultSet::Shortcut::AddColumns::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
+
+our $VERSION = '2.018000'; # VERSION
 
 sub add_columns { shift->search(undef, { '+columns' => shift }) }
 
@@ -20,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::AddColumns
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 AUTHOR
 

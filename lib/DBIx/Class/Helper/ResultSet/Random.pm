@@ -1,12 +1,11 @@
 package DBIx::Class::Helper::ResultSet::Random;
-{
-  $DBIx::Class::Helper::ResultSet::Random::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
 
 # ABSTRACT: Get random rows from a ResultSet
+
+our $VERSION = '2.018000'; # VERSION
 
 # this is ghetto
 my %rand_order_by = (
@@ -84,7 +83,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 

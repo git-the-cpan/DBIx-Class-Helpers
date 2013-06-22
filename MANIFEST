@@ -28,7 +28,11 @@ lib/DBIx/Class/Helper/ResultSet/Shortcut/Columns.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Distinct.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/GroupBy.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/HRI.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/HasRows.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Limit.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/OrderBy.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/OrderByMagic.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Prefetch.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Rows.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
@@ -72,6 +76,7 @@ t/release-pod-syntax.t
 t/resultset/attribute-accessors.t
 t/resultset/correlate-relationship.t
 t/resultset/ignore-wantarray.t
+t/resultset/me.t
 t/resultset/no-columns.t
 t/resultset/random.t
 t/resultset/remove-columns.t

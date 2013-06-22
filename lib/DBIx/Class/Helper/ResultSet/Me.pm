@@ -1,14 +1,13 @@
 package DBIx::Class::Helper::ResultSet::Me;
-{
-  $DBIx::Class::Helper::ResultSet::Me::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
 
-# ABSTRACT: Define predefined searches a more nicely
+# ABSTRACT: Define predefined searches more nicely
 
-sub me { shift->current_source_alias . q(.) }
+our $VERSION = '2.018000'; # VERSION
+
+sub me { join('.', shift->current_source_alias, shift || q{})  }
 
 1;
 
@@ -18,11 +17,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::Me - Define predefined searches a more nicely
+DBIx::Class::Helper::ResultSet::Me - Define predefined searches more nicely
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 
@@ -42,8 +41,13 @@ version 2.017000
     $_[0]->search({ $_[0]->me.'type' => CANDY })
  }
 
+ sub cake {
+    $_[0]->search({ $_[0]->me('type') => CAKE })
+ }
+
  # in code using resultset:
  my $candy_bars = $schema->resultset('Bar')->candy;
+ my $cake_bars  = $schema->resultset('Bar')->cake;
 
 =head1 DESCRIPTION
 
@@ -61,7 +65,8 @@ for the L</me> method.
 
 Merely returns the SQL namespace for the current search with a C<.> at the end,
 allowing internal resultset methods to be defined with C<< $self->me >> instead
-of C<< $self->current_source_alias . q(.) >>.
+of C<< $self->current_source_alias . q(.) >>.  Also, if you pass it a single
+argument it will append that to the returned string.
 
 =head1 AUTHOR
 

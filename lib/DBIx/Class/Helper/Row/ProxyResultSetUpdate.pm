@@ -1,7 +1,8 @@
 package DBIx::Class::Helper::Row::ProxyResultSetUpdate;
-{
-  $DBIx::Class::Helper::Row::ProxyResultSetUpdate::VERSION = '2.017000';
-}
+
+# ABSTRACT: Efficiently reuse ResultSet updates from results
+
+our $VERSION = '2.018000'; # VERSION
 
 use base 'DBIx::Class::Helper::Row::SelfResultSet';
 
@@ -36,11 +37,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Row::ProxyResultSetUpdate
+DBIx::Class::Helper::Row::ProxyResultSetUpdate - Efficiently reuse ResultSet updates from results
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 

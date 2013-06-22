@@ -1,12 +1,11 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-{
-  $DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.017000';
-}
 
 use strict;
 use warnings;
 
 # ABSTRACT: Clean up your SQL namespace (DEPRECATED)
+
+our $VERSION = '2.018000'; # VERSION
 
 sub as_virtual_view {
    my $self = shift;
@@ -15,8 +14,8 @@ sub as_virtual_view {
 }
 
 use Carp::Clan;
-carp 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subselect_rs instead!' if $DBIx::Class::Helper::ResultSet::VERSION >= 3;
-croak 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subselect_rs instead!' if $DBIx::Class::Helper::ResultSet::VERSION >= 4;
+carp 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 3;
+croak 'This module is deprecated!  Please use DBIx::Class::ResultSet::as_subselect_rs instead!' if $VERSION >= 4;
 
 1;
 
@@ -30,7 +29,7 @@ DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRE
 
 =head1 VERSION
 
-version 2.017000
+version 2.018000
 
 =head1 SYNOPSIS
 
