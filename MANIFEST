@@ -53,11 +53,14 @@ lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
 lib/DBIx/Class/Helpers/Util.pm
+t/bug-1.t
 t/lib/Lolbot.pm
+t/lib/ParentRS.pm
 t/lib/ParentSchema.pm
 t/lib/ParentSchema/Result.pm
 t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
+t/lib/RS.pm
 t/lib/TestSchema.pm
 t/lib/TestSchema/Result/Bar.pm
 t/lib/TestSchema/Result/Bloaty.pm

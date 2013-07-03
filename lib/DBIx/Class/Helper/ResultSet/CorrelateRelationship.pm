@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Easily correlate your ResultSets
 
-our $VERSION = '2.018000'; # VERSION
+our $VERSION = '2.018001'; # VERSION
 
 sub correlate {
    my ($self, $rel) = @_;
@@ -36,7 +36,7 @@ DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your Re
 
 =head1 VERSION
 
-version 2.018000
+version 2.018001
 
 =head1 SYNOPSIS
 

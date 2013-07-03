@@ -35,7 +35,7 @@ my %WriteMakefileArgs = (
     "parent" => 0
   },
   "TEST_REQUIRES" => {},
-  "VERSION" => "2.018000",
+  "VERSION" => "2.018001",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/row/*.t t/schema/*.t"
   }

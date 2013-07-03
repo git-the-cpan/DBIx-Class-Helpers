@@ -3,7 +3,7 @@ package DBIx::Class::Helper::ResultSet::Shortcut::GroupBy;
 use strict;
 use warnings;
 
-our $VERSION = '2.018000'; # VERSION
+our $VERSION = '2.018001'; # VERSION
 
 sub group_by { shift->search(undef, { group_by => shift }) }
 
@@ -19,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::GroupBy
 
 =head1 VERSION
 
-version 2.018000
+version 2.018001
 
 =head1 AUTHOR
 
