@@ -3,7 +3,7 @@ package DBIx::Class::Helper::ResultSet::Shortcut::Columns;
 use strict;
 use warnings;
 
-our $VERSION = '2.018001'; # VERSION
+our $VERSION = '2.018002'; # VERSION
 
 sub columns { shift->search(undef, { columns => shift }) }
 
@@ -19,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Columns
 
 =head1 VERSION
 
-version 2.018001
+version 2.018002
 
 =head1 AUTHOR
 

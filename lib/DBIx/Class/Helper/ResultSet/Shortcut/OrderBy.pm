@@ -3,7 +3,7 @@ package DBIx::Class::Helper::ResultSet::Shortcut::OrderBy;
 use strict;
 use warnings;
 
-our $VERSION = '2.018001'; # VERSION
+our $VERSION = '2.018002'; # VERSION
 
 sub order_by { shift->search(undef, { order_by => shift }) }
 
@@ -19,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::OrderBy
 
 =head1 VERSION
 
-version 2.018001
+version 2.018002
 
 =head1 AUTHOR
 

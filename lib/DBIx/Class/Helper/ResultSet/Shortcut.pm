@@ -5,21 +5,21 @@ package DBIx::Class::Helper::ResultSet::Shortcut;
 use strict;
 use warnings;
 
-our $VERSION = '2.018001'; # VERSION
+our $VERSION = '2.018002'; # VERSION
 
 use base 'DBIx::Class::ResultSet';
 
 __PACKAGE__->load_components(qw(
-   Helper::ResultSet::Shortcut::HRI
-   Helper::ResultSet::Shortcut::OrderByMagic
-   Helper::ResultSet::Shortcut::GroupBy
-   Helper::ResultSet::Shortcut::Distinct
-   Helper::ResultSet::Shortcut::Rows
-   Helper::ResultSet::Shortcut::HasRows
-   Helper::ResultSet::Shortcut::Limit
-   Helper::ResultSet::Shortcut::Columns
    Helper::ResultSet::Shortcut::AddColumns
+   Helper::ResultSet::Shortcut::Columns
+   Helper::ResultSet::Shortcut::Distinct
+   Helper::ResultSet::Shortcut::GroupBy
+   Helper::ResultSet::Shortcut::HasRows
+   Helper::ResultSet::Shortcut::HRI
+   Helper::ResultSet::Shortcut::Limit
+   Helper::ResultSet::Shortcut::OrderByMagic
    Helper::ResultSet::Shortcut::Prefetch
+   Helper::ResultSet::Shortcut::Rows
 ));
 
 1;
@@ -34,7 +34,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.018001
+version 2.018002
 
 =head1 SYNOPSIS
 
