@@ -1,5 +1,10 @@
 Revision history for DBIx-Class-Helpers
 
+2.018003  2013-09-26 08:06:03 America/Chicago
+ - fix method shadowing with some helpers for ::Shortcut
+ - ::OrderByMagic now correctly passes through arrayrefs (moltar)
+ - ::OrderByMagic only prefixes with CSA when needed (moltar)
+
 2.018002  2013-07-30 18:45:10 CST6CDT
  - ::Helper::ResultSet correctly uses all Helpers (reported by moltar)
    Note that some deprecated helpers were removed from ::ResultSet, so check

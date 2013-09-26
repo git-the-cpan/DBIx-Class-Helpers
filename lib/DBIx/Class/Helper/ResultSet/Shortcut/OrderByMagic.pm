@@ -3,17 +3,15 @@ package DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic;
 use strict;
 use warnings;
 
-our $VERSION = '2.018002'; # VERSION
+our $VERSION = '2.018003'; # VERSION
 
 use base 'DBIx::Class::Helper::ResultSet::Shortcut::OrderBy';
 
 sub order_by {
     my ($self, @order) = @_;
 
-    ## pass thru if we have a HashRef format
-    if (@order && ref($order[0]) eq 'HASH') {
-        return $self->next::method($order[0]);
-    }
+    return $self->next::method(@order)
+       if @order && ref($order[0]);
 
     my @clauses;
     foreach (@order) {
@@ -23,7 +21,12 @@ sub order_by {
                 $col = substr($col, 1); # take everything after '!'
                 $dir = 'desc';
             }
-            push @clauses, { "-$dir" => join('.', $self->current_source_alias, $col) };
+
+            # add csa prefix if necessary
+            $col = join('.', $self->current_source_alias, $col)
+                if index($col, '.') == -1;
+
+            push @clauses, { "-$dir" => $col };
         }
     }
 
@@ -42,7 +45,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic
 
 =head1 VERSION
 
-version 2.018002
+version 2.018003
 
 =head1 AUTHOR
 

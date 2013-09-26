@@ -5,21 +5,19 @@ package DBIx::Class::Helper::ResultSet::Shortcut;
 use strict;
 use warnings;
 
-our $VERSION = '2.018002'; # VERSION
+our $VERSION = '2.018003'; # VERSION
 
-use base 'DBIx::Class::ResultSet';
-
-__PACKAGE__->load_components(qw(
-   Helper::ResultSet::Shortcut::AddColumns
-   Helper::ResultSet::Shortcut::Columns
-   Helper::ResultSet::Shortcut::Distinct
-   Helper::ResultSet::Shortcut::GroupBy
-   Helper::ResultSet::Shortcut::HasRows
-   Helper::ResultSet::Shortcut::HRI
-   Helper::ResultSet::Shortcut::Limit
-   Helper::ResultSet::Shortcut::OrderByMagic
-   Helper::ResultSet::Shortcut::Prefetch
-   Helper::ResultSet::Shortcut::Rows
+use base (qw(
+   DBIx::Class::Helper::ResultSet::Shortcut::AddColumns
+   DBIx::Class::Helper::ResultSet::Shortcut::Columns
+   DBIx::Class::Helper::ResultSet::Shortcut::Distinct
+   DBIx::Class::Helper::ResultSet::Shortcut::GroupBy
+   DBIx::Class::Helper::ResultSet::Shortcut::HasRows
+   DBIx::Class::Helper::ResultSet::Shortcut::HRI
+   DBIx::Class::Helper::ResultSet::Shortcut::Limit
+   DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic
+   DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
+   DBIx::Class::Helper::ResultSet::Shortcut::Rows
 ));
 
 1;
@@ -34,7 +32,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.018002
+version 2.018003
 
 =head1 SYNOPSIS
 

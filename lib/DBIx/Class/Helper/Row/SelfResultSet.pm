@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Easily use ResultSet methods for the current row
 
-our $VERSION = '2.018002'; # VERSION
+our $VERSION = '2.018003'; # VERSION
 
 sub self_rs {
    my ($self) = @_;
@@ -31,7 +31,7 @@ DBIx::Class::Helper::Row::SelfResultSet - Easily use ResultSet methods for the c
 
 =head1 VERSION
 
-version 2.018002
+version 2.018003
 
 =head1 SYNOPSIS
 

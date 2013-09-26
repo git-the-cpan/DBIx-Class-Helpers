@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Helper utilities for DBIx::Class components
 
-our $VERSION = '2.018002'; # VERSION
+our $VERSION = '2.018003'; # VERSION
 
 use Sub::Exporter::Progressive -setup => {
     exports => [
@@ -153,7 +153,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.018002
+version 2.018003
 
 =head1 SYNOPSIS
 

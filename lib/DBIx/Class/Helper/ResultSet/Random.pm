@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Get random rows from a ResultSet
 
-our $VERSION = '2.018002'; # VERSION
+our $VERSION = '2.018003'; # VERSION
 
 # this is ghetto
 my %rand_order_by = (
@@ -83,7 +83,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.018002
+version 2.018003
 
 =head1 SYNOPSIS
 

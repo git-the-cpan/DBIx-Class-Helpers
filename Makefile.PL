@@ -21,21 +21,22 @@ my %WriteMakefileArgs = (
   "NAME" => "DBIx::Class::Helpers",
   "PREREQ_PM" => {
     "Carp::Clan" => "6.04",
-    "DBD::SQLite" => 0,
     "DBIx::Class" => "0.08127",
-    "DBIx::Class::Candy" => "0.001003",
     "Lingua::EN::Inflect" => 0,
     "List::Util" => 0,
     "String::CamelCase" => 0,
     "Sub::Exporter::Progressive" => "0.001006",
-    "Test::Deep" => 0,
-    "Test::Exception" => 0,
-    "Test::More" => "0.94",
     "namespace::clean" => "0.23",
     "parent" => 0
   },
-  "TEST_REQUIRES" => {},
-  "VERSION" => "2.018002",
+  "TEST_REQUIRES" => {
+    "DBD::SQLite" => 0,
+    "DBIx::Class::Candy" => "0.001003",
+    "Test::Deep" => 0,
+    "Test::Exception" => 0,
+    "Test::More" => "0.94"
+  },
+  "VERSION" => "2.018003",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/row/*.t t/schema/*.t"
   }
