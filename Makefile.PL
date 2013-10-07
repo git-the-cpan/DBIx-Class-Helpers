@@ -22,6 +22,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Carp::Clan" => "6.04",
     "DBIx::Class" => "0.08127",
+    "DBIx::Class::Candy" => "0.001003",
     "Lingua::EN::Inflect" => 0,
     "List::Util" => 0,
     "String::CamelCase" => 0,
@@ -31,12 +32,11 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "DBD::SQLite" => 0,
-    "DBIx::Class::Candy" => "0.001003",
     "Test::Deep" => 0,
     "Test::Exception" => 0,
     "Test::More" => "0.94"
   },
-  "VERSION" => "2.018003",
+  "VERSION" => "2.018004",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/row/*.t t/schema/*.t"
   }

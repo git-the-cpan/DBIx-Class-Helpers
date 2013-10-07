@@ -5,7 +5,7 @@ use warnings;
 
 use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
 
-our $VERSION = '2.018003'; # VERSION
+our $VERSION = '2.018004'; # VERSION
 
 sub has_rows { !! shift->rows(1)->next }
 
@@ -21,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::HasRows
 
 =head1 VERSION
 
-version 2.018003
+version 2.018004
 
 =head1 AUTHOR
 

@@ -16,7 +16,7 @@ use parent qw{
 
 # ABSTRACT: All the ResultSet Helpers in one place
 
-our $VERSION = '2.018003'; # VERSION
+our $VERSION = '2.018004'; # VERSION
 
 1;
 
@@ -30,7 +30,7 @@ DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
 
 =head1 VERSION
 
-version 2.018003
+version 2.018004
 
 =head1 DESCRIPTION
 

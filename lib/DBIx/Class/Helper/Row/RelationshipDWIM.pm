@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Type less for your relationships!
 
-our $VERSION = '2.018003'; # VERSION
+our $VERSION = '2.018004'; # VERSION
 
 sub default_result_namespace {
    die 'you forgot to set your default_result_namespace'
@@ -55,7 +55,7 @@ DBIx::Class::Helper::Row::RelationshipDWIM - Type less for your relationships!
 
 =head1 VERSION
 
-version 2.018003
+version 2.018004
 
 =head1 SYNOPSIS
 

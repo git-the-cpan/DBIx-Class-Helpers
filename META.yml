@@ -4,7 +4,6 @@ author:
   - "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
 build_requires:
   DBD::SQLite: 0
-  DBIx::Class::Candy: 0.001003
   Test::Deep: 0
   Test::Exception: 0
   Test::More: 0.94
@@ -20,6 +19,7 @@ name: DBIx-Class-Helpers
 requires:
   Carp::Clan: 6.04
   DBIx::Class: 0.08127
+  DBIx::Class::Candy: 0.001003
   Lingua::EN::Inflect: 0
   List::Util: 0
   String::CamelCase: 0
@@ -29,4 +29,4 @@ requires:
 resources:
   homepage: https://github.com/frioux/DBIx-Class-Helpers
   repository: https://github.com/frioux/DBIx-Class-Helpers.git
-version: 2.018003
+version: 2.018004

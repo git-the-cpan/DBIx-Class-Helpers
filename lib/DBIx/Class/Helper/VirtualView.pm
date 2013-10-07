@@ -2,7 +2,7 @@ package DBIx::Class::Helper::VirtualView;
 
 use parent 'DBIx::Class::Helper::ResultSet::VirtualView';
 
-our $VERSION = '2.018003'; # VERSION
+our $VERSION = '2.018004'; # VERSION
 
 use Carp::Clan;
 carp 'This module is deprecated!  Please use the namespaced version instead!' if $VERSION >= 3;
@@ -22,7 +22,7 @@ DBIx::Class::Helper::VirtualView - (DEPRECATED) Clean up your SQL namespace
 
 =head1 VERSION
 
-version 2.018003
+version 2.018004
 
 =head1 DESCRIPTION
 

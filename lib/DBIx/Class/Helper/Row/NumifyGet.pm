@@ -7,7 +7,7 @@ use Try::Tiny;
 
 # ABSTRACT: Force numeric "context" on numeric columns
 
-our $VERSION = '2.018003'; # VERSION
+our $VERSION = '2.018004'; # VERSION
 
 sub get_column {
    my ($self, $col) = @_;
@@ -46,7 +46,7 @@ DBIx::Class::Helper::Row::NumifyGet - Force numeric "context" on numeric columns
 
 =head1 VERSION
 
-version 2.018003
+version 2.018004
 
 =head1 SYNOPSIS
 
