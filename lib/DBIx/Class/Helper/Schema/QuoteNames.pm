@@ -5,7 +5,7 @@ package DBIx::Class::Helper::Schema::QuoteNames;
 use strict;
 use warnings;
 
-our $VERSION = '2.018004'; # VERSION
+our $VERSION = '2.019000'; # VERSION
 
 use DBIx::Class::Helpers::Util 'normalize_connect_info';
 
@@ -30,7 +30,7 @@ DBIx::Class::Helper::Schema::QuoteNames - force C<quote_names> on
 
 =head1 VERSION
 
-version 2.018004
+version 2.019000
 
 =head1 SYNOPSIS
 

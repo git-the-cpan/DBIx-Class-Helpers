@@ -32,13 +32,14 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "DBD::SQLite" => 0,
+    "DateTime::Format::SQLite" => 0,
     "Test::Deep" => 0,
     "Test::Exception" => 0,
     "Test::More" => "0.94"
   },
-  "VERSION" => "2.018004",
+  "VERSION" => "2.019000",
   "test" => {
-    "TESTS" => "t/*.t t/resultset/*.t t/row/*.t t/schema/*.t"
+    "TESTS" => "t/*.t t/resultset/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
   }
 );
 

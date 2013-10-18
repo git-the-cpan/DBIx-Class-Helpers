@@ -40,6 +40,7 @@
       "test" : {
          "requires" : {
             "DBD::SQLite" : "0",
+            "DateTime::Format::SQLite" : "0",
             "Test::Deep" : "0",
             "Test::Exception" : "0",
             "Test::More" : "0.94"
@@ -55,6 +56,6 @@
          "web" : "https://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.018004"
+   "version" : "2.019000"
 }
 

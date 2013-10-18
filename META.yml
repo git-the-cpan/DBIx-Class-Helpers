@@ -4,6 +4,7 @@ author:
   - "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
 build_requires:
   DBD::SQLite: 0
+  DateTime::Format::SQLite: 0
   Test::Deep: 0
   Test::Exception: 0
   Test::More: 0.94
@@ -29,4 +30,4 @@ requires:
 resources:
   homepage: https://github.com/frioux/DBIx-Class-Helpers
   repository: https://github.com/frioux/DBIx-Class-Helpers.git
-version: 2.018004
+version: 2.019000

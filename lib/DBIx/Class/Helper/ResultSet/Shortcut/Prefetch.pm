@@ -17,7 +17,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
 
 =head1 VERSION
 
-version 2.018004
+version 2.019000
 
 =head1 AUTHOR
 

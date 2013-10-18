@@ -5,7 +5,7 @@ package DBIx::Class::Helper::ResultSet::Shortcut;
 use strict;
 use warnings;
 
-our $VERSION = '2.018004'; # VERSION
+our $VERSION = '2.019000'; # VERSION
 
 use base (qw(
    DBIx::Class::Helper::ResultSet::Shortcut::AddColumns
@@ -32,7 +32,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.018004
+version 2.019000
 
 =head1 SYNOPSIS
 

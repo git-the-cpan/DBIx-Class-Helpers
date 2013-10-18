@@ -5,7 +5,7 @@ use warnings;
 
 use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
 
-our $VERSION = '2.018004'; # VERSION
+our $VERSION = '2.019000'; # VERSION
 
 sub limit { return shift->rows(@_) }
 
@@ -21,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Limit
 
 =head1 VERSION
 
-version 2.018004
+version 2.019000
 
 =head1 AUTHOR
 

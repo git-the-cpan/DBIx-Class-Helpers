@@ -37,6 +37,7 @@ lib/DBIx/Class/Helper/ResultSet/Shortcut/Prefetch.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Rows.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
+lib/DBIx/Class/Helper/Row/CleanResultSet.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm
 lib/DBIx/Class/Helper/Row/NumifyGet.pm
 lib/DBIx/Class/Helper/Row/OnColumnChange.pm
@@ -47,6 +48,7 @@ lib/DBIx/Class/Helper/Row/SelfResultSet.pm
 lib/DBIx/Class/Helper/Row/StorageValues.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/Row/ToJSON.pm
+lib/DBIx/Class/Helper/Schema/DateTime.pm
 lib/DBIx/Class/Helper/Schema/GenerateSource.pm
 lib/DBIx/Class/Helper/Schema/LintContents.pm
 lib/DBIx/Class/Helper/Schema/QuoteNames.pm
@@ -77,7 +79,6 @@ t/lib/TestSchema/ResultSet/Gnarly.pm
 t/lib/TestSchema/ResultSet/Station.pm
 t/lib/ddl.sql
 t/release-pod-syntax.t
-t/resultset/attribute-accessors.t
 t/resultset/correlate-relationship.t
 t/resultset/ignore-wantarray.t
 t/resultset/me.t
@@ -87,6 +88,18 @@ t/resultset/remove-columns.t
 t/resultset/result-class-dwim.t
 t/resultset/search-or.t
 t/resultset/set-operations.t
+t/resultset/shortcut/add-columns.t
+t/resultset/shortcut/columns.t
+t/resultset/shortcut/distinct.t
+t/resultset/shortcut/group-by.t
+t/resultset/shortcut/has-rows.t
+t/resultset/shortcut/hri.t
+t/resultset/shortcut/limit.t
+t/resultset/shortcut/order-by-magic.t
+t/resultset/shortcut/order-by.t
+t/resultset/shortcut/prefetch.t
+t/resultset/shortcut/rows.t
+t/row/clean-resultset.t
 t/row/jointable.t
 t/row/numifyget.t
 t/row/on-column-change.t
@@ -97,6 +110,7 @@ t/row/self-resultset.t
 t/row/storage-values.t
 t/row/subclass.t
 t/row/to_json.t
+t/schema/datetime.t
 t/schema/generate-source.t
 t/schema/lint-contents.t
 t/utilities.t

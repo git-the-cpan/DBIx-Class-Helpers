@@ -3,7 +3,7 @@ package DBIx::Class::Helper::ResultSet::Shortcut::HRI;
 use strict;
 use warnings;
 
-our $VERSION = '2.018004'; # VERSION
+our $VERSION = '2.019000'; # VERSION
 
 sub hri {
    shift->search(undef, {
@@ -22,7 +22,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::HRI
 
 =head1 VERSION
 
-version 2.018004
+version 2.019000
 
 =head1 AUTHOR
 
