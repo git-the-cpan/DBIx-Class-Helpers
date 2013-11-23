@@ -7,7 +7,7 @@ use Scalar::Util 'blessed';
 
 # ABSTRACT: Check the data in your database match your constraints
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 sub null_check_source {
    my ($self, $source_name, $non_nullable_columns) = @_;
@@ -111,13 +111,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Schema::LintContents - Check the data in your database match your constraints
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

@@ -37,37 +37,35 @@ my %WriteMakefileArgs = (
     "Test::Exception" => 0,
     "Test::More" => "0.94"
   },
-  "VERSION" => "2.019000",
+  "VERSION" => "2.019001",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
   }
 );
 
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
-  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
-  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
-  for my $mod ( keys %$tr ) {
-    if ( exists $br->{$mod} ) {
-      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
-    }
-    else {
-      $br->{$mod} = $tr->{$mod};
-    }
-  }
-}
+my %FallbackPrereqs = (
+  "Carp::Clan" => "6.04",
+  "DBD::SQLite" => 0,
+  "DBIx::Class" => "0.08127",
+  "DBIx::Class::Candy" => "0.001003",
+  "DateTime::Format::SQLite" => 0,
+  "Lingua::EN::Inflect" => 0,
+  "List::Util" => 0,
+  "String::CamelCase" => 0,
+  "Sub::Exporter::Progressive" => "0.001006",
+  "Test::Deep" => 0,
+  "Test::Exception" => 0,
+  "Test::More" => "0.94",
+  "namespace::clean" => "0.23",
+  "parent" => 0
+);
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
-  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM};
-  for my $mod ( keys %$br ) {
-    if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
-    }
-    else {
-      $pp->{$mod} = $br->{$mod};
-    }
-  }
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  delete $WriteMakefileArgs{TEST_REQUIRES};
+  delete $WriteMakefileArgs{BUILD_REQUIRES};
+  $WriteMakefileArgs{PREREQ_PM} = \%FallbackPrereqs;
 }
 
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}

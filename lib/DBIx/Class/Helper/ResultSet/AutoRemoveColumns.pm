@@ -2,7 +2,7 @@ package DBIx::Class::Helper::ResultSet::AutoRemoveColumns;
 
 # ABSTRACT: Automatically remove columns from a ResultSet
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use parent 'DBIx::Class::Helper::ResultSet::RemoveColumns', 'DBIx::Class';
 
@@ -58,13 +58,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::AutoRemoveColumns - Automatically remove columns from a ResultSet
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

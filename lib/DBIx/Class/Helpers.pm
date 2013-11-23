@@ -4,7 +4,7 @@ use warnings;
 
 # ABSTRACT: Simplify the common case stuff for DBIx::Class.
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 1; # this class isn't meant to be used
 
@@ -12,13 +12,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helpers - Simplify the common case stuff for DBIx::Class.
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

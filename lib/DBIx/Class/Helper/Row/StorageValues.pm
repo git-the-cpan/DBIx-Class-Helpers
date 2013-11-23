@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Keep track of stored vs in-memory row values
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use parent 'DBIx::Class';
 
@@ -72,13 +72,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Row::StorageValues - Keep track of stored vs in-memory row values
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

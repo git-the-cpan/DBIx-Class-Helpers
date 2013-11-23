@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Efficiently reuse ResultSet methods from results with fallback
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use base 'DBIx::Class::Helper::Row::SelfResultSet';
 use Sub::Name ();
@@ -42,13 +42,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Row::ProxyResultSetMethod - Efficiently reuse ResultSet methods from results with fallback
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

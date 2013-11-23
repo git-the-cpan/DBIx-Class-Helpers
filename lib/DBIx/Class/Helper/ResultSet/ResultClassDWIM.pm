@@ -2,7 +2,7 @@ package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
 
 # ABSTRACT: result_class => '::HRI' == WIN
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use strict;
 use warnings;
@@ -29,13 +29,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::ResultClassDWIM - result_class => '::HRI' == WIN
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

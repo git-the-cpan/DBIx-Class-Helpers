@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Do things when the values of a column change
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use parent 'DBIx::Class::Helper::Row::StorageValues';
 use List::Util 'first';
@@ -131,13 +131,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column change
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

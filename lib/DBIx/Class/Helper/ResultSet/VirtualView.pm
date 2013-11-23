@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Clean up your SQL namespace (DEPRECATED)
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 sub as_virtual_view {
    my $self = shift;
@@ -23,13 +23,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRECATED)
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

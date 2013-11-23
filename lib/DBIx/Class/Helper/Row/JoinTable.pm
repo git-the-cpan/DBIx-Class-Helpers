@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Easily set up join tables with DBIx::Class
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use DBIx::Class::Helpers::Util 'get_namespace_parts';
 use Lingua::EN::Inflect ();
@@ -186,13 +186,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Row::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

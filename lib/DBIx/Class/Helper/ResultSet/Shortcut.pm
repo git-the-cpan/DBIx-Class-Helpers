@@ -5,7 +5,7 @@ package DBIx::Class::Helper::ResultSet::Shortcut;
 use strict;
 use warnings;
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use base (qw(
    DBIx::Class::Helper::ResultSet::Shortcut::AddColumns
@@ -26,13 +26,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order_by, etc)
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

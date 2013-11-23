@@ -16,7 +16,7 @@ use parent qw{
 
 # ABSTRACT: All the ResultSet Helpers in one place
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 1;
 
@@ -24,13 +24,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 DESCRIPTION
 

@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Do set operations with DBIx::Class
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 # cribbed from perlfaq4
 sub _compare_arrays {
@@ -98,13 +98,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::SetOperations - Do set operations with DBIx::Class
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

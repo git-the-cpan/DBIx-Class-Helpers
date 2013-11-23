@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Shortcut for C<< ->resultset >>
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 sub clean_rs { return shift->result_source->resultset }
 
@@ -15,13 +15,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Row::CleanResultSet - Shortcut for C<< ->resultset >>
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Easily correlate your ResultSets
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 sub correlate {
    my ($self, $rel) = @_;
@@ -30,13 +30,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your ResultSets
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 
@@ -51,7 +53,7 @@ version 2.019000
 
    $self->search(undef, {
      '+columns' => {
-       book_count => $self->correlate('book')->count_rs->as_query
+       book_count => $self->correlate('books')->count_rs->as_query
      }
    });
  }

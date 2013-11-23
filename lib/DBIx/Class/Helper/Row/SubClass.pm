@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Convenient subclassing with DBIx::Class
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 use DBIx::Class::Helpers::Util qw{get_namespace_parts assert_similar_namespaces};
 use DBIx::Class::Candy::Exports;
@@ -49,13 +49,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::Row::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

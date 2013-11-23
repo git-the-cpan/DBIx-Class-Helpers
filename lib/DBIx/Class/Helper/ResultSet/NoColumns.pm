@@ -5,7 +5,7 @@ package DBIx::Class::Helper::ResultSet::NoColumns;
 use strict;
 use warnings;
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 sub no_columns { $_[0]->search(undef, { columns => [] }) }
 
@@ -15,13 +15,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::NoColumns - Look ma, no columns!
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 

@@ -11,13 +11,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 AUTHOR
 

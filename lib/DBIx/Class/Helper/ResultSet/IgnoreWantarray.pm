@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Get rid of search context issues
 
-our $VERSION = '2.019000'; # VERSION
+our $VERSION = '2.019001'; # VERSION
 
 sub search {
    shift->search_rs(@_);
@@ -17,13 +17,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issues
 
 =head1 VERSION
 
-version 2.019000
+version 2.019001
 
 =head1 SYNOPSIS
 
