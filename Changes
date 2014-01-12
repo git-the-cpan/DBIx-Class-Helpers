@@ -1,5 +1,10 @@
 Revision history for DBIx-Class-Helpers
 
+2.019002  2014-01-12 09:40:41 America/Chicago
+ - Pick SQL for random row selection in a cleaner way
+ - Stop using Class::MOP::load_class (RT#91035)
+ - Really stop using RT
+
 2.019001  2013-11-23 10:19:28 America/Chicago
  - Fix typo in ::CorrelateRelationship (Getty)
 

@@ -23,10 +23,13 @@ my %WriteMakefileArgs = (
     "Carp::Clan" => "6.04",
     "DBIx::Class" => "0.08127",
     "DBIx::Class::Candy" => "0.001003",
+    "DBIx::Introspector" => 0,
     "Lingua::EN::Inflect" => 0,
     "List::Util" => 0,
+    "Module::Runtime" => 0,
     "String::CamelCase" => 0,
     "Sub::Exporter::Progressive" => "0.001006",
+    "Try::Tiny" => 0,
     "namespace::clean" => "0.23",
     "parent" => 0
   },
@@ -37,7 +40,7 @@ my %WriteMakefileArgs = (
     "Test::Exception" => 0,
     "Test::More" => "0.94"
   },
-  "VERSION" => "2.019001",
+  "VERSION" => "2.019002",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
   }
@@ -49,14 +52,17 @@ my %FallbackPrereqs = (
   "DBD::SQLite" => 0,
   "DBIx::Class" => "0.08127",
   "DBIx::Class::Candy" => "0.001003",
+  "DBIx::Introspector" => 0,
   "DateTime::Format::SQLite" => 0,
   "Lingua::EN::Inflect" => 0,
   "List::Util" => 0,
+  "Module::Runtime" => 0,
   "String::CamelCase" => 0,
   "Sub::Exporter::Progressive" => "0.001006",
   "Test::Deep" => 0,
   "Test::Exception" => 0,
   "Test::More" => "0.94",
+  "Try::Tiny" => 0,
   "namespace::clean" => "0.23",
   "parent" => 0
 );

@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Type less for your relationships!
 
-our $VERSION = '2.019001'; # VERSION
+our $VERSION = '2.019002'; # VERSION
 
 sub default_result_namespace {
    die 'you forgot to set your default_result_namespace'
@@ -57,7 +57,7 @@ DBIx::Class::Helper::Row::RelationshipDWIM - Type less for your relationships!
 
 =head1 VERSION
 
-version 2.019001
+version 2.019002
 
 =head1 SYNOPSIS
 
@@ -101,7 +101,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

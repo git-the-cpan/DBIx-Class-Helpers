@@ -2,7 +2,7 @@ package DBIx::Class::Helper::IgnoreWantarray;
 
 use parent 'DBIx::Class::Helper::ResultSet::IgnoreWantarray';
 
-our $VERSION = '2.019001'; # VERSION
+our $VERSION = '2.019002'; # VERSION
 
 use Carp::Clan;
 carp 'This module is deprecated!  Please use the namespaced version instead!' if $VERSION >= 3;
@@ -24,7 +24,7 @@ DBIx::Class::Helper::IgnoreWantarray - (DEPRECATED) Get rid of search context is
 
 =head1 VERSION
 
-version 2.019001
+version 2.019002
 
 =head1 DESCRIPTION
 
@@ -39,7 +39,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

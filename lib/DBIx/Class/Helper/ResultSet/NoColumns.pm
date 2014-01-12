@@ -5,7 +5,7 @@ package DBIx::Class::Helper::ResultSet::NoColumns;
 use strict;
 use warnings;
 
-our $VERSION = '2.019001'; # VERSION
+our $VERSION = '2.019002'; # VERSION
 
 sub no_columns { $_[0]->search(undef, { columns => [] }) }
 
@@ -23,7 +23,7 @@ DBIx::Class::Helper::ResultSet::NoColumns - Look ma, no columns!
 
 =head1 VERSION
 
-version 2.019001
+version 2.019002
 
 =head1 SYNOPSIS
 
@@ -64,7 +64,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

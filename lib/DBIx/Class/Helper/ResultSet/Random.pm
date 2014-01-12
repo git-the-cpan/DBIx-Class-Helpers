@@ -2,58 +2,34 @@ package DBIx::Class::Helper::ResultSet::Random;
 
 use strict;
 use warnings;
+use Module::Runtime 'use_module';
+use Try::Tiny;
 
 # ABSTRACT: Get random rows from a ResultSet
 
-our $VERSION = '2.019001'; # VERSION
+our $VERSION = '2.019002'; # VERSION
 
-# this is ghetto
-my %rand_order_by = (
-   'DBIx::Class::Storage::DBI::SQLite'                     => 'RANDOM()',
-   'DBIx::Class::Storage::DBI::mysql'                      => 'RAND()',
-   'DBIx::Class::Storage::DBI::ODBC::Microsoft_SQL_Server' => 'NEWID()',
-   'DBIx::Class::Storage::DBI::MSSQL'                      => 'NEWID()',
-   'DBIx::Class::Storage::DBI::Pg'                         => 'RANDOM()',
-   'DBIx::Class::Storage::DBI::Oracle'                     => 'dbms_random.value',
-   'DBIx::Class::Storage::DBI::Sybase::MSSQL'                     => 'NEWID()',
-   'DBIx::Class::Storage::DBI::Sybase::Microsoft_SQL_Server::NoBindVars' =>
-     'NEWID()',
-   'DBIx::Class::Storage::DBI::Sybase::Microsoft_SQL_Server'      => 'NEWID()',
-   'DBIx::Class::Storage::DBI::Sybase::ASE::NoBindVars'           => 'RAND()',
-   'DBIx::Class::Storage::DBI::Sybase::ASE'                       => 'RAND()',
-   'DBIx::Class::Storage::DBI::Sybase'                            => 'RAND()',
-   'DBIx::Class::Storage::DBI::SQLAnywhere'                       => 'RAND()',
-   'DBIx::Class::Storage::DBI::Oracle::WhereJoins' => 'dbms_random.value',
-   'DBIx::Class::Storage::DBI::Oracle::Generic'    => 'dbms_random.value',
-   'DBIx::Class::Storage::DBI::ODBC::SQL_Anywhere' => 'RAND()',
-   'DBIx::Class::Storage::DBI::ODBC::Firebird'                    => 'RAND()',
-   'DBIx::Class::Storage::DBI::ODBC::ACCESS'                      => 'RND()',
-   'DBIx::Class::Storage::DBI::mysql::backup'                     => 'RAND()',
-   'DBIx::Class::Storage::DBI::InterBase'                         => 'RAND()',
-   'DBIx::Class::Storage::DBI::Firebird::Common'                  => 'RAND()',
-   'DBIx::Class::Storage::DBI::Firebird'                          => 'RAND()',
-   'DBIx::Class::Storage::DBI::DB2'                               => 'RAND()',
-   'DBIx::Class::Storage::DBI::ADO::MS_Jet'                       => 'RND()',
-   'DBIx::Class::Storage::DBI::ADO::Microsoft_SQL_Server'         => 'NEWID()',
-   'DBIx::Class::Storage::DBI::ACCESS'                            => 'RND()',
-);
+sub _introspector {
+   my $d = use_module('DBIx::Introspector')
+      ->new(drivers => '2013-12.01');
 
-{
-#sort keys descending to handle more specific storage classes first
-#(right now it does not make a difference though)
-my @keys_rand_order_by = sort { $b cmp $a } keys %rand_order_by;
+   $d->decorate_driver_unconnected(ACCESS => rand_sql => sub { 'RND()' });
+   $d->decorate_driver_unconnected(Oracle => rand_sql => sub { 'dbms_random.value' });
+   $d->decorate_driver_unconnected(Pg     => rand_sql => sub { 'RANDOM()' });
+   $d->decorate_driver_unconnected(MSSQL  => rand_sql => sub { 'NEWID()' });
+   $d->decorate_driver_unconnected(SQLite => rand_sql => sub { 'RANDOM()' });
 
+   $d
+}
+
+my $d;
 sub _rand_order_by {
    my $self = shift;
-   $self->result_source->storage->_determine_driver;
    my $storage = $self->result_source->storage;
+   $storage->ensure_connected;
 
-   for my $dbms (@keys_rand_order_by) {
-      return $rand_order_by{$dbms} if $storage->isa($dbms);
-   }
-
-   return 'RAND()';
-}
+   $d ||= $self->_introspector;
+   return try { $d->get($storage->dbh, undef, 'rand_sql') } catch { 'RAND()' };
 }
 
 sub rand {
@@ -85,7 +61,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.019001
+version 2.019002
 
 =head1 SYNOPSIS
 
@@ -146,7 +122,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

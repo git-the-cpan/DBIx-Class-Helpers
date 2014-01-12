@@ -29,10 +29,13 @@
             "Carp::Clan" : "6.04",
             "DBIx::Class" : "0.08127",
             "DBIx::Class::Candy" : "0.001003",
+            "DBIx::Introspector" : "0",
             "Lingua::EN::Inflect" : "0",
             "List::Util" : "0",
+            "Module::Runtime" : "0",
             "String::CamelCase" : "0",
             "Sub::Exporter::Progressive" : "0.001006",
+            "Try::Tiny" : "0",
             "namespace::clean" : "0.23",
             "parent" : "0"
          }
@@ -49,6 +52,9 @@
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/frioux/DBIx-Class-Helpers/issues"
+      },
       "homepage" : "https://github.com/frioux/DBIx-Class-Helpers",
       "repository" : {
          "type" : "git",
@@ -56,6 +62,6 @@
          "web" : "https://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.019001"
+   "version" : "2.019002"
 }
 
