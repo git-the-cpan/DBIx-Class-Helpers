@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::SetOperations;
-
+$DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Do set operations with DBIx::Class
-
-our $VERSION = '2.019002'; # VERSION
 
 # cribbed from perlfaq4
 sub _compare_arrays {
@@ -106,7 +104,7 @@ DBIx::Class::Helper::ResultSet::SetOperations - Do set operations with DBIx::Cla
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

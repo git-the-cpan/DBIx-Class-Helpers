@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::HasRows;
-
+$DBIx::Class::Helper::ResultSet::Shortcut::HasRows::VERSION = '2.019003';
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
-
-our $VERSION = '2.019002'; # VERSION
 
 sub has_rows { !! shift->rows(1)->next }
 
@@ -23,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::HasRows
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 AUTHOR
 

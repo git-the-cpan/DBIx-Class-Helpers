@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::Row::SubClass;
-
+$DBIx::Class::Helper::Row::SubClass::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Convenient subclassing with DBIx::Class
-
-our $VERSION = '2.019002'; # VERSION
 
 use DBIx::Class::Helpers::Util qw{get_namespace_parts assert_similar_namespaces};
 use DBIx::Class::Candy::Exports;
@@ -57,7 +55,7 @@ DBIx::Class::Helper::Row::SubClass - Convenient subclassing with DBIx::Class
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

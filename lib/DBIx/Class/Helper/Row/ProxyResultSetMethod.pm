@@ -1,24 +1,27 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
-
+$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Efficiently reuse ResultSet methods from results with fallback
 
-our $VERSION = '2.019002'; # VERSION
-
-use base 'DBIx::Class::Helper::Row::SelfResultSet';
+use base 'DBIx::Class::Helper::Row::SelfResultSet', 'Class::Accessor::Grouped';
 use Sub::Name ();
 
 use DBIx::Class::Candy::Exports;
 
 export_methods [qw( proxy_resultset_method )];
 
+__PACKAGE__->mk_group_accessors(inherited => '_proxy_slots');
+
 sub proxy_resultset_method {
    my ($self, $name, $attr) = @_;
 
    my $rs_method   = $attr->{resultset_method} || "with_$name";
    my $slot        = $attr->{slot} || $name;
+
+   $self->_proxy_slots([]) unless $self->_proxy_slots;
+   push @{$self->_proxy_slots}, $slot;
 
    no strict 'refs';
    my $method = $self . '::' . $name;
@@ -36,6 +39,12 @@ sub proxy_resultset_method {
    }
 }
 
+sub copy {
+   delete local @{$_[0]->{_column_data}}{@{$_[0]->_proxy_slots}};
+
+   shift->next::method(@_);
+}
+
 1;
 
 __END__
@@ -50,7 +59,7 @@ DBIx::Class::Helper::Row::ProxyResultSetMethod - Efficiently reuse ResultSet met
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

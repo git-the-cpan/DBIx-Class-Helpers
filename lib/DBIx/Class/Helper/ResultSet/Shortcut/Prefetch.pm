@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Prefetch;
-
+$DBIx::Class::Helper::ResultSet::Shortcut::Prefetch::VERSION = '2.019003';
 use strict;
 use warnings;
 
@@ -19,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 AUTHOR
 

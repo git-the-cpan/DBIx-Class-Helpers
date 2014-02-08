@@ -1,13 +1,12 @@
 package DBIx::Class::Helper::ResultSet::Random;
-
+$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.019003';
 use strict;
 use warnings;
+
 use Module::Runtime 'use_module';
 use Try::Tiny;
 
 # ABSTRACT: Get random rows from a ResultSet
-
-our $VERSION = '2.019002'; # VERSION
 
 sub _introspector {
    my $d = use_module('DBIx::Introspector')
@@ -61,7 +60,7 @@ DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

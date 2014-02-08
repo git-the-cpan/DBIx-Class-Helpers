@@ -1,11 +1,9 @@
 package DBIx::Class::Helpers::Util;
-
+$DBIx::Class::Helpers::Util::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Helper utilities for DBIx::Class components
-
-our $VERSION = '2.019002'; # VERSION
 
 use Sub::Exporter::Progressive -setup => {
     exports => [
@@ -155,7 +153,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

@@ -1,13 +1,11 @@
 package DBIx::Class::Helper::Row::NumifyGet;
-
+$DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.019003';
 use strict;
 use warnings;
 
 use Try::Tiny;
 
 # ABSTRACT: Force numeric "context" on numeric columns
-
-our $VERSION = '2.019002'; # VERSION
 
 sub get_column {
    my ($self, $col) = @_;
@@ -48,7 +46,7 @@ DBIx::Class::Helper::Row::NumifyGet - Force numeric "context" on numeric columns
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

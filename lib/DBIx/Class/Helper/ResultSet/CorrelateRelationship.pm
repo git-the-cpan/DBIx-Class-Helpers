@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::CorrelateRelationship;
-
+$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Easily correlate your ResultSets
-
-our $VERSION = '2.019002'; # VERSION
 
 sub correlate {
    my ($self, $rel) = @_;
@@ -38,7 +36,7 @@ DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your Re
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

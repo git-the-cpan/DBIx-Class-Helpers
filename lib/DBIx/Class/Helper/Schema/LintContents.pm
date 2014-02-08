@@ -1,13 +1,9 @@
 package DBIx::Class::Helper::Schema::LintContents;
-
+$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.019003';
 use strict;
 use warnings;
 
 use Scalar::Util 'blessed';
-
-# ABSTRACT: Check the data in your database match your constraints
-
-our $VERSION = '2.019002'; # VERSION
 
 sub null_check_source {
    my ($self, $source_name, $non_nullable_columns) = @_;
@@ -115,11 +111,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Schema::LintContents - Check the data in your database match your constraints
+DBIx::Class::Helper::Schema::LintContents
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

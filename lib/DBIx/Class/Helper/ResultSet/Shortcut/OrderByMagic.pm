@@ -1,9 +1,7 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic;
-
+$DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic::VERSION = '2.019003';
 use strict;
 use warnings;
-
-our $VERSION = '2.019002'; # VERSION
 
 use base 'DBIx::Class::Helper::ResultSet::Shortcut::OrderBy';
 
@@ -47,7 +45,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 AUTHOR
 

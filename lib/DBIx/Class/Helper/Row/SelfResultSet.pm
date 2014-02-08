@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
-
+$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Easily use ResultSet methods for the current row
-
-our $VERSION = '2.019002'; # VERSION
 
 sub self_rs {
    my ($self) = @_;
@@ -33,7 +31,7 @@ DBIx::Class::Helper::Row::SelfResultSet - Easily use ResultSet methods for the c
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

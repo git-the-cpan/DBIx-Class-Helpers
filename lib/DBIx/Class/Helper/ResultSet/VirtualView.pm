@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-
+$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Clean up your SQL namespace (DEPRECATED)
-
-our $VERSION = '2.019002'; # VERSION
 
 sub as_virtual_view {
    my $self = shift;
@@ -31,7 +29,7 @@ DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRE
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

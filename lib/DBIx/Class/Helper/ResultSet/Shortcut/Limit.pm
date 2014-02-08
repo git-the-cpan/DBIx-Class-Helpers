@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Limit;
-
+$DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.019003';
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
-
-our $VERSION = '2.019002'; # VERSION
 
 sub limit { return shift->rows(@_) }
 
@@ -23,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Limit
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 AUTHOR
 

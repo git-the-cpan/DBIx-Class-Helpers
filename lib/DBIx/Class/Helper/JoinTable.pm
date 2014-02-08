@@ -1,8 +1,6 @@
 package DBIx::Class::Helper::JoinTable;
-
+$DBIx::Class::Helper::JoinTable::VERSION = '2.019003';
 use parent 'DBIx::Class::Helper::Row::JoinTable';
-
-our $VERSION = '2.019002'; # VERSION
 
 use Carp::Clan;
 carp 'This module is deprecated!  Please use the namespaced version instead!' if $VERSION >= 3;
@@ -24,7 +22,7 @@ DBIx::Class::Helper::JoinTable - (DEPRECATED) Easily set up join tables with DBI
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 DESCRIPTION
 

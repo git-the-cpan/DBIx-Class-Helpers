@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::SearchOr;
-
+$DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.019003';
 # ABSTRACT: Combine ResultSet searches with OR's
 
 use strict;
 use warnings;
-
-our $VERSION = '2.019002'; # VERSION
 
 use List::Util 'first';
 use Carp::Clan;
@@ -39,7 +37,7 @@ DBIx::Class::Helper::ResultSet::SearchOr - Combine ResultSet searches with OR's
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

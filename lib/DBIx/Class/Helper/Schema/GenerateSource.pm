@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::Schema::GenerateSource;
-
+$DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.019003';
 # ABSTRACT: Generate sources directly from your Schema
 
 use strict;
 use warnings;
-
-our $VERSION = '2.019002'; # VERSION
 
 use Scalar::Util 'blessed';
 
@@ -43,7 +41,7 @@ DBIx::Class::Helper::Schema::GenerateSource - Generate sources directly from you
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

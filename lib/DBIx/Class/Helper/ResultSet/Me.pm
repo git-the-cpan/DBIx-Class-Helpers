@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Me;
-
+$DBIx::Class::Helper::ResultSet::Me::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Define predefined searches more nicely
-
-our $VERSION = '2.019002'; # VERSION
 
 sub me { join('.', shift->current_source_alias, shift || q{})  }
 
@@ -23,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Me - Define predefined searches more nicely
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 

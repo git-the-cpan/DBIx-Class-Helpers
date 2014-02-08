@@ -1,11 +1,9 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
-
+$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.019003';
 use strict;
 use warnings;
 
 # ABSTRACT: Do things when the values of a column change
-
-our $VERSION = '2.019002'; # VERSION
 
 use parent 'DBIx::Class::Helper::Row::StorageValues';
 use List::Util 'first';
@@ -139,7 +137,7 @@ DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column
 
 =head1 VERSION
 
-version 2.019002
+version 2.019003
 
 =head1 SYNOPSIS
 
