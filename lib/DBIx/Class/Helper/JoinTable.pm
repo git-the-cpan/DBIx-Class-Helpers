@@ -1,5 +1,8 @@
 package DBIx::Class::Helper::JoinTable;
-$DBIx::Class::Helper::JoinTable::VERSION = '2.019003';
+{
+  $DBIx::Class::Helper::JoinTable::VERSION = '2.019004';
+}
+
 use parent 'DBIx::Class::Helper::Row::JoinTable';
 
 use Carp::Clan;
@@ -22,7 +25,7 @@ DBIx::Class::Helper::JoinTable - (DEPRECATED) Easily set up join tables with DBI
 
 =head1 VERSION
 
-version 2.019003
+version 2.019004
 
 =head1 DESCRIPTION
 

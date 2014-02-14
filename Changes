@@ -1,5 +1,8 @@
 Revision history for DBIx-Class-Helpers
 
+2.019004  2014-02-14 07:53:19 America/Chicago
+ - Make IgnoreWantarray's search die in void context
+
 2.019003  2014-02-07 22:21:47-06:00 America/Chicago
  - Fix ->copy on rows with proxied ResultSet methods (thanks moltar for the
    test!) (NOTE: This fix is what requires upgrading to DBIC 0.08260)

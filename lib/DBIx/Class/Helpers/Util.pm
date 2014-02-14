@@ -1,5 +1,8 @@
 package DBIx::Class::Helpers::Util;
-$DBIx::Class::Helpers::Util::VERSION = '2.019003';
+{
+  $DBIx::Class::Helpers::Util::VERSION = '2.019004';
+}
+
 use strict;
 use warnings;
 
@@ -153,7 +156,7 @@ DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
 
 =head1 VERSION
 
-version 2.019003
+version 2.019004
 
 =head1 SYNOPSIS
 

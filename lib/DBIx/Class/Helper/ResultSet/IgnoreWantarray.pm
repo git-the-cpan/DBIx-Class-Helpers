@@ -1,11 +1,17 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-$DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.019003';
+{
+  $DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.019004';
+}
+
 use strict;
 use warnings;
 
 # ABSTRACT: Get rid of search context issues
 
 sub search {
+   $_[0]->throw_exception ('->search is *not* a mutator, calling it in void context makes no sense')
+      if !defined wantarray && (caller)[0] !~ /^\QDBIx::Class::/;
+
    shift->search_rs(@_);
 }
 
@@ -23,7 +29,7 @@ DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issu
 
 =head1 VERSION
 
-version 2.019003
+version 2.019004
 
 =head1 SYNOPSIS
 

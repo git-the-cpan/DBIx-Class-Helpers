@@ -1,5 +1,8 @@
 package DBIx::Class::Helper::VirtualView;
-$DBIx::Class::Helper::VirtualView::VERSION = '2.019003';
+{
+  $DBIx::Class::Helper::VirtualView::VERSION = '2.019004';
+}
+
 use parent 'DBIx::Class::Helper::ResultSet::VirtualView';
 
 use Carp::Clan;
@@ -22,7 +25,7 @@ DBIx::Class::Helper::VirtualView - (DEPRECATED) Clean up your SQL namespace
 
 =head1 VERSION
 
-version 2.019003
+version 2.019004
 
 =head1 DESCRIPTION
 

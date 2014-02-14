@@ -1,5 +1,8 @@
 package DBIx::Class::Helper::Row::RelationshipDWIM;
-$DBIx::Class::Helper::Row::RelationshipDWIM::VERSION = '2.019003';
+{
+  $DBIx::Class::Helper::Row::RelationshipDWIM::VERSION = '2.019004';
+}
+
 use strict;
 use warnings;
 
@@ -55,7 +58,7 @@ DBIx::Class::Helper::Row::RelationshipDWIM - Type less for your relationships!
 
 =head1 VERSION
 
-version 2.019003
+version 2.019004
 
 =head1 SYNOPSIS
 
