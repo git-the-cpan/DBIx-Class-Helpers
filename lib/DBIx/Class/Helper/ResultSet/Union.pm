@@ -1,8 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Union;
-{
-  $DBIx::Class::Helper::ResultSet::Union::VERSION = '2.019004';
-}
-
+$DBIx::Class::Helper::ResultSet::Union::VERSION = '2.020000';
 use parent 'DBIx::Class::Helper::ResultSet::SetOperations';
 
 use Carp::Clan;
@@ -25,7 +22,7 @@ DBIx::Class::Helper::ResultSet::Union - (DEPRECATED) Get rid of search context i
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 DESCRIPTION
 

@@ -1,8 +1,5 @@
 package DBIx::Class::Helper::Row::CleanResultSet;
-{
-  $DBIx::Class::Helper::Row::CleanResultSet::VERSION = '2.019004';
-}
-
+$DBIx::Class::Helper::Row::CleanResultSet::VERSION = '2.020000';
 use strict;
 use warnings;
 
@@ -24,7 +21,7 @@ DBIx::Class::Helper::Row::CleanResultSet - Shortcut for C<< ->resultset >>
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 SYNOPSIS
 

@@ -1,7 +1,6 @@
 package DBIx::Class::Helper::Schema::LintContents;
-{
-  $DBIx::Class::Helper::Schema::LintContents::VERSION = '2.019004';
-}
+$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.020000';
+# ABSTRACT: suite of methods to find violated "constraints"
 
 use strict;
 use warnings;
@@ -114,11 +113,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Schema::LintContents
+DBIx::Class::Helper::Schema::LintContents - suite of methods to find violated "constraints"
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 SYNOPSIS
 

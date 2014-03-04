@@ -1,8 +1,5 @@
 package DBIx::Class::Helper::SubClass;
-{
-  $DBIx::Class::Helper::SubClass::VERSION = '2.019004';
-}
-
+$DBIx::Class::Helper::SubClass::VERSION = '2.020000';
 use parent 'DBIx::Class::Helper::Row::SubClass';
 
 use Carp::Clan;
@@ -25,7 +22,7 @@ DBIx::Class::Helper::SubClass - (DEPRECATED) Convenient subclassing with DBIx::C
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 DESCRIPTION
 

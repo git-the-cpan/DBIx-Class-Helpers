@@ -1,8 +1,5 @@
 package DBIx::Class::Helper::ResultSet;
-{
-  $DBIx::Class::Helper::ResultSet::VERSION = '2.019004';
-}
-
+$DBIx::Class::Helper::ResultSet::VERSION = '2.020000';
 use parent qw{
    DBIx::Class::Helper::ResultSet::AutoRemoveColumns
    DBIx::Class::Helper::ResultSet::CorrelateRelationship
@@ -33,7 +30,7 @@ DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 DESCRIPTION
 

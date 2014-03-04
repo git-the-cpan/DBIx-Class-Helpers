@@ -1,8 +1,5 @@
 package DBIx::Class::Helper::Schema::QuoteNames;
-{
-  $DBIx::Class::Helper::Schema::QuoteNames::VERSION = '2.019004';
-}
-
+$DBIx::Class::Helper::Schema::QuoteNames::VERSION = '2.020000';
 # ABSTRACT: force C<quote_names> on
 
 use strict;
@@ -33,7 +30,7 @@ DBIx::Class::Helper::Schema::QuoteNames - force C<quote_names> on
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 SYNOPSIS
 

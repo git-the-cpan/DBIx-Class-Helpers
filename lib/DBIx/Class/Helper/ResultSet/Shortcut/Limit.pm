@@ -1,8 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Limit;
-{
-  $DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.019004';
-}
-
+$DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.020000';
 use strict;
 use warnings;
 
@@ -24,7 +21,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Limit
 
 =head1 VERSION
 
-version 2.019004
+version 2.020000
 
 =head1 AUTHOR
 
