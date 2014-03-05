@@ -43,9 +43,9 @@ my %WriteMakefileArgs = (
     "Test::More" => "0.94",
     "Test::Roo" => 0
   },
-  "VERSION" => "2.020000",
+  "VERSION" => "2.020001",
   "test" => {
-    "TESTS" => "t/*.t t/resultset/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
+    "TESTS" => "t/*.t t/resultset/*.t t/resultset/date-methods-1/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
   }
 );
 

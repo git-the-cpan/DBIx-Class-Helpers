@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::DateTime;
-$DBIx::Class::Helper::Schema::DateTime::VERSION = '2.020000';
+$DBIx::Class::Helper::Schema::DateTime::VERSION = '2.020001';
 # ABSTRACT: DateTime helper
 
 use strict;
@@ -25,7 +25,7 @@ DBIx::Class::Helper::Schema::DateTime - DateTime helper
 
 =head1 VERSION
 
-version 2.020000
+version 2.020001
 
 =head1 SYNOPSIS
 

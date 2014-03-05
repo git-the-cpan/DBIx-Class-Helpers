@@ -1,6 +1,6 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.020000';
-# ABSTRACT: Define predefined searches more nicely
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.020001';
+# ABSTRACT: Work with dates in your RDBMS nicely
 
 # VERSION
 
@@ -287,8 +287,8 @@ sub _introspector {
 
             my $sql = delete $date_sql->[0];
 
-            # word on the street is that $sql may need to be wrapped with
-            # TO_TIMESTAMP(...)
+            $sql = "TO_TIMESTAMP($sql)"
+                if $part =~ /second|minute|hour/;
             return [
                "EXTRACT($part_map{$part} FROM $sql)", @$date_sql
             ]
@@ -308,7 +308,7 @@ sub _introspector {
             die "unknown unit $unit" unless $diff_part_map{$unit};
 
             return [
-               "($d_sql + NUMTODSINTERVAL($a_sql, ?)",
+               "($d_sql + NUMTODSINTERVAL($a_sql, ?))",
                @d_args, @a_args, $diff_part_map{$unit}
             ];
          }
@@ -431,11 +431,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::DateMethods1 - Define predefined searches more nicely
+DBIx::Class::Helper::ResultSet::DateMethods1 - Work with dates in your RDBMS nicely
 
 =head1 VERSION
 
-version 2.020000
+version 2.020001
 
 =head1 DESCRIPTION
 

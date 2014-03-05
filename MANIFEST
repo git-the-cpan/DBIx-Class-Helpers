@@ -60,6 +60,7 @@ lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
 lib/DBIx/Class/Helpers/Util.pm
 t/bug-1.t
+t/lib/A/ResultSet/DateMethods1.pm
 t/lib/Lolbot.pm
 t/lib/ParentRS.pm
 t/lib/ParentSchema.pm
@@ -68,6 +69,7 @@ t/lib/ParentSchema/Result/Bar.pm
 t/lib/ParentSchema/Result/Foo.pm
 t/lib/RS.pm
 t/lib/TestSchema-0.001-MySQL.sql
+t/lib/TestSchema-0.001-Oracle.sql
 t/lib/TestSchema-0.001-PostgreSQL.sql
 t/lib/TestSchema-0.001-SQLServer.sql
 t/lib/TestSchema-0.001-SQLite.sql
@@ -88,7 +90,11 @@ t/lib/TestSchema/ResultSet/HasDateOps.pm
 t/lib/TestSchema/ResultSet/Station.pm
 t/release-pod-syntax.t
 t/resultset/correlate-relationship.t
-t/resultset/date-methods-1.t
+t/resultset/date-methods-1/mssql.t
+t/resultset/date-methods-1/mysql.t
+t/resultset/date-methods-1/oracle.t
+t/resultset/date-methods-1/pg.t
+t/resultset/date-methods-1/sqlite.t
 t/resultset/ignore-wantarray.t
 t/resultset/me.t
 t/resultset/no-columns.t

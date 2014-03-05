@@ -1,10 +1,11 @@
 -- 
 -- Created by SQL::Translator::Producer::PostgreSQL
--- Created on Tue Mar  4 08:31:41 2014
+-- Created on Wed Mar  5 10:33:51 2014
 -- 
 --
 -- Table: HasDateOps.
 --
+DROP TABLE "HasDateOps" CASCADE;
 CREATE TABLE "HasDateOps" (
   "id" integer NOT NULL,
   "a_date" timestamp NOT NULL,

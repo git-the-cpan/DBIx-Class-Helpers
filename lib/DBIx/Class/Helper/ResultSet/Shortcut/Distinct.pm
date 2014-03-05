@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Distinct;
-$DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.020000';
+$DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.020001';
 use strict;
 use warnings;
 
@@ -19,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::Distinct
 
 =head1 VERSION
 
-version 2.020000
+version 2.020001
 
 =head1 AUTHOR
 
