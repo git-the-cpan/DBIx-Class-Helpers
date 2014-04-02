@@ -12,7 +12,7 @@ DBIx::Class::Helper::ResultSet::DateMethods1::Announce
 
 =head1 VERSION
 
-version 2.020001
+version 2.021000
 
 =head1 NAME
 

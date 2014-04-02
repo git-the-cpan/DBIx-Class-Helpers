@@ -34,8 +34,10 @@ lib/DBIx/Class/Helper/ResultSet/Shortcut/GroupBy.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/HRI.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/HasRows.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Limit.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/LimitedPage.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/OrderBy.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/OrderByMagic.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Page.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Prefetch.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Rows.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
@@ -110,6 +112,7 @@ t/resultset/shortcut/group-by.t
 t/resultset/shortcut/has-rows.t
 t/resultset/shortcut/hri.t
 t/resultset/shortcut/limit.t
+t/resultset/shortcut/limited-page.t
 t/resultset/shortcut/order-by-magic.t
 t/resultset/shortcut/order-by.t
 t/resultset/shortcut/prefetch.t

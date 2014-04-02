@@ -1,9 +1,9 @@
-package DBIx::Class::Helper::ResultSet::Shortcut::OrderBy;
-$DBIx::Class::Helper::ResultSet::Shortcut::OrderBy::VERSION = '2.021000';
+package DBIx::Class::Helper::ResultSet::Shortcut::Page;
+$DBIx::Class::Helper::ResultSet::Shortcut::Page::VERSION = '2.021000';
 use strict;
 use warnings;
 
-sub order_by { shift->search(undef, { order_by => shift }) }
+sub page { shift->search(undef, { page => shift }) }
 
 1;
 
@@ -15,7 +15,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::Shortcut::OrderBy
+DBIx::Class::Helper::ResultSet::Shortcut::Page
 
 =head1 VERSION
 

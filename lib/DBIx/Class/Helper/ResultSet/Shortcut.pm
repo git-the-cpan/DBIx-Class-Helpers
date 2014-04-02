@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.020001';
+$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.021000';
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;
@@ -15,7 +15,9 @@ use base (qw(
    DBIx::Class::Helper::ResultSet::Shortcut::Limit
    DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic
    DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
+   DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage
    DBIx::Class::Helper::ResultSet::Shortcut::Rows
+   DBIx::Class::Helper::ResultSet::Shortcut::Page
 ));
 
 1;
@@ -32,7 +34,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.020001
+version 2.021000
 
 =head1 SYNOPSIS
 
@@ -130,6 +132,20 @@ This is an alias for C<rows>.
 A lighter way to check the resultset contains any data rather than
 calling C<< $rs->count >>.
 
+=head2 page
+
+ $foo_rs->page(2);
+
+ # equivalent to...
+ $foo_rs->search(undef, { page => 2 })
+
+=head2 limited_page
+
+ $foo_rs->limited_page(2, 3);
+
+ # equivalent to...
+ $foo_rs->search(undef, { page => 2, rows => 3 })
+
 =head2 columns
 
  $foo_rs->columns([qw/ some column names /]);
@@ -187,6 +203,13 @@ C<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>))
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::Columns>
 
 =item * L<DBIx::Class::Helper::ResultSet::Shortcut::AddColumns>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Page>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage>
+
+(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Page> and
+L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
 
 =back
 
