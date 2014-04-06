@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::RemoveColumns;
-$DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.021000';
+$DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.021001';
 use strict;
 use warnings;
 
@@ -10,7 +10,7 @@ sub _resolved_attrs {
 
    my $attrs  = $self->{attrs}; # not copying on purpose...
 
-   if ( $attrs->{remove_columns} ) {
+   if ( !$attrs->{columns} && $attrs->{remove_columns} ) {
       my %rc = map { $_ => 1 } @{$attrs->{remove_columns}};
       $attrs->{columns} = [
          grep { !$rc{$_} } $self->result_source->columns
@@ -34,7 +34,7 @@ DBIx::Class::Helper::ResultSet::RemoveColumns - Remove columns from a ResultSet
 
 =head1 VERSION
 
-version 2.021000
+version 2.021001
 
 =head1 SYNOPSIS
 

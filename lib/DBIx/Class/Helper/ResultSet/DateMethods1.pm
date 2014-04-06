@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.021000';
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.021001';
 # ABSTRACT: Work with dates in your RDBMS nicely
 
 use strict;
@@ -433,7 +433,7 @@ DBIx::Class::Helper::ResultSet::DateMethods1 - Work with dates in your RDBMS nic
 
 =head1 VERSION
 
-version 2.021000
+version 2.021001
 
 =head1 DESCRIPTION
 

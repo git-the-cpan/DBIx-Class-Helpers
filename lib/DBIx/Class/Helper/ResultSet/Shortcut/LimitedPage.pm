@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage;
-$DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage::VERSION = '2.021000';
+$DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage::VERSION = '2.021001';
 use strict;
 use warnings;
 
@@ -40,7 +40,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage
 
 =head1 VERSION
 
-version 2.021000
+version 2.021001
 
 =head1 AUTHOR
 
