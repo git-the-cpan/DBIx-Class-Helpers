@@ -1,9 +1,17 @@
-package DBIx::Class::Helper::ResultSet::Shortcut::Page;
-$DBIx::Class::Helper::ResultSet::Shortcut::Page::VERSION = '2.022000';
+package DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist;
+$DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist::VERSION = '2.022000';
 use strict;
 use warnings;
 
-sub page { shift->search(undef, { page => shift }) }
+sub results_exist {
+   my $self   = shift;
+
+   $self
+      ->result_source
+      ->resultset
+      ->search({ -exists => $self->as_query })
+      ->first
+}
 
 1;
 
@@ -15,7 +23,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::Shortcut::Page
+DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist
 
 =head1 VERSION
 

@@ -1,5 +1,7 @@
 # PODNAME: DBIx::Class::Helper::ResultSet::DateMethods1::Announce
 
+# ABSTRACT: Original Announcement of DBIx::Class::Helper::ResultSet::DateMethods1
+
 __END__
 
 =pod
@@ -8,15 +10,11 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::ResultSet::DateMethods1::Announce
+DBIx::Class::Helper::ResultSet::DateMethods1::Announce - Original Announcement of DBIx::Class::Helper::ResultSet::DateMethods1
 
 =head1 VERSION
 
-version 2.021001
-
-=head1 NAME
-
-::DateMethods1 Announcement
+version 2.022000
 
 =head1 Content
 
@@ -142,7 +140,7 @@ And that's it.  I hope you can use and enjoy these helpers!
 
 =head1 SEE ALSO
 
-L<original blog post|http://blog.afoolishmanifesto.com/archives/1926>
+L<original blog post|https://blog.afoolishmanifesto.com/posts/announcing-helper-resultset-datemethods1/>
 
 =head1 AUTHOR
 

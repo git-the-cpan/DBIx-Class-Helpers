@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.021001';
+$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.022000';
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;
@@ -16,6 +16,7 @@ use base (qw(
    DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic
    DBIx::Class::Helper::ResultSet::Shortcut::Prefetch
    DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage
+   DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist
    DBIx::Class::Helper::ResultSet::Shortcut::Rows
    DBIx::Class::Helper::ResultSet::Shortcut::Page
 ));
@@ -34,7 +35,7 @@ DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order
 
 =head1 VERSION
 
-version 2.021001
+version 2.022000
 
 =head1 SYNOPSIS
 
@@ -167,6 +168,14 @@ calling C<< $rs->count >>.
  # equivalent to...
  $foo_rs->search(undef, { prefetch => 'bar' });
 
+=head2 results_exist
+
+ my $results_exist = $schema->resultset('Bar')->search({...})->results_exist;
+
+Uses C<EXISTS> SQL function to check if the query would return anything.
+Possibly lighter weight than the much more common C<< foo() if $rs->count >>
+idiom.
+
 =head1 SEE ALSO
 
 This component is actually a number of other components put together.  It will
@@ -210,6 +219,8 @@ C<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>))
 
 (inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Page> and
 L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist>
 
 =back
 

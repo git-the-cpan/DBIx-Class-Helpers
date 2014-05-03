@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::AddColumns;
-$DBIx::Class::Helper::ResultSet::Shortcut::AddColumns::VERSION = '2.021001';
+$DBIx::Class::Helper::ResultSet::Shortcut::AddColumns::VERSION = '2.022000';
 use strict;
 use warnings;
 
@@ -19,7 +19,7 @@ DBIx::Class::Helper::ResultSet::Shortcut::AddColumns
 
 =head1 VERSION
 
-version 2.021001
+version 2.022000
 
 =head1 AUTHOR
 
