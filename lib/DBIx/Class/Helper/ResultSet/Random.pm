@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Random;
-$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -52,15 +52,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Random - Get random rows from a ResultSet
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

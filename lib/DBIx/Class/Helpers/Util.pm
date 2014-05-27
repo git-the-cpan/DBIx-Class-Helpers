@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers::Util;
-$DBIx::Class::Helpers::Util::VERSION = '2.022000';
+$DBIx::Class::Helpers::Util::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -145,15 +145,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helpers::Util - Helper utilities for DBIx::Class components
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

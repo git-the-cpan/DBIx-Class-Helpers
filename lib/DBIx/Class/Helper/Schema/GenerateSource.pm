@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::GenerateSource;
-$DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.022000';
+$DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.023000';
 # ABSTRACT: Generate sources directly from your Schema
 
 use strict;
@@ -33,15 +33,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::Schema::GenerateSource - Generate sources directly from your Schema
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

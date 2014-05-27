@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
-$DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.023000';
 # ABSTRACT: result_class => '::HRI' == WIN
 
 use strict;
@@ -27,15 +27,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::ResultClassDWIM - result_class => '::HRI' == WIN
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

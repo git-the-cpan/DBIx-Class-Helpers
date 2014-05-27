@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::CorrelateRelationship;
-$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -28,15 +28,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your ResultSets
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

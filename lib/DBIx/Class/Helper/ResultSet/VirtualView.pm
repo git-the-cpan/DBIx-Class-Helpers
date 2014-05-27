@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -21,15 +21,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::VirtualView - Clean up your SQL namespace (DEPRECATED)
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

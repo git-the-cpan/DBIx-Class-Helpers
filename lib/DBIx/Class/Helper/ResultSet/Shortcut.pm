@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.023000';
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;
@@ -27,15 +27,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Shortcut - Shortcuts to common searches (->order_by, etc)
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 
@@ -68,6 +62,54 @@ This helper provides convenience methods for resultset modifications.
 
 See L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to your
 entire schema.
+
+=head1 SEE ALSO
+
+This component is actually a number of other components put together.  It will
+get more components added to it over time.  If you are worried about all the
+extra methods you won't use or something, using the individual shortcuts is
+a simple solution.  All the documentation will remain here, but the individual
+components are:
+
+=over 2
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::HRI>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic>
+
+(adds the "magic string" functionality to
+C<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>))
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::GroupBy>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Distinct>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Limit>
+
+(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::HasRows>
+
+(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Columns>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::AddColumns>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Page>
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage>
+
+(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Page> and
+L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
+
+=item * L<DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist>
+
+=back
 
 =head1 METHODS
 
@@ -175,54 +217,6 @@ calling C<< $rs->count >>.
 Uses C<EXISTS> SQL function to check if the query would return anything.
 Possibly lighter weight than the much more common C<< foo() if $rs->count >>
 idiom.
-
-=head1 SEE ALSO
-
-This component is actually a number of other components put together.  It will
-get more components added to it over time.  If you are worried about all the
-extra methods you won't use or something, using the individual shortcuts is
-a simple solution.  All the documentation will remain here, but the individual
-components are:
-
-=over 2
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::HRI>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic>
-
-(adds the "magic string" functionality to
-C<DBIx::Class::Helper::ResultSet::Shortcut::OrderBy>))
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::GroupBy>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Distinct>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Limit>
-
-(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::HasRows>
-
-(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Columns>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::AddColumns>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::Page>
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::LimitedPage>
-
-(inherits from C<DBIx::Class::Helper::ResultSet::Shortcut::Page> and
-L<DBIx::Class::Helper::ResultSet::Shortcut::Rows>)
-
-=item * L<DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist>
-
-=back
 
 =head1 AUTHOR
 

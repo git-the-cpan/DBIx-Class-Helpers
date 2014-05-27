@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
-$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.022000';
+$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -129,15 +129,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column change
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 
@@ -237,6 +231,20 @@ To be clear, the change methods only get called if the value will be changed
 after C<update> runs.  It correctly looks at the current value of the column
 as well as the arguments passed to C<update>.
 
+=head1 CANDY EXPORTS
+
+If used in conjunction with L<DBIx::Class::Candy> this component will export:
+
+=over
+
+=item before_column_change
+
+=item around_column_change
+
+=item after_column_change
+
+=back
+
 =head1 METHODS
 
 =head2 before_column_change
@@ -295,20 +303,6 @@ a time when I've needed around yet, but it seems like there is a use-case.
 Also Note: you don't get to change the args to C<$next>.  If you think you
 should be able to, you probably don't understand what this component is for.
 That or you know something I don't (equally likely.)
-
-=head1 CANDY EXPORTS
-
-If used in conjunction with L<DBIx::Class::Candy> this component will export:
-
-=over
-
-=item before_column_change
-
-=item around_column_change
-
-=item after_column_change
-
-=back
 
 =head1 AUTHOR
 

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet;
-$DBIx::Class::Helper::ResultSet::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::VERSION = '2.023000';
 use parent qw{
    DBIx::Class::Helper::ResultSet::AutoRemoveColumns
    DBIx::Class::Helper::ResultSet::CorrelateRelationship
@@ -22,15 +22,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet - All the ResultSet Helpers in one place
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 DESCRIPTION
 

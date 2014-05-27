@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
-$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.022000';
+$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -51,15 +51,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::Row::ProxyResultSetMethod - Efficiently reuse ResultSet methods from results with fallback
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::StorageValues;
-$DBIx::Class::Helper::Row::StorageValues::VERSION = '2.022000';
+$DBIx::Class::Helper::Row::StorageValues::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -70,15 +70,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::Row::StorageValues - Keep track of stored vs in-memory row values
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

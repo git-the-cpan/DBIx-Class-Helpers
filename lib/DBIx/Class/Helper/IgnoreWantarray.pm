@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::IgnoreWantarray;
-$DBIx::Class::Helper::IgnoreWantarray::VERSION = '2.022000';
+$DBIx::Class::Helper::IgnoreWantarray::VERSION = '2.023000';
 use parent 'DBIx::Class::Helper::ResultSet::IgnoreWantarray';
 
 use Carp::Clan;
@@ -14,15 +14,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::IgnoreWantarray - (DEPRECATED) Get rid of search context issues
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 DESCRIPTION
 

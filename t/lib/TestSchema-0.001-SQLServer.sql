@@ -1,7 +1,19 @@
 -- 
 -- Created by SQL::Translator::Generator::Role::DDL
--- Created on Sat May  3 10:39:33 2014
+-- Created on Mon May 26 19:33:03 2014
 -- 
+
+
+--
+-- Table: [Gnarly]
+--
+CREATE TABLE [Gnarly] (
+  [id] int NOT NULL,
+  [name] varchar NOT NULL,
+  [literature] text NULL,
+  [your_mom] blob NULL,
+  CONSTRAINT [Gnarly_pk] PRIMARY KEY ([id])
+);
 
 
 --

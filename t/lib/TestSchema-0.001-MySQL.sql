@@ -1,8 +1,21 @@
 -- 
 -- Created by SQL::Translator::Producer::MySQL
--- Created on Sat May  3 10:39:33 2014
+-- Created on Mon May 26 19:33:03 2014
 -- 
 SET foreign_key_checks=0;
+
+DROP TABLE IF EXISTS `Gnarly`;
+
+--
+-- Table: `Gnarly`
+--
+CREATE TABLE `Gnarly` (
+  `id` integer NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `literature` text NULL,
+  `your_mom` blob NULL,
+  PRIMARY KEY (`id`)
+);
 
 DROP TABLE IF EXISTS `HasDateOps`;
 

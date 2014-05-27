@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
-$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.022000';
+$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -23,15 +23,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::Row::SelfResultSet - Easily use ResultSet methods for the current row
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

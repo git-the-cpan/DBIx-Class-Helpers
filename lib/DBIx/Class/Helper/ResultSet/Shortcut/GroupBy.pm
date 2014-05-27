@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::GroupBy;
-$DBIx::Class::Helper::ResultSet::Shortcut::GroupBy::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::Shortcut::GroupBy::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -11,15 +11,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Shortcut::GroupBy
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 AUTHOR
 

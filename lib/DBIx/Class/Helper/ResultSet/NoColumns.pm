@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::NoColumns;
-$DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.023000';
 # ABSTRACT: Look ma, no columns!
 
 use strict;
@@ -13,15 +13,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::NoColumns - Look ma, no columns!
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

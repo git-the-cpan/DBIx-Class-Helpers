@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-$DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -18,15 +18,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::IgnoreWantarray - Get rid of search context issues
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

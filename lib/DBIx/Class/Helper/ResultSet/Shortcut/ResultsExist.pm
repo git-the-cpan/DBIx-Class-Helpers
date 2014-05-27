@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist;
-$DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist::VERSION = '2.023000';
 use strict;
 use warnings;
 
@@ -19,15 +19,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 AUTHOR
 

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.023000';
 # ABSTRACT: Work with dates in your RDBMS nicely
 
 use strict;
@@ -425,15 +425,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::DateMethods1 - Work with dates in your RDBMS nicely
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 DESCRIPTION
 
@@ -465,75 +459,6 @@ parts of L<DBIx::Class::ResultSet/search>.  See L</utc_now>, L</dt_SQL_pluck>,
 and L</dt_SQL_add>.
 
 =back
-
-=head1 METHODS
-
-=head2 utc
-
- $rs->search({
-   'some_date' => $rs->utc($datetime),
- })->all
-
-Takes a L<DateTime> object, updates the C<time_zone> to C<UTC>, and formats it
-according to whatever database engine you are using.
-
-Dies if you pass it a date with a C<< floating time_zone >>.
-
-=head2 utc_now
-
-Returns a C<ScalarRef> representing the way to get the current date and time
-in C<UTC> for whatever database engine you are using.
-
-=head2 dt_before
-
- $rs->dt_before({ -ident => '.start' }, { -ident => '.end' })->all
-
-Takes two values, each an expression of L</TYPES>.
-
-=head2 dt_on_or_before
-
- $rs->dt_on_or_before({ -ident => '.start' }, DateTime->now)->all
-
-Takes two values, each an expression of L</TYPES>.
-
-=head2 dt_on_or_after
-
- $rs->dt_on_or_after(DateTime->now, { ident => '.end' })->all
-
-Takes two values, each an expression of L</TYPES>.
-
-=head2 dt_after
-
- $rs->dt_after({ ident => '.end' }, $rs->get_column('datecol')->as_query)->all
-
-Takes two values, each an expression of L</TYPES>.
-
-=head2 dt_SQL_add
-
- # which ones start in 3 minutes?
- $rs->dt_on_or_after(
-    { ident => '.start' },
-    $rs->dt_SQL_add($rs->utc_now, 'minute', 3)
- )->all
-
-Takes three arguments: a date conforming to L</TYPES>, a unit, and an amount.
-The idea is to add the given unit to the datetime.  See your L</IMPLEMENTATION>
-for what units are accepted.
-
-=head2 dt_SQL_pluck
-
- # get count per year
- $rs->search(undef, {
-    columns => {
-       count => '*',
-       year  => $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
-    },
-    group_by => [$rs->dt_SQL_pluck({ -ident => '.start' }, 'year')],
- )->hri->all
-
-Takes two arguments: a date conforming to L</TYPES> and a unit.  The idea
-is to pluck a given unit from the datetime.  See your L</IMPLEMENTATION>
-for what units are accepted.
 
 =head1 TYPES
 
@@ -572,6 +497,8 @@ bound values.
 Anything not mentioned in the above list will explode, one way or another.
 
 =head1 IMPLEMENTATION
+
+=encoding utf8
 
 The exact details for the functions your database engine provides.
 
@@ -974,6 +901,75 @@ times and getting bitten every time, I decided to stop using it and instead
 compare against actual dates always.  If someone can come up with a good use
 case I am interested in re-implementing C<dt_SQL_diff>, but I worry that it
 will be very unportable and generally not very useful.
+
+=head1 METHODS
+
+=head2 utc
+
+ $rs->search({
+   'some_date' => $rs->utc($datetime),
+ })->all
+
+Takes a L<DateTime> object, updates the C<time_zone> to C<UTC>, and formats it
+according to whatever database engine you are using.
+
+Dies if you pass it a date with a C<< floating time_zone >>.
+
+=head2 utc_now
+
+Returns a C<ScalarRef> representing the way to get the current date and time
+in C<UTC> for whatever database engine you are using.
+
+=head2 dt_before
+
+ $rs->dt_before({ -ident => '.start' }, { -ident => '.end' })->all
+
+Takes two values, each an expression of L</TYPES>.
+
+=head2 dt_on_or_before
+
+ $rs->dt_on_or_before({ -ident => '.start' }, DateTime->now)->all
+
+Takes two values, each an expression of L</TYPES>.
+
+=head2 dt_on_or_after
+
+ $rs->dt_on_or_after(DateTime->now, { ident => '.end' })->all
+
+Takes two values, each an expression of L</TYPES>.
+
+=head2 dt_after
+
+ $rs->dt_after({ ident => '.end' }, $rs->get_column('datecol')->as_query)->all
+
+Takes two values, each an expression of L</TYPES>.
+
+=head2 dt_SQL_add
+
+ # which ones start in 3 minutes?
+ $rs->dt_on_or_after(
+    { ident => '.start' },
+    $rs->dt_SQL_add($rs->utc_now, 'minute', 3)
+ )->all
+
+Takes three arguments: a date conforming to L</TYPES>, a unit, and an amount.
+The idea is to add the given unit to the datetime.  See your L</IMPLEMENTATION>
+for what units are accepted.
+
+=head2 dt_SQL_pluck
+
+ # get count per year
+ $rs->search(undef, {
+    columns => {
+       count => '*',
+       year  => $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
+    },
+    group_by => [$rs->dt_SQL_pluck({ -ident => '.start' }, 'year')],
+ )->hri->all
+
+Takes two arguments: a date conforming to L</TYPES> and a unit.  The idea
+is to pluck a given unit from the datetime.  See your L</IMPLEMENTATION>
+for what units are accepted.
 
 =head1 AUTHOR
 

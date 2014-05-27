@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::LintContents;
-$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.022000';
+$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.023000';
 # ABSTRACT: suite of methods to find violated "constraints"
 
 use strict;
@@ -109,15 +109,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::Schema::LintContents - suite of methods to find violated "constraints"
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 SYNOPSIS
 

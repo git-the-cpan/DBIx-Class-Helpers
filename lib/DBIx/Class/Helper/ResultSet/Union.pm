@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Union;
-$DBIx::Class::Helper::ResultSet::Union::VERSION = '2.022000';
+$DBIx::Class::Helper::ResultSet::Union::VERSION = '2.023000';
 use parent 'DBIx::Class::Helper::ResultSet::SetOperations';
 
 use Carp::Clan;
@@ -14,15 +14,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::Union - (DEPRECATED) Get rid of search context issues
-
-=head1 VERSION
-
-version 2.022000
 
 =head1 DESCRIPTION
 
