@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::RelationshipDWIM;
-$DBIx::Class::Helper::Row::RelationshipDWIM::VERSION = '2.023000';
+$DBIx::Class::Helper::Row::RelationshipDWIM::VERSION = '2.023001';
 use strict;
 use warnings;
 

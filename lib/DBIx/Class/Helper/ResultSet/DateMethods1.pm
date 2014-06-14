@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.023000';
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.023001';
 # ABSTRACT: Work with dates in your RDBMS nicely
 
 use strict;
@@ -428,6 +428,38 @@ __END__
 =head1 NAME
 
 DBIx::Class::Helper::ResultSet::DateMethods1 - Work with dates in your RDBMS nicely
+
+=head1 SYNOPSIS
+
+ package MySchema::ResultSet::Bar;
+
+ use strict;
+ use warnings;
+
+ use parent 'DBIx::Class::ResultSet';
+
+ __PACKAGE__->load_components('Helper::ResultSet::DateMethods1');
+
+ # in code using resultset
+
+ # get count per year/month
+ $rs->search(undef, {
+    columns => {
+       count => '*',
+       year  => $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
+       month => $rs->dt_SQL_pluck({ -ident => '.start' }, 'month'),
+    },
+    group_by => [
+       $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
+       $rs->dt_SQL_pluck({ -ident => '.start' }, 'month'),
+    ],
+ });
+ 
+ # mysql
+ (SELECT `me`.*, EXTRACT(MONTH FROM `me`.`start`), EXTRACT(YEAR FROM `me`.`start`) FROM `HasDateOps` `me` GROUP BY EXTRACT(YEAR FROM `me`.`start`), EXTRACT(MONTH FROM `me`.`start`))
+
+ # SQLite
+ (SELECT "me".*, STRFTIME('%m', "me"."start"), STRFTIME('%Y', "me"."start") FROM "HasDateOps" "me" GROUP BY STRFTIME('%Y', "me"."start"), STRFTIME('%m', "me"."start"))
 
 =head1 DESCRIPTION
 
@@ -965,7 +997,7 @@ for what units are accepted.
        year  => $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
     },
     group_by => [$rs->dt_SQL_pluck({ -ident => '.start' }, 'year')],
- )->hri->all
+ })->hri->all
 
 Takes two arguments: a date conforming to L</TYPES> and a unit.  The idea
 is to pluck a given unit from the datetime.  See your L</IMPLEMENTATION>

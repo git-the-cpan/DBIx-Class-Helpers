@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::AddColumns;
-$DBIx::Class::Helper::ResultSet::Shortcut::AddColumns::VERSION = '2.023000';
+$DBIx::Class::Helper::ResultSet::Shortcut::AddColumns::VERSION = '2.023001';
 use strict;
 use warnings;
 

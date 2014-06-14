@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::NumifyGet;
-$DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.023000';
+$DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.023001';
 use strict;
 use warnings;
 

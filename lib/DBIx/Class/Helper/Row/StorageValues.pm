@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::StorageValues;
-$DBIx::Class::Helper::Row::StorageValues::VERSION = '2.023000';
+$DBIx::Class::Helper::Row::StorageValues::VERSION = '2.023001';
 use strict;
 use warnings;
 
