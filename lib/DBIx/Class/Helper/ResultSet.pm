@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet;
-$DBIx::Class::Helper::ResultSet::VERSION = '2.023001';
+$DBIx::Class::Helper::ResultSet::VERSION = '2.023002';
 use parent qw{
    DBIx::Class::Helper::ResultSet::AutoRemoveColumns
    DBIx::Class::Helper::ResultSet::CorrelateRelationship

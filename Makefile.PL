@@ -40,9 +40,9 @@ my %WriteMakefileArgs = (
     "Test::Deep" => 0,
     "Test::Exception" => 0,
     "Test::More" => "0.94",
-    "Test::Roo" => 0
+    "Test::Roo" => "1.003"
   },
-  "VERSION" => "2.023001",
+  "VERSION" => "2.023002",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/resultset/date-methods-1/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
   }
@@ -65,7 +65,7 @@ my %FallbackPrereqs = (
   "Test::Deep" => 0,
   "Test::Exception" => 0,
   "Test::More" => "0.94",
-  "Test::Roo" => 0,
+  "Test::Roo" => "1.003",
   "Try::Tiny" => 0,
   "namespace::clean" => "0.23",
   "parent" => 0

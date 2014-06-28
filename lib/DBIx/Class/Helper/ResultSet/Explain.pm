@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.023001';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.023002';
 use strict;
 use warnings;
 
@@ -257,7 +257,7 @@ to your entire schema.
      "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.002..0.002 rows=0 loops=1)"
    ],
    [
-     "Total runtime: 0.043 ms"
+     "Total runtime: 0.022 ms"
    ]
  ]
 
