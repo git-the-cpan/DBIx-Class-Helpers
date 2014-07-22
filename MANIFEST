@@ -86,12 +86,14 @@ t/lib/TestSchema/Result/Foo.pm
 t/lib/TestSchema/Result/Foo_Bar.pm
 t/lib/TestSchema/Result/Gnarly.pm
 t/lib/TestSchema/Result/Gnarly_Station.pm
+t/lib/TestSchema/Result/HasAccessor.pm
 t/lib/TestSchema/Result/HasDateOps.pm
 t/lib/TestSchema/Result/Station.pm
 t/lib/TestSchema/ResultSet.pm
 t/lib/TestSchema/ResultSet/Bloaty.pm
 t/lib/TestSchema/ResultSet/Foo.pm
 t/lib/TestSchema/ResultSet/Gnarly.pm
+t/lib/TestSchema/ResultSet/HasAccessor.pm
 t/lib/TestSchema/ResultSet/HasDateOps.pm
 t/lib/TestSchema/ResultSet/Station.pm
 t/release-pod-syntax.t

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::ToJSON;
-$DBIx::Class::Helper::Row::ToJSON::VERSION = '2.023002';
+$DBIx::Class::Helper::Row::ToJSON::VERSION = '2.023003';
 use strict;
 use warnings;
 
@@ -47,9 +47,12 @@ sub serializable_columns {
 sub TO_JSON {
    my $self = shift;
 
+   my $columns_info = $self->columns_info($self->serializable_columns);
+
    return {
       map +($_ => $self->$_),
-         @{$self->serializable_columns}
+      map +($columns_info->{$_}{accessor} || $_),
+          keys %$columns_info
    };
 }
 

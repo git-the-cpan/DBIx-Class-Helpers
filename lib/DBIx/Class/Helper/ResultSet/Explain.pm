@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.023002';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.023003';
 use strict;
 use warnings;
 
@@ -76,7 +76,7 @@ DBIx::Class::Helper::ResultSet::Explain - Get query plan for a ResultSet
 
 This module mostly makes sense to be used without setting as a component:
 
- ues Devel::Dwarn;
+ use Devel::Dwarn;
  Dwarn DBIx::Class::ResultSet::Explain::explain($rs)
 
 But as usual, if you prefer to use it as a component here's how:
@@ -223,7 +223,7 @@ to your entire schema.
      "Transaction",
      0,
      0,
-     14,
+     15,
      0,
      "01",
      undef
@@ -257,7 +257,7 @@ to your entire schema.
      "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.002..0.002 rows=0 loops=1)"
    ],
    [
-     "Total runtime: 0.022 ms"
+     "Total runtime: 0.027 ms"
    ]
  ]
 

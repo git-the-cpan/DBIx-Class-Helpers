@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::SQLite
--- Created on Sat Jun 28 15:04:17 2014
+-- Created on Mon Jul 21 21:22:29 2014
 -- 
 
 BEGIN TRANSACTION;
@@ -23,6 +23,15 @@ CREATE TABLE Gnarly (
   name varchar NOT NULL,
   literature text,
   your_mom blob
+);
+
+--
+-- Table: HasAccessor
+--
+CREATE TABLE HasAccessor (
+  id INTEGER PRIMARY KEY NOT NULL,
+  usable_column varchar NOT NULL,
+  unusable_column varchar NOT NULL
 );
 
 --
