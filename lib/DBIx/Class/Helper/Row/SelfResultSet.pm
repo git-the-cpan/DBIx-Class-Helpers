@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
-$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.023003';
+$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.023004';
 use strict;
 use warnings;
 
@@ -8,13 +8,8 @@ use warnings;
 sub self_rs {
    my ($self) = @_;
 
-   my $src = $self->result_source;
-   my $rs = $src->resultset;
-   my $me = $rs->current_source_alias;
-   return $rs->search({
-          # perl, sometimes I hate your guts
-      map +( "$me.$_" => $self->get_column($_) ), $src->primary_columns
-   })
+   my $rs = $self->result_source->resultset;
+   return $rs->search($self->ident_condition)
 }
 
 1;
@@ -43,6 +38,12 @@ Sometimes you need to be able to access a ResultSet containing just the current
 row.  A good reason to do that would be if you had a ResultSet method that adds
 in some calculated data, like counts of a relationship.  You could use this to
 get at that counted data without duplicating the logic for the counting.
+
+Due to primitives provided by L<DBIx::Class::PK> this references the current
+values, or in C<DBIx::Class> terms, the dirty values.  So if you modify the
+primary columns it will be temporarily incorrect.  For what it's worth I'm not
+married to this behavior and I'd rather you get in touch with me before you
+depend on it.
 
 =head1 METHODS
 
