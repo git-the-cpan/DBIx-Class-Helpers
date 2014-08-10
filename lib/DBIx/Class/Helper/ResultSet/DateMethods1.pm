@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.023004';
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.023005';
 # ABSTRACT: Work with dates in your RDBMS nicely
 
 use strict;
@@ -454,9 +454,6 @@ DBIx::Class::Helper::ResultSet::DateMethods1 - Work with dates in your RDBMS nic
        $rs->dt_SQL_pluck({ -ident => '.start' }, 'month'),
     ],
  });
- 
- # mysql
- (SELECT `me`.*, EXTRACT(MONTH FROM `me`.`start`), EXTRACT(YEAR FROM `me`.`start`) FROM `HasDateOps` `me` GROUP BY EXTRACT(YEAR FROM `me`.`start`), EXTRACT(MONTH FROM `me`.`start`))
 
  # SQLite
  (SELECT "me".*, STRFTIME('%m', "me"."start"), STRFTIME('%Y', "me"."start") FROM "HasDateOps" "me" GROUP BY STRFTIME('%Y', "me"."start"), STRFTIME('%m', "me"."start"))

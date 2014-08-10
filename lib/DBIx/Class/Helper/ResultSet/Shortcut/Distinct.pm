@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Distinct;
-$DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.023004';
+$DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.023005';
 use strict;
 use warnings;
 

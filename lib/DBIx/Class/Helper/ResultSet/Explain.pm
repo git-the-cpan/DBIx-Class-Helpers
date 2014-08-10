@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.023004';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.023005';
 use strict;
 use warnings;
 
@@ -262,22 +262,6 @@ to your entire schema.
  ]
 
 =head2 mysql
-
- [
-   [
-     1,
-     "SIMPLE",
-     "me",
-     "ALL",
-     undef,
-     undef,
-     undef,
-     undef,
-     1,
-     "100.00",
-     ""
-   ]
- ]
 
 =head1 AUTHOR
 

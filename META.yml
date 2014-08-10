@@ -36,4 +36,4 @@ resources:
   bugtracker: https://github.com/frioux/DBIx-Class-Helpers/issues
   homepage: https://github.com/frioux/DBIx-Class-Helpers
   repository: https://github.com/frioux/DBIx-Class-Helpers.git
-version: '2.023004'
+version: '2.023005'
