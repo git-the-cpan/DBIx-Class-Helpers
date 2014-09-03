@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic;
-$DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic::VERSION = '2.023005';
+$DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic::VERSION = '2.023006';
 use strict;
 use warnings;
 

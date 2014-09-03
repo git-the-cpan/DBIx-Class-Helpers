@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::LintContents;
-$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.023005';
+$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.023006';
 # ABSTRACT: suite of methods to find violated "constraints"
 
 use strict;
