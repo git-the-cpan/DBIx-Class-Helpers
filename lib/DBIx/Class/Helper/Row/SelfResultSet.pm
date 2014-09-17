@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
-$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.023006';
+$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.023007';
 use strict;
 use warnings;
 

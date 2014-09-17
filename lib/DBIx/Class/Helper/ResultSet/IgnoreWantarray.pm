@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::IgnoreWantarray;
-$DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.023006';
+$DBIx::Class::Helper::ResultSet::IgnoreWantarray::VERSION = '2.023007';
 use strict;
 use warnings;
 

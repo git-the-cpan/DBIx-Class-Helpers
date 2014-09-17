@@ -1,9 +1,20 @@
 -- 
 -- Created by SQL::Translator::Generator::Role::DDL
--- Created on Wed Sep  3 17:44:36 2014
+-- Created on Tue Sep 16 19:48:36 2014
 -- 
 
+--
+-- Turn off constraints
+--
 
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'HasDateOps' AND type = 'U') ALTER TABLE [HasDateOps] NOCHECK CONSTRAINT all;
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'Gnarly' AND type = 'U') ALTER TABLE [Gnarly] NOCHECK CONSTRAINT all;
+--
+-- Drop tables
+--
+
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'HasDateOps' AND type = 'U') DROP TABLE [HasDateOps];
+IF EXISTS (SELECT name FROM sysobjects WHERE name = 'Gnarly' AND type = 'U') DROP TABLE [Gnarly];
 --
 -- Table: [Gnarly]
 --

@@ -10,9 +10,9 @@ build_requires:
   Test::More: '0.94'
   Test::Roo: '1.003'
 configure_requires:
-  ExtUtils::MakeMaker: '6.30'
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.141170'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -36,4 +36,4 @@ resources:
   bugtracker: https://github.com/frioux/DBIx-Class-Helpers/issues
   homepage: https://github.com/frioux/DBIx-Class-Helpers
   repository: https://github.com/frioux/DBIx-Class-Helpers.git
-version: '2.023006'
+version: '2.023007'

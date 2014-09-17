@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
-$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.023006';
+$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.023007';
 use strict;
 use warnings;
 
@@ -40,7 +40,7 @@ sub proxy_resultset_method {
 }
 
 sub copy {
-   delete local @{$_[0]->{_column_data}}{@{$_[0]->_proxy_slots}};
+   delete local @{$_[0]->{_column_data}}{@{$_[0]->_proxy_slots||[]}};
 
    shift->next::method(@_);
 }
