@@ -1,9 +1,9 @@
 package DBIx::Class::Helper::Row::CleanResultSet;
-$DBIx::Class::Helper::Row::CleanResultSet::VERSION = '2.023007';
+$DBIx::Class::Helper::Row::CleanResultSet::VERSION = '2.024000';
 use strict;
 use warnings;
 
-# ABSTRACT: Shortcut for C<< ->resultset >>
+# ABSTRACT: Get an unfiltered ResultSet from the row
 
 sub clean_rs { return shift->result_source->resultset }
 
@@ -15,7 +15,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Row::CleanResultSet - Shortcut for C<< ->resultset >>
+DBIx::Class::Helper::Row::CleanResultSet - Get an unfiltered ResultSet from the row
 
 =head1 SYNOPSIS
 

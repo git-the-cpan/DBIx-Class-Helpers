@@ -30,6 +30,7 @@ my %WriteMakefileArgs = (
     "Safe::Isa" => 0,
     "String::CamelCase" => 0,
     "Sub::Exporter::Progressive" => "0.001006",
+    "Text::Brew" => 0,
     "Try::Tiny" => 0,
     "namespace::clean" => "0.23",
     "parent" => 0
@@ -42,7 +43,7 @@ my %WriteMakefileArgs = (
     "Test::More" => "0.94",
     "Test::Roo" => "1.003"
   },
-  "VERSION" => "2.023007",
+  "VERSION" => "2.024000",
   "test" => {
     "TESTS" => "t/*.t t/resultset/*.t t/resultset/date-methods-1/*.t t/resultset/shortcut/*.t t/row/*.t t/schema/*.t"
   }
@@ -66,6 +67,7 @@ my %FallbackPrereqs = (
   "Test::Exception" => 0,
   "Test::More" => "0.94",
   "Test::Roo" => "1.003",
+  "Text::Brew" => 0,
   "Try::Tiny" => 0,
   "namespace::clean" => "0.23",
   "parent" => 0

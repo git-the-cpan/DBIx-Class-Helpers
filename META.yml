@@ -29,6 +29,7 @@ requires:
   Safe::Isa: '0'
   String::CamelCase: '0'
   Sub::Exporter::Progressive: '0.001006'
+  Text::Brew: '0'
   Try::Tiny: '0'
   namespace::clean: '0.23'
   parent: '0'
@@ -36,4 +37,4 @@ resources:
   bugtracker: https://github.com/frioux/DBIx-Class-Helpers/issues
   homepage: https://github.com/frioux/DBIx-Class-Helpers
   repository: https://github.com/frioux/DBIx-Class-Helpers.git
-version: '2.023007'
+version: '2.024000'

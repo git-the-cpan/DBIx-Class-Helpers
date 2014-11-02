@@ -56,6 +56,7 @@ lib/DBIx/Class/Helper/Row/StorageValues.pm
 lib/DBIx/Class/Helper/Row/SubClass.pm
 lib/DBIx/Class/Helper/Row/ToJSON.pm
 lib/DBIx/Class/Helper/Schema/DateTime.pm
+lib/DBIx/Class/Helper/Schema/DidYouMean.pm
 lib/DBIx/Class/Helper/Schema/GenerateSource.pm
 lib/DBIx/Class/Helper/Schema/LintContents.pm
 lib/DBIx/Class/Helper/Schema/QuoteNames.pm
@@ -137,6 +138,7 @@ t/row/storage-values.t
 t/row/subclass.t
 t/row/to_json.t
 t/schema/datetime.t
+t/schema/did-you-mean.t
 t/schema/generate-source.t
 t/schema/lint-contents.t
 t/utilities.t

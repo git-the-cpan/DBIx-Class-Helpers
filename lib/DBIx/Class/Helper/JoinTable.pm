@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::JoinTable;
-$DBIx::Class::Helper::JoinTable::VERSION = '2.023007';
+$DBIx::Class::Helper::JoinTable::VERSION = '2.024000';
 use parent 'DBIx::Class::Helper::Row::JoinTable';
 
 use Carp::Clan;

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::RemoveColumns;
-$DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.023007';
+$DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.024000';
 use strict;
 use warnings;
 
