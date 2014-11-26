@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SubClass;
-$DBIx::Class::Helper::Row::SubClass::VERSION = '2.024000';
+$DBIx::Class::Helper::Row::SubClass::VERSION = '2.024001';
 use strict;
 use warnings;
 

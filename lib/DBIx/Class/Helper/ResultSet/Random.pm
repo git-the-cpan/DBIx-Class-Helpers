@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Random;
-$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.024000';
+$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.024001';
 use strict;
 use warnings;
 

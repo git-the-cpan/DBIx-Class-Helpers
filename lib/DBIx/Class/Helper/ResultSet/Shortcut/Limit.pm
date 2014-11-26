@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Limit;
-$DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.024000';
+$DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.024001';
 use strict;
 use warnings;
 

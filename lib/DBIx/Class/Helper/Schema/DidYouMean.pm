@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::DidYouMean;
-$DBIx::Class::Helper::Schema::DidYouMean::VERSION = '2.024000';
+$DBIx::Class::Helper::Schema::DidYouMean::VERSION = '2.024001';
 # ABSTRACT: Nice error messages when you misspell the name of a ResultSet
 
 use strict;
@@ -9,7 +9,7 @@ use Text::Brew 'distance';
 use Try::Tiny;
 use namespace::clean;
 
-sub resultset {
+sub source {
    my ($self, @rest) = @_;
 
    my $method = $self->next::can;
