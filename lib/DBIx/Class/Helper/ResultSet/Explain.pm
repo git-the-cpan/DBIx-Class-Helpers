@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.024001';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.025000';
 use strict;
 use warnings;
 
@@ -254,10 +254,13 @@ to your entire schema.
 
  [
    [
-     "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.000..0.000 rows=0 loops=1)"
+     "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.001..0.001 rows=0 loops=1)"
    ],
    [
-     "Total runtime: 0.013 ms"
+     "Planning time: 0.216 ms"
+   ],
+   [
+     "Execution time: 0.014 ms"
    ]
  ]
 
@@ -285,7 +288,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2015 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::DateTime;
-$DBIx::Class::Helper::Schema::DateTime::VERSION = '2.024001';
+$DBIx::Class::Helper::Schema::DateTime::VERSION = '2.025000';
 # ABSTRACT: DateTime helper
 
 use strict;
@@ -39,7 +39,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2015 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
