@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
-$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.025000';
+$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.025001';
 use strict;
 use warnings;
 

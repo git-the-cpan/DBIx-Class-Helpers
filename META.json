@@ -4,13 +4,13 @@
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.031, CPAN::Meta::Converter version 2.142060",
+   "generated_by" : "Dist::Zilla version 5.032, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
+      "version" : 2
    },
    "name" : "DBIx-Class-Helpers",
    "prereqs" : {
@@ -65,6 +65,6 @@
          "web" : "https://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.025000"
+   "version" : "2.025001"
 }
 

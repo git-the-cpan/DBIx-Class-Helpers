@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.025000';
+$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.025001';
 use strict;
 use warnings;
 

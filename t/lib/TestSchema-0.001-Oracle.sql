@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::Oracle
--- Created on Fri Feb 20 22:50:49 2015
+-- Created on Sat Feb 28 09:53:38 2015
 -- 
 --
 -- Table: Gnarly
@@ -28,6 +28,4 @@ CREATE TABLE "HasDateOps" (
   "b_date" date,
   PRIMARY KEY ("id")
 );
-
-/
 

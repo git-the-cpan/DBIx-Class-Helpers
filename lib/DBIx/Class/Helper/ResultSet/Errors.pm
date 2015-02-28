@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Errors;
-$DBIx::Class::Helper::ResultSet::Errors::VERSION = '2.025000';
+$DBIx::Class::Helper::ResultSet::Errors::VERSION = '2.025001';
 # ABSTRACT: add exceptions to help when calling Result methods on an ResultSets
 
 use strict;
@@ -61,7 +61,9 @@ And then in a script or something:
 
 Users new to C<DBIx::Class> often make the mistake of treating ResultSets like
 Results.  This helper ameliorates the situation by giving a helpful error when
-the user calls methods for the result on the ResultSet.
+the user calls methods for the result on the ResultSet.  See
+L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it to your entire
+schema.
 
 =head1 AUTHOR
 
