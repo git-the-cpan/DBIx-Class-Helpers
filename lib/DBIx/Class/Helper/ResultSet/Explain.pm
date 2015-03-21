@@ -1,11 +1,13 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.025002';
+# ABSTRACT: Get query plan for a ResultSet
+
 use strict;
 use warnings;
 
-use DBIx::Introspector;
+use parent 'DBIx::Class::ResultSet';
 
-# ABSTRACT: Get query plan for a ResultSet
+use DBIx::Introspector;
 
 sub _introspector {
    my $d = DBIx::Introspector->new(drivers => '2013-12.01');
@@ -257,10 +259,10 @@ to your entire schema.
      "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.001..0.001 rows=0 loops=1)"
    ],
    [
-     "Planning time: 0.249 ms"
+     "Planning time: 0.221 ms"
    ],
    [
-     "Execution time: 0.020 ms"
+     "Execution time: 0.014 ms"
    ]
  ]
 

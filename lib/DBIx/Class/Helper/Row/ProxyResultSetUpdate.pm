@@ -1,8 +1,11 @@
 package DBIx::Class::Helper::Row::ProxyResultSetUpdate;
-$DBIx::Class::Helper::Row::ProxyResultSetUpdate::VERSION = '2.025001';
+$DBIx::Class::Helper::Row::ProxyResultSetUpdate::VERSION = '2.025002';
 # ABSTRACT: Efficiently reuse ResultSet updates from results
 
-use base 'DBIx::Class::Helper::Row::SelfResultSet';
+use strict;
+use warnings;
+
+use parent 'DBIx::Class::Helper::Row::SelfResultSet', 'DBIx::Class::Row';
 
 sub update {
   my ($self, $upd) = @_;
@@ -43,7 +46,7 @@ ResultSet:
 
  package MyApp::Schema::ResultSet::Foo;
 
- use base 'DBIx::Class::ResultSet';
+ use parent 'DBIx::Class::ResultSet';
 
  sub update {
     my ($self, $data) = @_;
@@ -57,7 +60,7 @@ Result:
 
  package MyApp::Schema::Result::Foo;
 
- use base 'DBIx::Class::Core';
+ use parent 'DBIx::Class::Core';
 
  __PACKAGE__->load_components(qw( Helper::Row::ProxyResultSetUpdate ));
 

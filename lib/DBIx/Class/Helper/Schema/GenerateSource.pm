@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::Schema::GenerateSource;
-$DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.025001';
+$DBIx::Class::Helper::Schema::GenerateSource::VERSION = '2.025002';
 # ABSTRACT: Generate sources directly from your Schema
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::Schema';
 
 use Scalar::Util 'blessed';
 

@@ -1,11 +1,12 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
-$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.025001';
+$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.025002';
+# ABSTRACT: Do things when the values of a column change
+
 use strict;
 use warnings;
 
-# ABSTRACT: Do things when the values of a column change
+use parent 'DBIx::Class::Helper::Row::StorageValues', 'DBIx::Class::Row';
 
-use parent 'DBIx::Class::Helper::Row::StorageValues';
 use List::Util 'first';
 use DBIx::Class::Candy::Exports;
 use namespace::clean;

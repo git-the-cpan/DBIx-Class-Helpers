@@ -1,11 +1,11 @@
 package DBIx::Class::Helper::Row::ToJSON;
-$DBIx::Class::Helper::Row::ToJSON::VERSION = '2.025001';
+$DBIx::Class::Helper::Row::ToJSON::VERSION = '2.025002';
+# ABSTRACT: Remove the boilerplate from your TO_JSON functions
+
 use strict;
 use warnings;
 
-use parent 'DBIx::Class';
-
-# ABSTRACT: Remove the boilerplate from your TO_JSON functions
+use parent 'DBIx::Class::Row';
 
 __PACKAGE__->mk_group_accessors(inherited => '_serializable_columns');
 
@@ -70,7 +70,7 @@ DBIx::Class::Helper::Row::ToJSON - Remove the boilerplate from your TO_JSON func
 
  package MyApp::Schema::Result::KittenRobot;
 
- use base 'DBIx::Class::Core';
+ use parent 'DBIx::Class::Core';
 
  __PACKAGE__->load_components(qw{Helper::Row::ToJSON});
 

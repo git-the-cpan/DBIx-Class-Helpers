@@ -1,11 +1,11 @@
 package DBIx::Class::Helper::ResultSet::AutoRemoveColumns;
-$DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.025002';
+# ABSTRACT: Automatically remove columns from a ResultSet
+
 use strict;
 use warnings;
 
-# ABSTRACT: Automatically remove columns from a ResultSet
-
-use parent 'DBIx::Class::Helper::ResultSet::RemoveColumns', 'DBIx::Class';
+use parent 'DBIx::Class::Helper::ResultSet::RemoveColumns', 'DBIx::Class::ResultSet';
 
 __PACKAGE__->mk_group_accessors(inherited => '_fetchable_columns');
 

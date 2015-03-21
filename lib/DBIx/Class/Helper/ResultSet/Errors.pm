@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::ResultSet::Errors;
-$DBIx::Class::Helper::ResultSet::Errors::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Errors::VERSION = '2.025002';
 # ABSTRACT: add exceptions to help when calling Result methods on an ResultSets
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 my $std_err = qq{Can't locate object method "%s" via package "%s" } .
               qq{at %s line %d.\n};

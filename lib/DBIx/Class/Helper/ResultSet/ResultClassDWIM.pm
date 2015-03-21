@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
-$DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.025002';
 # ABSTRACT: result_class => '::HRI' == WIN
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub result_class {
    my ($self, $result_class) = @_;

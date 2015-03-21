@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::ResultSet::Me;
-$DBIx::Class::Helper::ResultSet::Me::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Me::VERSION = '2.025002';
+# ABSTRACT: Define predefined searches more nicely
+
 use strict;
 use warnings;
 
-# ABSTRACT: Define predefined searches more nicely
+use parent 'DBIx::Class::ResultSet';
 
 sub me { join('.', shift->current_source_alias, shift || q{})  }
 

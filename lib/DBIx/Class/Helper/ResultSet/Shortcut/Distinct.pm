@@ -1,7 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Distinct;
-$DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::Distinct::VERSION = '2.025002';
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub distinct { $_[0]->search(undef, { distinct => defined $_[1] ? $_[1] : 1 }) }
 

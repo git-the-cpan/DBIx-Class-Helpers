@@ -1,9 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::HasRows;
-$DBIx::Class::Helper::ResultSet::Shortcut::HasRows::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::HasRows::VERSION = '2.025002';
 use strict;
 use warnings;
 
-use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
+use parent 'DBIx::Class::Helper::ResultSet::Shortcut::Rows', 'DBIx::Class::ResultSet';
 
 sub has_rows { !! shift->rows(1)->next }
 

@@ -1,26 +1,14 @@
 package DBIx::Class::Helper::ResultSet::CorrelateRelationship;
-$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.025002';
+# ABSTRACT: Easily correlate your ResultSets
+
 use strict;
 use warnings;
 
-# ABSTRACT: Easily correlate your ResultSets
+use DBIx::Class::Helper::ResultSet::Util
+   correlate => { -as => 'corr' };
 
-sub correlate {
-   my ($self, $rel) = @_;
-
-   my $source = $self->result_source;
-   my $rel_info = $source->relationship_info($rel);
-
-   return $source->related_source($rel)->resultset
-      ->search(scalar $source->_resolve_condition(
-         $rel_info->{cond},
-         "${rel}_alias",
-         $self->current_source_alias,
-         $rel
-      ), {
-         alias => "${rel}_alias",
-      })
-}
+sub correlate { corr(@_) }
 
 1;
 
@@ -36,7 +24,7 @@ DBIx::Class::Helper::ResultSet::CorrelateRelationship - Easily correlate your Re
 
  package MyApp::Schema::ResultSet::Author;
 
- use base 'DBIx::Class::ResultSet';
+ use parent 'DBIx::Class::ResultSet';
 
  __PACKAGE__->load_components(qw(Helper::ResultSet::CorrelateRelationship));
 
@@ -77,7 +65,7 @@ in L<DBIx::Class>.  Here is an example of how you might do that:
 
  package MyApp::Schema::ResultSet::Author;
 
- use base 'DBIx::Class::ResultSet';
+ use parent 'DBIx::Class::ResultSet';
 
  __PACKAGE__->load_components(qw(Helper::ResultSet::CorrelateRelationship));
 

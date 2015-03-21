@@ -1,9 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic;
-$DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::OrderByMagic::VERSION = '2.025002';
 use strict;
 use warnings;
 
-use base 'DBIx::Class::Helper::ResultSet::Shortcut::OrderBy';
+use parent 'DBIx::Class::Helper::ResultSet::Shortcut::OrderBy', 'DBIx::Class::ResultSet';
 
 sub order_by {
     my ($self, @order) = @_;

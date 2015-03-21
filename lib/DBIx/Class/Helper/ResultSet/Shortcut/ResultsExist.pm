@@ -1,7 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist;
-$DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist::VERSION = '2.025002';
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub results_exist {
    my $self   = shift;

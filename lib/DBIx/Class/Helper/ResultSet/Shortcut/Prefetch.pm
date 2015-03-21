@@ -1,7 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Prefetch;
-$DBIx::Class::Helper::ResultSet::Shortcut::Prefetch::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::Prefetch::VERSION = '2.025002';
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub prefetch { return shift->search(undef, { prefetch => shift }) }
 

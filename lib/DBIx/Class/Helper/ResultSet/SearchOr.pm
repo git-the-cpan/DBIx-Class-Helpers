@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::ResultSet::SearchOr;
-$DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::SearchOr::VERSION = '2.025002';
 # ABSTRACT: Combine ResultSet searches with OR's
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 use List::Util 'first';
 use Carp::Clan;
@@ -37,7 +39,7 @@ DBIx::Class::Helper::ResultSet::SearchOr - Combine ResultSet searches with OR's
 
  package MyApp::Schema::ResultSet::Tests;
 
- use base 'DBIx::Class::ResultSet';
+ use parent 'DBIx::Class::ResultSet';
 
  __PACKAGE__->load_components(qw(Helper::ResultSet::IgnoreWantarray Helper::ResultSet::SearchOr));
 

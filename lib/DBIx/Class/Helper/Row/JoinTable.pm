@@ -1,9 +1,9 @@
 package DBIx::Class::Helper::Row::JoinTable;
-$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.025001';
+$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.025002';
 use strict;
 use warnings;
 
-# ABSTRACT: Easily set up join tables with DBIx::Class
+use parent 'DBIx::Class::Row';
 
 use DBIx::Class::Helpers::Util 'get_namespace_parts';
 use Lingua::EN::Inflect ();
@@ -186,7 +186,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Row::JoinTable - Easily set up join tables with DBIx::Class
+DBIx::Class::Helper::Row::JoinTable
 
 =head1 SYNOPSIS
 

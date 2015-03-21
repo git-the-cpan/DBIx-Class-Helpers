@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::Schema::LintContents;
-$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.025001';
+$DBIx::Class::Helper::Schema::LintContents::VERSION = '2.025002';
 # ABSTRACT: suite of methods to find violated "constraints"
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::Schema';
 
 use Scalar::Util 'blessed';
 

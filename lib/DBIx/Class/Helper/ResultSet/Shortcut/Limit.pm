@@ -1,9 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Limit;
-$DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::Limit::VERSION = '2.025002';
 use strict;
 use warnings;
 
-use base 'DBIx::Class::Helper::ResultSet::Shortcut::Rows';
+use parent 'DBIx::Class::Helper::ResultSet::Shortcut::Rows', 'DBIx::Class::ResultSet';
 
 sub limit { return shift->rows(@_) }
 

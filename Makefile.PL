@@ -36,11 +36,11 @@ my %WriteMakefileArgs = (
     "DBD::SQLite" => 0,
     "DateTime::Format::SQLite" => 0,
     "Test::Deep" => 0,
-    "Test::Exception" => 0,
+    "Test::Fatal" => "0.006",
     "Test::More" => "0.94",
     "Test::Roo" => "1.003"
   },
-  "VERSION" => "2.025001",
+  "VERSION" => "2.025002",
   "test" => {
     "TESTS" => "t/*.t t/ResultSet/*.t t/ResultSet/DateMethods1/*.t t/ResultSet/Shortcut/*.t t/Row/*.t t/Schema/*.t"
   }
@@ -62,7 +62,7 @@ my %FallbackPrereqs = (
   "String::CamelCase" => 0,
   "Sub::Exporter::Progressive" => "0.001006",
   "Test::Deep" => 0,
-  "Test::Exception" => 0,
+  "Test::Fatal" => "0.006",
   "Test::More" => "0.94",
   "Test::Roo" => "1.003",
   "Text::Brew" => 0,

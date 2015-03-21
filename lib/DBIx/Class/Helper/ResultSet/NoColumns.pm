@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::ResultSet::NoColumns;
-$DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::NoColumns::VERSION = '2.025002';
 # ABSTRACT: Look ma, no columns!
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub no_columns { $_[0]->search(undef, { columns => [] }) }
 

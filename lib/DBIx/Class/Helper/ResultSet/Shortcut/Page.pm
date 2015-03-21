@@ -1,7 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Page;
-$DBIx::Class::Helper::ResultSet::Shortcut::Page::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::Page::VERSION = '2.025002';
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub page { shift->search(undef, { page => shift }) }
 

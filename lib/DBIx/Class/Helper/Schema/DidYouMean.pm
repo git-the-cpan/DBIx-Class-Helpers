@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::Schema::DidYouMean;
-$DBIx::Class::Helper::Schema::DidYouMean::VERSION = '2.025001';
+$DBIx::Class::Helper::Schema::DidYouMean::VERSION = '2.025002';
 # ABSTRACT: Nice error messages when you misspell the name of a ResultSet
 
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::Schema';
 
 use Text::Brew 'distance';
 use Try::Tiny;

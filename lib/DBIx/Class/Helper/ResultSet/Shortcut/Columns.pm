@@ -1,7 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Columns;
-$DBIx::Class::Helper::ResultSet::Shortcut::Columns::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::Columns::VERSION = '2.025002';
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub columns { shift->search(undef, { columns => shift }) }
 

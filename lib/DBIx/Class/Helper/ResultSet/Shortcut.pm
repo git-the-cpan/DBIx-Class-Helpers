@@ -1,11 +1,11 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.025002';
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;
 use warnings;
 
-use base (qw(
+use parent (qw(
    DBIx::Class::Helper::ResultSet::Shortcut::AddColumns
    DBIx::Class::Helper::ResultSet::Shortcut::Columns
    DBIx::Class::Helper::ResultSet::Shortcut::Distinct

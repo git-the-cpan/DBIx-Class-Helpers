@@ -1,9 +1,11 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
-$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.025001';
+$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.025002';
+# ABSTRACT: Easily use ResultSet methods for the current row
+
 use strict;
 use warnings;
 
-# ABSTRACT: Easily use ResultSet methods for the current row
+use parent 'DBIx::Class::Row';
 
 sub self_rs {
    my ($self) = @_;

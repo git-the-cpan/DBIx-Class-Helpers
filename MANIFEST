@@ -44,6 +44,7 @@ lib/DBIx/Class/Helper/ResultSet/Shortcut/Prefetch.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/ResultsExist.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Rows.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
+lib/DBIx/Class/Helper/ResultSet/Util.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
 lib/DBIx/Class/Helper/Row/CleanResultSet.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm

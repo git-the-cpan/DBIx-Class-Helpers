@@ -1,7 +1,9 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::HRI;
-$DBIx::Class::Helper::ResultSet::Shortcut::HRI::VERSION = '2.025001';
+$DBIx::Class::Helper::ResultSet::Shortcut::HRI::VERSION = '2.025002';
 use strict;
 use warnings;
+
+use parent 'DBIx::Class::ResultSet';
 
 sub hri {
    shift->search(undef, {
