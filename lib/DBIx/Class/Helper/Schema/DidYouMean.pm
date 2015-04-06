@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::DidYouMean;
-$DBIx::Class::Helper::Schema::DidYouMean::VERSION = '2.025002';
+$DBIx::Class::Helper::Schema::DidYouMean::VERSION = '2.025003';
 # ABSTRACT: Nice error messages when you misspell the name of a ResultSet
 
 use strict;

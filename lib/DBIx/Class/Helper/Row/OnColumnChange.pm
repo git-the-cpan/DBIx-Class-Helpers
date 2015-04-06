@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::OnColumnChange;
-$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.025002';
+$DBIx::Class::Helper::Row::OnColumnChange::VERSION = '2.025003';
 # ABSTRACT: Do things when the values of a column change
 
 use strict;
@@ -86,7 +86,9 @@ sub update {
 
    my $inner = $self->next::can;
 
-   my $final = sub { $self->$inner($args) };
+   my $final = $self->on_column_change_allow_override_args
+      ? sub { $self->$inner        }
+      : sub { $self->$inner($args) };
 
    for ( reverse @around ) {
       my $fn = $_->{method};
@@ -124,6 +126,8 @@ sub update {
    $ret
 }
 
+sub on_column_change_allow_override_args { 0 }
+
 1;
 
 __END__
@@ -154,6 +158,7 @@ DBIx::Class::Helper::Row::OnColumnChange - Do things when the values of a column
        keep_storage_value => 1,
     },
  );
+ sub on_column_change_allow_override_args { 1 }
 
  __PACKAGE__->before_column_change(
    amount => {
@@ -192,6 +197,7 @@ or with L<DBIx::Class::Candy>:
     data_type          => 'float',
     keep_storage_value => 1,
  };
+ sub on_column_change_allow_override_args { 1 }
 
  before_column_change amount => {
     method   => 'bank_transfer',
@@ -246,6 +252,15 @@ If used in conjunction with L<DBIx::Class::Candy> this component will export:
 
 =back
 
+=head1 NO SURPRISE RACE CONDITIONS
+
+One thing that should be made totally clear is that the column change callbacks
+are in effect B<< only once >> in a given update.  If you expect to be able to
+do something weird like calling one of the callbacks which changes a value with
+an accessor which calls a callback etc etc, you probably just need to write some
+code to do that yourself.  This helper is specifically made with the aim of
+reacting to changes immediately before they hit the database.
+
 =head1 METHODS
 
 =head2 before_column_change
@@ -270,7 +285,7 @@ C<< $self, $old_value, $new_value >>.
  );
 
 Note: the arguments passed to C<method> will be
-C<< $self, $old_value, $new_value >>.
+C<< $self, $new_value, $new_value >>. (Because the old value has been changed.)
 
 =head2 around_column_change
 
@@ -304,6 +319,38 @@ a time when I've needed around yet, but it seems like there is a use-case.
 Also Note: you don't get to change the args to C<$next>.  If you think you
 should be able to, you probably don't understand what this component is for.
 That or you know something I don't (equally likely.)
+
+=head2 on_column_change_allow_override_args
+
+This is a method that allows a user to circumvent a strange bug in the initial
+implementation.  Basically, if the user wanted, she could use
+L</before_column_change> to override the value of a given column before
+C<update> gets called, thus replacing the value.  Unfortunately this worked in
+the case of accessors setting the value, but not if the user had used an
+argument to C<update>.  To be clear, if you want the following to actually
+replace the value:
+
+ __PACKAGE__->before_column_change(
+    name => {
+       method   => sub {
+          my ($self, $old, $new) = @_;
+
+          $self->name(uc $new);
+       },
+    },
+ );
+
+you will need to define this in your result class:
+
+ sub on_column_change_allow_override_args { 1 }
+
+If for some reason you need the old style, a default of false is already set.
+If you are painted in the corner and need both, you can create an accessor and
+set it yourself to change the behavior:
+
+ __PACKAGE__->mk_group_accessors(inherited => 'on_column_change_allow_override_args');
+ ...
+ $obj->on_column_change_allow_override_args(1); # works the new way
 
 =head1 AUTHOR
 

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::NumifyGet;
-$DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.025002';
+$DBIx::Class::Helper::Row::NumifyGet::VERSION = '2.025003';
 # ABSTRACT: Force numeric "context" on numeric columns
 
 use strict;

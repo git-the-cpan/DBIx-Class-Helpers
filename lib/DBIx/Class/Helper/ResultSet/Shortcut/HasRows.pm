@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::HasRows;
-$DBIx::Class::Helper::ResultSet::Shortcut::HasRows::VERSION = '2.025002';
+$DBIx::Class::Helper::ResultSet::Shortcut::HasRows::VERSION = '2.025003';
 use strict;
 use warnings;
 

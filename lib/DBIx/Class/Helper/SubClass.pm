@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::SubClass;
-$DBIx::Class::Helper::SubClass::VERSION = '2.025002';
+$DBIx::Class::Helper::SubClass::VERSION = '2.025003';
 use parent 'DBIx::Class::Helper::Row::SubClass';
 
 use Carp::Clan;

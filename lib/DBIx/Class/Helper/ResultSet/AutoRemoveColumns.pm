@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::AutoRemoveColumns;
-$DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.025002';
+$DBIx::Class::Helper::ResultSet::AutoRemoveColumns::VERSION = '2.025003';
 # ABSTRACT: Automatically remove columns from a ResultSet
 
 use strict;

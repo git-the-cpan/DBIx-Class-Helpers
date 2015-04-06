@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SubClass;
-$DBIx::Class::Helper::Row::SubClass::VERSION = '2.025002';
+$DBIx::Class::Helper::Row::SubClass::VERSION = '2.025003';
 # ABSTRACT: Convenient subclassing with DBIx::Class
 
 use strict;

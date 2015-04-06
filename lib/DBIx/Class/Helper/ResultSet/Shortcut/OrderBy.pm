@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::OrderBy;
-$DBIx::Class::Helper::ResultSet::Shortcut::OrderBy::VERSION = '2.025002';
+$DBIx::Class::Helper::ResultSet::Shortcut::OrderBy::VERSION = '2.025003';
 use strict;
 use warnings;
 
