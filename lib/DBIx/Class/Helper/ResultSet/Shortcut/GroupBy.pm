@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::GroupBy;
-$DBIx::Class::Helper::ResultSet::Shortcut::GroupBy::VERSION = '2.025003';
+$DBIx::Class::Helper::ResultSet::Shortcut::GroupBy::VERSION = '2.026000';
 use strict;
 use warnings;
 

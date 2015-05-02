@@ -6,7 +6,7 @@ requires 'parent' => 0;
 requires 'String::CamelCase' => 0;
 requires 'namespace::clean' => 0.23;
 requires 'List::Util' => 0;
-requires 'DBIx::Class::Candy' => 0.001003;
+requires 'DBIx::Class::Candy' => 0.003001;
 requires 'DBIx::Introspector' => 0.001002;
 requires 'Module::Runtime';
 requires 'Try::Tiny';
@@ -20,4 +20,5 @@ on test => sub {
    requires 'DBD::SQLite' => 0;
    requires 'Test::Fatal' => 0.006;
    requires 'DateTime::Format::SQLite' => 0;
+   requires 'aliased' => 0.34;
 };

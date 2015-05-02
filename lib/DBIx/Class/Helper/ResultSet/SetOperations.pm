@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::SetOperations;
-$DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.025003';
+$DBIx::Class::Helper::ResultSet::SetOperations::VERSION = '2.026000';
 # ABSTRACT: Do set operations with DBIx::Class
 
 use strict;
