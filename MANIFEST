@@ -64,6 +64,7 @@ lib/DBIx/Class/Helper/Schema/LintContents.pm
 lib/DBIx/Class/Helper/Schema/QuoteNames.pm
 lib/DBIx/Class/Helper/Schema/Verifier.pm
 lib/DBIx/Class/Helper/Schema/Verifier/C3.pm
+lib/DBIx/Class/Helper/Schema/Verifier/Parent.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -113,6 +114,8 @@ t/Schema/DidYouMean.t
 t/Schema/GenerateSource.t
 t/Schema/LintContents.t
 t/Schema/Verifier.t
+t/Schema/Verifier/C3.t
+t/Schema/Verifier/Parent.t
 t/bug-1.t
 t/lib/A/ResultSet/DateMethods1.pm
 t/lib/A/Role/TestConnect.pm

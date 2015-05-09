@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Random;
-$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.026000';
+$DBIx::Class::Helper::ResultSet::Random::VERSION = '2.027000';
 # ABSTRACT: Get random rows from a ResultSet
 
 use strict;

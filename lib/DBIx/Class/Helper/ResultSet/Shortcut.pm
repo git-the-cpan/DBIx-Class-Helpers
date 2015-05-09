@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.026000';
+$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.027000';
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;

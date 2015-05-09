@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::VirtualView;
-$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.026000';
+$DBIx::Class::Helper::ResultSet::VirtualView::VERSION = '2.027000';
 # ABSTRACT: Clean up your SQL namespace (DEPRECATED)
 
 use strict;

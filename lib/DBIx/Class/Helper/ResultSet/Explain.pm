@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.026000';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.027000';
 # ABSTRACT: Get query plan for a ResultSet
 
 use strict;
