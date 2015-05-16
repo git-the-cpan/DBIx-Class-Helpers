@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.027000';
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.027001';
 # ABSTRACT: Work with dates in your RDBMS nicely
 
 use parent 'DBIx::Class::ResultSet';
@@ -448,6 +448,25 @@ DBIx::Class::Helper::ResultSet::DateMethods1 - Work with dates in your RDBMS nic
 
  # in code using resultset
 
+ # get count per year/month
+ $rs->search(undef, {
+    columns => {
+       count => '*',
+       year  => $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
+       month => $rs->dt_SQL_pluck({ -ident => '.start' }, 'month'),
+    },
+    group_by => [
+       $rs->dt_SQL_pluck({ -ident => '.start' }, 'year'),
+       $rs->dt_SQL_pluck({ -ident => '.start' }, 'month'),
+    ],
+ });
+ 
+ # mysql
+ (SELECT `me`.*, EXTRACT(MONTH FROM `me`.`start`), EXTRACT(YEAR FROM `me`.`start`) FROM `HasDateOps` `me` GROUP BY EXTRACT(YEAR FROM `me`.`start`), EXTRACT(MONTH FROM `me`.`start`))
+
+ # SQLite
+ (SELECT "me".*, STRFTIME('%m', "me"."start"), STRFTIME('%Y', "me"."start") FROM "HasDateOps" "me" GROUP BY STRFTIME('%Y', "me"."start"), STRFTIME('%m', "me"."start"))
+
 =head1 DESCRIPTION
 
 See L<DBIx::Class::Helper::ResultSet/NOTE> for a nice way to apply it
@@ -478,8 +497,6 @@ parts of L<DBIx::Class::ResultSet/search>.  See L</utc_now>, L</dt_SQL_pluck>,
 and L</dt_SQL_add>.
 
 =back
-
-=for exec perl maint/datemethods-sql-out SQLite
 
 =head1 TYPES
 

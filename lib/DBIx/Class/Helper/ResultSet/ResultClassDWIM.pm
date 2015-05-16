@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::ResultClassDWIM;
-$DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.027000';
+$DBIx::Class::Helper::ResultSet::ResultClassDWIM::VERSION = '2.027001';
 # ABSTRACT: result_class => '::HRI' == WIN
 
 use strict;

@@ -44,7 +44,7 @@ my %WriteMakefileArgs = (
     "Test::Roo" => "1.003",
     "aliased" => "0.34"
   },
-  "VERSION" => "2.027000",
+  "VERSION" => "2.027001",
   "test" => {
     "TESTS" => "t/*.t t/ResultSet/*.t t/ResultSet/DateMethods1/*.t t/ResultSet/Shortcut/*.t t/Row/*.t t/Schema/*.t t/Schema/Verifier/*.t"
   }

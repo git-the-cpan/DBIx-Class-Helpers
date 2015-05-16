@@ -1,5 +1,5 @@
 package DBIx::Class::Helpers;
-$DBIx::Class::Helpers::VERSION = '2.027000';
+$DBIx::Class::Helpers::VERSION = '2.027001';
 use strict;
 use warnings;
 
