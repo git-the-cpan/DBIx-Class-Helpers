@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::HRI;
-$DBIx::Class::Helper::ResultSet::Shortcut::HRI::VERSION = '2.027001';
+$DBIx::Class::Helper::ResultSet::Shortcut::HRI::VERSION = '2.028000';
 use strict;
 use warnings;
 

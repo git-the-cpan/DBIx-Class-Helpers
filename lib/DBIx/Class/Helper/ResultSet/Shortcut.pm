@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut;
-$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.027001';
+$DBIx::Class::Helper::ResultSet::Shortcut::VERSION = '2.028000';
 # ABSTRACT: Shortcuts to common searches (->order_by, etc)
 
 use strict;
@@ -19,6 +19,7 @@ use parent (qw(
    DBIx::Class::Helper::ResultSet::Shortcut::ResultsExist
    DBIx::Class::Helper::ResultSet::Shortcut::Rows
    DBIx::Class::Helper::ResultSet::Shortcut::Page
+   DBIx::Class::Helper::ResultSet::Shortcut::Search
 ));
 
 1;
@@ -217,6 +218,26 @@ calling C<< $rs->count >>.
 Uses C<EXISTS> SQL function to check if the query would return anything.
 Possibly lighter weight than the much more common C<< foo() if $rs->count >>
 idiom.
+
+=head2 null(@columns || \@columns)
+
+ $rs->null('status');
+ $rs->null(['status', 'title']);
+
+=head2 not_null(@columns || \@columns)
+
+ $rs->not_null('status');
+ $rs->not_null(['status', 'title']);
+
+=head2 like($column || \@columns, $cond)
+
+ $rs->like('lyrics', '%zebra%');
+ $rs->like(['lyrics', 'title'], '%zebra%');
+
+=head2 not_like($column || \@columns, $cond)
+
+ $rs->not_like('lyrics', '%zebra%');
+ $rs->not_like(['lyrics', 'title'], '%zebra%');
 
 =head1 AUTHOR
 

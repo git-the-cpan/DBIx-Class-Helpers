@@ -43,6 +43,12 @@ lib/DBIx/Class/Helper/ResultSet/Shortcut/Page.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Prefetch.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/ResultsExist.pm
 lib/DBIx/Class/Helper/ResultSet/Shortcut/Rows.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Search.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Search/Base.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Search/Like.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Search/NotLike.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Search/NotNull.pm
+lib/DBIx/Class/Helper/ResultSet/Shortcut/Search/Null.pm
 lib/DBIx/Class/Helper/ResultSet/Union.pm
 lib/DBIx/Class/Helper/ResultSet/Util.pm
 lib/DBIx/Class/Helper/ResultSet/VirtualView.pm
@@ -65,6 +71,7 @@ lib/DBIx/Class/Helper/Schema/QuoteNames.pm
 lib/DBIx/Class/Helper/Schema/Verifier.pm
 lib/DBIx/Class/Helper/Schema/Verifier/C3.pm
 lib/DBIx/Class/Helper/Schema/Verifier/Parent.pm
+lib/DBIx/Class/Helper/Schema/Verifier/RelationshipColumnName.pm
 lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
@@ -98,6 +105,11 @@ t/ResultSet/Shortcut/OrderByMagic.t
 t/ResultSet/Shortcut/Prefetch.t
 t/ResultSet/Shortcut/ResultsExist.t
 t/ResultSet/Shortcut/Rows.t
+t/ResultSet/Shortcut/Search/Base.t
+t/ResultSet/Shortcut/Search/Like.t
+t/ResultSet/Shortcut/Search/NotLike.t
+t/ResultSet/Shortcut/Search/NotNull.t
+t/ResultSet/Shortcut/Search/Null.t
 t/Row/CleanResultSet.t
 t/Row/JoinTable.t
 t/Row/NumifyGet.t
@@ -116,6 +128,7 @@ t/Schema/LintContents.t
 t/Schema/Verifier.t
 t/Schema/Verifier/C3.t
 t/Schema/Verifier/Parent.t
+t/Schema/Verifier/RelationshipColumnName.t
 t/bug-1.t
 t/lib/A/ResultSet/DateMethods1.pm
 t/lib/A/Role/TestConnect.pm
@@ -142,6 +155,7 @@ t/lib/TestSchema/Result/Gnarly.pm
 t/lib/TestSchema/Result/Gnarly_Station.pm
 t/lib/TestSchema/Result/HasAccessor.pm
 t/lib/TestSchema/Result/HasDateOps.pm
+t/lib/TestSchema/Result/Search.pm
 t/lib/TestSchema/Result/Station.pm
 t/lib/TestSchema/ResultSet.pm
 t/lib/TestSchema/ResultSet/Bloaty.pm
@@ -149,6 +163,7 @@ t/lib/TestSchema/ResultSet/Foo.pm
 t/lib/TestSchema/ResultSet/Gnarly.pm
 t/lib/TestSchema/ResultSet/HasAccessor.pm
 t/lib/TestSchema/ResultSet/HasDateOps.pm
+t/lib/TestSchema/ResultSet/Search.pm
 t/lib/TestSchema/ResultSet/Station.pm
 t/lib/VerifySchema.pm
 t/lib/VerifySchema/Result/A.pm
