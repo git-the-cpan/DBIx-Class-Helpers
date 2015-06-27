@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::JoinTable;
-$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.028000';
+$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.029000';
 use strict;
 use warnings;
 

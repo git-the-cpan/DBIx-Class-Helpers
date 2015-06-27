@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::DateMethods1;
-$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.028000';
+$DBIx::Class::Helper::ResultSet::DateMethods1::VERSION = '2.029000';
 # ABSTRACT: Work with dates in your RDBMS nicely
 
 use parent 'DBIx::Class::ResultSet';

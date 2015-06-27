@@ -1,9 +1,9 @@
 -- 
 -- Created by SQL::Translator::Producer::PostgreSQL
--- Created on Sat May 30 17:06:03 2015
+-- Created on Sat Jun 27 14:16:35 2015
 -- 
 --
--- Table: Gnarly.
+-- Table: Gnarly
 --
 DROP TABLE "Gnarly" CASCADE;
 CREATE TABLE "Gnarly" (
@@ -15,7 +15,7 @@ CREATE TABLE "Gnarly" (
 );
 
 --
--- Table: HasDateOps.
+-- Table: HasDateOps
 --
 DROP TABLE "HasDateOps" CASCADE;
 CREATE TABLE "HasDateOps" (

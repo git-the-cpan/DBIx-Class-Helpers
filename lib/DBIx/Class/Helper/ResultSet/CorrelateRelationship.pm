@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::CorrelateRelationship;
-$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.028000';
+$DBIx::Class::Helper::ResultSet::CorrelateRelationship::VERSION = '2.029000';
 # ABSTRACT: Easily correlate your ResultSets
 
 use strict;
