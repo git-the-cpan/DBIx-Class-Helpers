@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::RemoveColumns;
-$DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.029000';
+$DBIx::Class::Helper::ResultSet::RemoveColumns::VERSION = '2.030000';
 # ABSTRACT: Remove columns from a ResultSet
 
 use strict;

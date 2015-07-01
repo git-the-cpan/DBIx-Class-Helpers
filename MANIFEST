@@ -57,6 +57,7 @@ lib/DBIx/Class/Helper/Row/CleanResultSet.pm
 lib/DBIx/Class/Helper/Row/JoinTable.pm
 lib/DBIx/Class/Helper/Row/NumifyGet.pm
 lib/DBIx/Class/Helper/Row/OnColumnChange.pm
+lib/DBIx/Class/Helper/Row/OnColumnMissing.pm
 lib/DBIx/Class/Helper/Row/ProxyResultSetMethod.pm
 lib/DBIx/Class/Helper/Row/ProxyResultSetUpdate.pm
 lib/DBIx/Class/Helper/Row/RelationshipDWIM.pm
@@ -116,6 +117,7 @@ t/Row/CleanResultSet.t
 t/Row/JoinTable.t
 t/Row/NumifyGet.t
 t/Row/OnColumnChange.t
+t/Row/OnColumnMissing.t
 t/Row/ProxyResultSetMethod.t
 t/Row/ProxyResultSetUpdate.t
 t/Row/RelationshipDWIM.t

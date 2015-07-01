@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::Verifier;
-$DBIx::Class::Helper::Schema::Verifier::VERSION = '2.029000';
+$DBIx::Class::Helper::Schema::Verifier::VERSION = '2.030000';
 # ABSTRACT: Verify the Results and ResultSets of your Schemata
 
 use strict;
