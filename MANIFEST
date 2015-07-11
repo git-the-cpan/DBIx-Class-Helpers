@@ -171,7 +171,9 @@ t/lib/TestSchema/ResultSet/Search.pm
 t/lib/TestSchema/ResultSet/Station.pm
 t/lib/VerifySchema.pm
 t/lib/VerifySchema/Result/A.pm
+t/lib/VerifySchema/Result/B.pm
 t/lib/VerifySchema/ResultSet/A.pm
+t/lib/VerifySchema/ResultSet/B.pm
 t/release-pod-syntax.t
 t/utilities.t
 weaver.ini

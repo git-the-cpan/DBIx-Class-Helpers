@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Errors;
-$DBIx::Class::Helper::ResultSet::Errors::VERSION = '2.030000';
+$DBIx::Class::Helper::ResultSet::Errors::VERSION = '2.030001';
 # ABSTRACT: add exceptions to help when calling Result methods on an ResultSets
 
 use strict;
