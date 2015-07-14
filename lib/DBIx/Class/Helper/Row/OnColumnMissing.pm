@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::OnColumnMissing;
-$DBIx::Class::Helper::Row::OnColumnMissing::VERSION = '2.030001';
+$DBIx::Class::Helper::Row::OnColumnMissing::VERSION = '2.030002';
 # ABSTRACT: Configurably handle access of missing columns
 
 use strict;

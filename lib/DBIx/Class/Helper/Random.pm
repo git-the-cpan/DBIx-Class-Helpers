@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Random;
-$DBIx::Class::Helper::Random::VERSION = '2.030001';
+$DBIx::Class::Helper::Random::VERSION = '2.030002';
 use parent 'DBIx::Class::Helper::ResultSet::Random';
 
 use Carp::Clan;

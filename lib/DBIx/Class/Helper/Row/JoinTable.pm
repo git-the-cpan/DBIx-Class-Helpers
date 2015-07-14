@@ -1,5 +1,7 @@
 package DBIx::Class::Helper::Row::JoinTable;
-$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.030001';
+$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.030002';
+# ABSTRACT: Easily set up join tables with DBIx::Class
+
 use strict;
 use warnings;
 
@@ -186,7 +188,7 @@ __END__
 
 =head1 NAME
 
-DBIx::Class::Helper::Row::JoinTable
+DBIx::Class::Helper::Row::JoinTable - Easily set up join tables with DBIx::Class
 
 =head1 SYNOPSIS
 

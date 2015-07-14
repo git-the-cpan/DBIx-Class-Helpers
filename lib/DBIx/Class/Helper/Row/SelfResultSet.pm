@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::SelfResultSet;
-$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.030001';
+$DBIx::Class::Helper::Row::SelfResultSet::VERSION = '2.030002';
 # ABSTRACT: Easily use ResultSet methods for the current row
 
 use strict;

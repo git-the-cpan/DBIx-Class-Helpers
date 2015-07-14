@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Page;
-$DBIx::Class::Helper::ResultSet::Shortcut::Page::VERSION = '2.030001';
+$DBIx::Class::Helper::ResultSet::Shortcut::Page::VERSION = '2.030002';
 use strict;
 use warnings;
 

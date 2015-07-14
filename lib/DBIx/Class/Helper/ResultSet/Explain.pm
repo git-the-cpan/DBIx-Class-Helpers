@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Explain;
-$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.030001';
+$DBIx::Class::Helper::ResultSet::Explain::VERSION = '2.030002';
 # ABSTRACT: Get query plan for a ResultSet
 
 use strict;
@@ -256,13 +256,13 @@ to your entire schema.
 
  [
    [
-     "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.002..0.002 rows=0 loops=1)"
+     "Seq Scan on \"Gnarly\" me  (cost=0.00..16.20 rows=620 width=100) (actual time=0.003..0.003 rows=0 loops=1)"
    ],
    [
-     "Planning time: 0.502 ms"
+     "Planning time: 0.643 ms"
    ],
    [
-     "Execution time: 0.031 ms"
+     "Execution time: 0.049 ms"
    ]
  ]
 
