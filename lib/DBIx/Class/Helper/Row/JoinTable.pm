@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::JoinTable;
-$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.030002';
+$DBIx::Class::Helper::Row::JoinTable::VERSION = '2.031000';
 # ABSTRACT: Easily set up join tables with DBIx::Class
 
 use strict;

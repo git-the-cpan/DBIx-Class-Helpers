@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Search::NotNull;
-$DBIx::Class::Helper::ResultSet::Shortcut::Search::NotNull::VERSION = '2.030002';
+$DBIx::Class::Helper::ResultSet::Shortcut::Search::NotNull::VERSION = '2.031000';
 use strict;
 use warnings;
 

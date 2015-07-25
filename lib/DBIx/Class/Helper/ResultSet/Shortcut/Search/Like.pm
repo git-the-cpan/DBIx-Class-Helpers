@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::Shortcut::Search::Like;
-$DBIx::Class::Helper::ResultSet::Shortcut::Search::Like::VERSION = '2.030002';
+$DBIx::Class::Helper::ResultSet::Shortcut::Search::Like::VERSION = '2.031000';
 use strict;
 use warnings;
 

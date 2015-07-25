@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::IgnoreWantarray;
-$DBIx::Class::Helper::IgnoreWantarray::VERSION = '2.030002';
+$DBIx::Class::Helper::IgnoreWantarray::VERSION = '2.031000';
 use parent 'DBIx::Class::Helper::ResultSet::IgnoreWantarray';
 
 use Carp::Clan;

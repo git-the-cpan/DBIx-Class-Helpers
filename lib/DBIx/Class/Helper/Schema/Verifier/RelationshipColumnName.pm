@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Schema::Verifier::RelationshipColumnName;
-$DBIx::Class::Helper::Schema::Verifier::RelationshipColumnName::VERSION = '2.030002';
+$DBIx::Class::Helper::Schema::Verifier::RelationshipColumnName::VERSION = '2.031000';
 # ABSTRACT: Verify that relationships and column names are distinct
 
 use strict;

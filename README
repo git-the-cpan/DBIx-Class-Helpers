@@ -44,5 +44,5 @@ SYNOPSIS
 SEE ALSO
 
     DBIx::Class::Helper::Row::JoinTable,
-    DBIx::Class::Helper::ResultSet::SubClass, DBIx::Class::Helpers::Util
+    DBIx::Class::Helper::Row::SubClass, DBIx::Class::Helpers::Util
 

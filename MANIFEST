@@ -15,6 +15,7 @@ lib/DBIx/Class/Helper/JoinTable.pm
 lib/DBIx/Class/Helper/Random.pm
 lib/DBIx/Class/Helper/ResultSet.pm
 lib/DBIx/Class/Helper/ResultSet/AutoRemoveColumns.pm
+lib/DBIx/Class/Helper/ResultSet/Bare.pm
 lib/DBIx/Class/Helper/ResultSet/CorrelateRelationship.pm
 lib/DBIx/Class/Helper/ResultSet/DateMethods1.pm
 lib/DBIx/Class/Helper/ResultSet/DateMethods1/Announcement.pod
@@ -78,6 +79,7 @@ lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
 lib/DBIx/Class/Helpers/Util.pm
+t/ResultSet/Bare.t
 t/ResultSet/CorrelateRelationship.t
 t/ResultSet/DateMethods1/mssql.t
 t/ResultSet/DateMethods1/mysql.t
