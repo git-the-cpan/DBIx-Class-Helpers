@@ -13,6 +13,7 @@ inc/Dist/Zilla/Plugin/DBICSgen.pm
 lib/DBIx/Class/Helper/IgnoreWantarray.pm
 lib/DBIx/Class/Helper/JoinTable.pm
 lib/DBIx/Class/Helper/Random.pm
+lib/DBIx/Class/Helper/ResultClass/Tee.pm
 lib/DBIx/Class/Helper/ResultSet.pm
 lib/DBIx/Class/Helper/ResultSet/AutoRemoveColumns.pm
 lib/DBIx/Class/Helper/ResultSet/Bare.pm
@@ -79,6 +80,7 @@ lib/DBIx/Class/Helper/SubClass.pm
 lib/DBIx/Class/Helper/VirtualView.pm
 lib/DBIx/Class/Helpers.pm
 lib/DBIx/Class/Helpers/Util.pm
+t/ResultClass/Tee.t
 t/ResultSet/Bare.t
 t/ResultSet/CorrelateRelationship.t
 t/ResultSet/DateMethods1/mssql.t

@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::Row::ProxyResultSetMethod;
-$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.031000';
+$DBIx::Class::Helper::Row::ProxyResultSetMethod::VERSION = '2.032000';
 # ABSTRACT: Efficiently reuse ResultSet methods from results with fallback
 
 use strict;

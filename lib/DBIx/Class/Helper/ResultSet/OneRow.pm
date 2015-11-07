@@ -1,5 +1,5 @@
 package DBIx::Class::Helper::ResultSet::OneRow;
-$DBIx::Class::Helper::ResultSet::OneRow::VERSION = '2.031000';
+$DBIx::Class::Helper::ResultSet::OneRow::VERSION = '2.032000';
 # ABSTRACT: The first you always wanted
 
 use strict;

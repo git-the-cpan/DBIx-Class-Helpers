@@ -24,6 +24,7 @@ my %WriteMakefileArgs = (
     "Lingua::EN::Inflect" => 0,
     "List::Util" => 0,
     "Module::Runtime" => 0,
+    "Moo" => 2,
     "Safe::Isa" => 0,
     "String::CamelCase" => 0,
     "Sub::Exporter::Progressive" => "0.001006",
@@ -41,9 +42,9 @@ my %WriteMakefileArgs = (
     "Test::Roo" => "1.003",
     "aliased" => "0.34"
   },
-  "VERSION" => "2.031000",
+  "VERSION" => "2.032000",
   "test" => {
-    "TESTS" => "t/*.t t/ResultSet/*.t t/ResultSet/DateMethods1/*.t t/ResultSet/Shortcut/*.t t/ResultSet/Shortcut/Search/*.t t/Row/*.t t/Schema/*.t t/Schema/Verifier/*.t"
+    "TESTS" => "t/*.t t/ResultClass/*.t t/ResultSet/*.t t/ResultSet/DateMethods1/*.t t/ResultSet/Shortcut/*.t t/ResultSet/Shortcut/Search/*.t t/Row/*.t t/Schema/*.t t/Schema/Verifier/*.t"
   }
 );
 
@@ -59,6 +60,7 @@ my %FallbackPrereqs = (
   "Lingua::EN::Inflect" => 0,
   "List::Util" => 0,
   "Module::Runtime" => 0,
+  "Moo" => 2,
   "Safe::Isa" => 0,
   "String::CamelCase" => 0,
   "Sub::Exporter::Progressive" => "0.001006",

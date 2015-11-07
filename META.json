@@ -33,6 +33,7 @@
             "Lingua::EN::Inflect" : "0",
             "List::Util" : "0",
             "Module::Runtime" : "0",
+            "Moo" : "2",
             "Safe::Isa" : "0",
             "String::CamelCase" : "0",
             "Sub::Exporter::Progressive" : "0.001006",
@@ -66,6 +67,6 @@
          "web" : "https://github.com/frioux/DBIx-Class-Helpers"
       }
    },
-   "version" : "2.031000"
+   "version" : "2.032000"
 }
 
